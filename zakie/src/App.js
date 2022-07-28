@@ -100,7 +100,7 @@ function App() {
                       </Link>
                     </li>
                     <li>
-                      <Link to='/login'>
+                      <Link to='/Register'>
                       <a href="#hero">Signup</a>
                       </Link>
                     </li>
@@ -124,9 +124,6 @@ function App() {
                 <i className="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" />
               </div>
             </header>
-
-
-      {/* <Home /> */}
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
@@ -174,9 +171,9 @@ function App() {
       </header> */}
        <Routes>
          <Route path='/' element={<Home />} />
+         <Route path='/Home' element={<Home />} />
           {/* <Route path='/Register' element={<Register />} /> */}
           {/* <Route path='/Login' element={<Login />} /> */}
-          <Route path='/Home' element={<Home />} />
           {/* <Route path='/:userid' element={<Home />} /> */}
           <Route path='/Aboutus' element={<About />} />
           <Route path='/Contactus' element={<Contactus />} />
