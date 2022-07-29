@@ -20,7 +20,8 @@ function Post() {
             console.log(comments);
         })}
         postData();
-    },[])
+        CommentData();
+    },[post,comments])
 
 
 
