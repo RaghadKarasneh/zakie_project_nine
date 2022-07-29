@@ -1,8 +1,8 @@
-
 import React, { Component } from 'react';
 import './css/main.css';
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { UilClipboardAlt } from '@iconscout/react-unicons'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 class Home extends Component {
     state = {  } 
@@ -10,7 +10,7 @@ class Home extends Component {
         return (<>
             <meta charSet="utf-8" />
             <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-            <title>Yummy Bootstrap Template - Index</title>
+            <title>Home page</title>
             <meta content="" name="description" />
             <meta content="" name="keywords" />
             {/* Favicons */}
@@ -43,97 +43,6 @@ class Home extends Component {
             * Author: BootstrapMade.com
             * License: https://bootstrapmade.com/license/
             ======================================================== */}
-            {/* ======= Header ======= */}
-            
-            <header id="header" className="header fixed-top d-flex align-items-center">
-              <div className="container d-flex align-items-center justify-content-between">
-                <a
-                  href="index.html"
-                  className="logo d-flex align-items-center me-auto me-lg-0"
-                >
-                  {/* Uncomment the line below if you also wish to use an image logo */}
-                  {/* <img src="assets/img/logo.png" alt=""> */}
-                  <h1>
-                    Yummy<span>.</span>
-                  </h1>
-                </a>
-                <nav id="navbar" className="navbar">
-                  <ul>
-                    <li>
-                      <a href="#hero">Home</a>
-                    </li>
-                    <li>
-                      <a href="#about">About</a>
-                    </li>
-                    <li>
-                      <a href="#menu">Menu</a>
-                    </li>
-                    <li>
-                      <a href="#events">Events</a>
-                    </li>
-                    <li>
-                      <a href="#chefs">Chefs</a>
-                    </li>
-                    <li>
-                      <a href="#gallery">Gallery</a>
-                    </li>
-                    <li className="dropdown">
-                      <a href="#">
-                        <span>Drop Down</span>{" "}
-                        <i className="bi bi-chevron-down dropdown-indicator" />
-                      </a>
-                      <ul>
-                        <li>
-                          <a href="#">Drop Down 1</a>
-                        </li>
-                        <li className="dropdown">
-                          <a href="#">
-                            <span>Deep Drop Down</span>{" "}
-                            <i className="bi bi-chevron-down dropdown-indicator" />
-                          </a>
-                          <ul>
-                            <li>
-                              <a href="#">Deep Drop Down 1</a>
-                            </li>
-                            <li>
-                              <a href="#">Deep Drop Down 2</a>
-                            </li>
-                            <li>
-                              <a href="#">Deep Drop Down 3</a>
-                            </li>
-                            <li>
-                              <a href="#">Deep Drop Down 4</a>
-                            </li>
-                            <li>
-                              <a href="#">Deep Drop Down 5</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          <a href="#">Drop Down 2</a>
-                        </li>
-                        <li>
-                          <a href="#">Drop Down 3</a>
-                        </li>
-                        <li>
-                          <a href="#">Drop Down 4</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#contact">Contact</a>
-                    </li>
-                  </ul>
-                </nav>
-                {/* .navbar */}
-                <a className="btn-book-a-table" href="#book-a-table">
-                  Book a Table
-                </a>
-                <i className="mobile-nav-toggle mobile-nav-show bi bi-list" />
-                <i className="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" />
-              </div>
-            </header>
-            {/* End Header */}
             {/* ======= Hero Section ======= */}
             <section id="hero" className="hero d-flex align-items-center section-bg">
               <div className="container">
@@ -154,7 +63,7 @@ class Home extends Component {
                       </a>
                       <a
                         href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
-                        className="glightbox btn-watch-video d-flex align-items-center"
+                        className="glightbox btn-watch-video d-flex align-items-center" target={'_blank'}
                       >
                         <i className="bi bi-play-circle" />
                         <span>Watch Video</span>
@@ -175,76 +84,6 @@ class Home extends Component {
             </section>
             {/* End Hero Section */}
             <main id="main">
-              {/* ======= About Section ======= */}
-              <section id="about" className="about">
-                <div className="container" data-aos="fade-up">
-                  <div className="section-header">
-                    <h2>About Us</h2>
-                    <p>
-                      Learn More <span>About Us</span>
-                    </p>
-                  </div>
-                  <div className="row gy-4">
-                    <div
-                      className="col-lg-7 position-relative about-img"
-                      style={{ backgroundImage: "url(./img/about.jpg)" }}
-                      data-aos="fade-up"
-                      data-aos-delay={150}
-                    >
-                      <div className="call-us position-absolute">
-                        <h4>Book a Table</h4>
-                        <p>+1 5589 55488 55</p>
-                      </div>
-                    </div>
-                    <div
-                      className="col-lg-5 d-flex align-items-end"
-                      data-aos="fade-up"
-                      data-aos-delay={300}
-                    >
-                      <div className="content ps-0 ps-lg-5">
-                        <p className="fst-italic">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
-                        <ul>
-                          <li>
-                            <i className="bi bi-check2-all" /> Ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat.
-                          </li>
-                          <li>
-                            <i className="bi bi-check2-all" /> Duis aute irure dolor in
-                            reprehenderit in voluptate velit.
-                          </li>
-                          <li>
-                            <i className="bi bi-check2-all" /> Ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate trideta storacalaperda mastiro
-                            dolore eu fugiat nulla pariatur.
-                          </li>
-                        </ul>
-                        <p>
-                          Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                          aute irure dolor in reprehenderit in voluptate velit esse cillum
-                          dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                          cupidatat non proident
-                        </p>
-                        <div className="position-relative mt-4">
-                          <img
-                            src="./img/about-2.jpg"
-                            className="img-fluid"
-                            alt=""
-                          />
-                          <a
-                            href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
-                            className="glightbox play-btn"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              {/* End About Section */}
               {/* ======= Why Us Section ======= */}
               <section id="why-us" className="why-us section-bg">
                 <div className="container" data-aos="fade-up">
@@ -271,7 +110,7 @@ class Home extends Component {
                       <div className="row gy-4">
                         <div className="col-xl-4" data-aos="fade-up" data-aos-delay={200}>
                           <div className="icon-box d-flex flex-column justify-content-center align-items-center">
-                            <i className="bi bi-clipboard-data" />
+                            <UilClipboardAlt />
                             <h4>Corporis voluptates officia eiusmod</h4>
                             <p>
                               Consequuntur sunt aut quasi enim aliquam quae harum pariatur
@@ -1408,210 +1247,10 @@ class Home extends Component {
                 </div>
               </section>
               {/* End Gallery Section */}
-              {/* ======= Contact Section ======= */}
-              <section id="contact" className="contact">
-                <div className="container" data-aos="fade-up">
-                  <div className="section-header">
-                    <h2>Contact</h2>
-                    <p>
-                      Need Help? <span>Contact Us</span>
-                    </p>
-                  </div>
-                  <div className="mb-3">
-                    <iframe
-                      style={{ border: 0, width: "100%", height: 350 }}
-                      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-                      frameBorder={0}
-                      allowFullScreen=""
-                    />
-                  </div>
-                  {/* End Google Maps */}
-                  <div className="row gy-4">
-                    <div className="col-md-6">
-                      <div className="info-item  d-flex align-items-center">
-                        <i className="icon bi bi-map flex-shrink-0" />
-                        <div>
-                          <h3>Our Address</h3>
-                          <p>A108 Adam Street, New York, NY 535022</p>
-                        </div>
-                      </div>
-                    </div>
-                    {/* End Info Item */}
-                    <div className="col-md-6">
-                      <div className="info-item d-flex align-items-center">
-                        <i className="icon bi bi-envelope flex-shrink-0" />
-                        <div>
-                          <h3>Email Us</h3>
-                          <p>contact@example.com</p>
-                        </div>
-                      </div>
-                    </div>
-                    {/* End Info Item */}
-                    <div className="col-md-6">
-                      <div className="info-item  d-flex align-items-center">
-                        <i className="icon bi bi-telephone flex-shrink-0" />
-                        <div>
-                          <h3>Call Us</h3>
-                          <p>+1 5589 55488 55</p>
-                        </div>
-                      </div>
-                    </div>
-                    {/* End Info Item */}
-                    <div className="col-md-6">
-                      <div className="info-item  d-flex align-items-center">
-                        <i className="icon bi bi-share flex-shrink-0" />
-                        <div>
-                          <h3>Opening Hours</h3>
-                          <div>
-                            <strong>Mon-Sat:</strong> 11AM - 23PM;
-                            <strong>Sunday:</strong> Closed
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    {/* End Info Item */}
-                  </div>
-                  <form
-                    action="forms/contact.php"
-                    method="post"
-                    role="form"
-                    className="php-email-form p-3 p-md-4"
-                  >
-                    <div className="row">
-                      <div className="col-xl-6 form-group">
-                        <input
-                          type="text"
-                          name="name"
-                          className="form-control"
-                          id="name"
-                          placeholder="Your Name"
-                          required=""
-                        />
-                      </div>
-                      <div className="col-xl-6 form-group">
-                        <input
-                          type="email"
-                          className="form-control"
-                          name="email"
-                          id="email"
-                          placeholder="Your Email"
-                          required=""
-                        />
-                      </div>
-                    </div>
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        className="form-control"
-                        name="subject"
-                        id="subject"
-                        placeholder="Subject"
-                        required=""
-                      />
-                    </div>
-                    <div className="form-group">
-                      <textarea
-                        className="form-control"
-                        name="message"
-                        rows={5}
-                        placeholder="Message"
-                        required=""
-                        defaultValue={""}
-                      />
-                    </div>
-                    <div className="my-3">
-                      <div className="loading">Loading</div>
-                      <div className="error-message" />
-                      <div className="sent-message">
-                        Your message has been sent. Thank you!
-                      </div>
-                    </div>
-                    <div className="text-center">
-                      <button type="submit">Send Message</button>
-                    </div>
-                  </form>
-                  {/*End Contact Form */}
-                </div>
-              </section>
-              {/* End Contact Section */}
+            
             </main>
             {/* End #main */}
-            {/* ======= Footer ======= */}
-            <footer id="footer" className="footer">
-              <div className="container">
-                <div className="row gy-3">
-                  <div className="col-lg-3 col-md-6 d-flex">
-                    <i className="bi bi-geo-alt icon" />
-                    <div>
-                      <h4>Address</h4>
-                      <p>
-                        A108 Adam Street <br />
-                        New York, NY 535022 - US
-                        <br />
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3 col-md-6 footer-links d-flex">
-                    <i className="bi bi-telephone icon" />
-                    <div>
-                      <h4>Reservations</h4>
-                      <p>
-                        <strong>Phone:</strong> +1 5589 55488 55
-                        <br />
-                        <strong>Email:</strong> info@example.com
-                        <br />
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3 col-md-6 footer-links d-flex">
-                    <i className="bi bi-clock icon" />
-                    <div>
-                      <h4>Opening Hours</h4>
-                      <p>
-                        <strong>Mon-Sat: 11AM</strong> - 23PM
-                        <br />
-                        Sunday: Closed
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3 col-md-6 footer-links">
-                    <h4>Follow Us</h4>
-                    <div className="social-links d-flex">
-                      <a href="#" className="twitter">
-                        <i className="bi bi-twitter" />
-                      </a>
-                      <a href="#" className="facebook">
-                        <i className="bi bi-facebook" />
-                      </a>
-                      <a href="#" className="instagram">
-                        <i className="bi bi-instagram" />
-                      </a>
-                      <a href="#" className="linkedin">
-                        <i className="bi bi-linkedin" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="container">
-                <div className="copyright">
-                  © Copyright{" "}
-                  <strong>
-                    <span>Yummy</span>
-                  </strong>
-                  . All Rights Reserved
-                </div>
-                <div className="credits">
-                  {/* All the links in the footer should remain intact. */}
-                  {/* You can delete the links only if you purchased the pro version. */}
-                  {/* Licensing information: https://bootstrapmade.com/license/ */}
-                  {/* Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/ */}
-                  Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-                </div>
-              </div>
-            </footer>
-            {/* End Footer */}
-            {/* End Footer */}
+
             <a
               href="#"
               className="scroll-top d-flex align-items-center justify-content-center"
@@ -1625,5 +1264,4 @@ class Home extends Component {
           );
     }
 }
- 
 export default Home;
