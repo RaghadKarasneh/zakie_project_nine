@@ -38,12 +38,12 @@ body {
 
 a {
   color: var(--color-primary);
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 a:hover {
   color: #ec2727;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 h1,
@@ -1405,13 +1405,13 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
+  width: 46px;
+  height: 46px;
   font-size: 24px;
   line-height: 0;
   color: #fff;
   background: var(--color-primary);
-  border-radius: 50%;
+  border-radius: 40%;
   margin-right: 15px;
 }
 
