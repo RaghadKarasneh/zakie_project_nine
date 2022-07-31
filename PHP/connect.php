@@ -5,7 +5,7 @@ header("Access-Control-Allow-Headers: access");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-$dsn='mysql:host=localhost;dbname=project9';
+$dsn='mysql:host=localhost;dbname=test';
 
 try {
     $connect= new PDO($dsn,'root','');

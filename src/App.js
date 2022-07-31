@@ -9,6 +9,7 @@ import About from './Components/About';
 import { UilUser } from '@iconscout/react-unicons';
 import Footer from './Components/Footer';
 import Header from './Component/Header';
+import Posts from './Component/Posts/Posts';
 
 function App() {
   return (      
@@ -17,6 +18,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/post' element={<Post />}>Post Page</Route>
+          <Route path='/posts' element={<Posts />}>Post Page</Route>
           <Route path='/' element={<Home />}>Landing page</Route>
           <Route path='/Home' element={<Home />} />
           {/* <Route path='/Register' element={<Register />} /> */}
