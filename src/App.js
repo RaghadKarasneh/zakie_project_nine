@@ -6,12 +6,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Post from './Components/Posts/Post';
 import Contact from './Components/Contact';
 import About from './Components/About';
-import { UilUser } from '@iconscout/react-unicons';
+
 import Footer from './Components/Footer';
 import Posts from './Components/Posts/Posts';
 import Header from './Components/Header';
 import Calculator from './Components/Calculator';
 import Pricing from './Components/Pricing';
+import Signup from "./signup";
+import Login from "./login";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (      
@@ -25,10 +28,11 @@ function App() {
           <Route path='/posts' element={<Posts />}>Post Page</Route>
           <Route path='/' element={<Home />}>Landing page</Route>
           <Route path='/Home' element={<Home />} />
-          {/* <Route path='/Register' element={<Register />} /> */}
-          {/* <Route path='/Login' element={<Login />} /> */}
+          <Route path="/log" element={<Login />}/>
+          <Route path="/reg" element={<Signup />}/>
           {/* <Route path='/:userid' element={<Home />} /> */}
           <Route path='/About' element={<About />} />
+      
           <Route path='/Contact' element={<Contact />} />
           <Route path='/Pricing' element={<Pricing />} />
           <Route path='/Calculator' element={<Calculator />} />
