@@ -3,27 +3,40 @@ import React, { useEffect, useState } from 'react';
 import Comment from './Comments/Comment';
 
 function Post() {
+
+    const [comments,setComments]=useState([]);
     const[user,setUser]=useState([]);
     const [posts,setPosts]=useState([]);
     const [post,setPost]=useState([]);
-    const [comments,setComments]=useState([]);
+    const [state,setState]=useState(false);
+
+
+
+
+
+
+    const CommentData=() => {
+        axios.get('http://localhost/project9/PHP/comments.php')
+        .then((response)=>{
+        setComments(response.data)
+        console.log(comments);
+    })};
 
     useEffect(()=>{
-        const postData=()=>{axios.get('')
-        .then((response)=>{
-            setPost(response.data)
-            console.log(post);
-        })}
-        const CommentData=()=>{axios.get('')
-        .then((response)=>{
-            setComments(response.data)
-            console.log(comments);
-        })}
-        postData();
         CommentData();
-    },[post,comments])
+        setState(false);
+  
+        // const postData=setTimeout(()=>{axios.get('')
+        // .then((response)=>{
+        //     setPost(response.data)
+        //     console.log(post);
+        // })},
+        // postData();
+    },[state])
 
 
+
+    
 
   return (
 
@@ -99,62 +112,14 @@ function Post() {
         </div> {/* <!-- end row --> */}
 
 
-        {/* <!-- comments
-        ================================================== --> */}
-        <div className="comments-wrap">
-
-            <div id="comments" className="row">
-                <div className="column">
-
-                    <h3>5 Comments</h3>
-
-                    {/* <!-- START commentlist --> */}
-                    <ol className="commentlist">
-
-                        <li className="depth-1 comment">
-
-                            <div className="comment__avatar">
-                                <img className="avatar" src="images/avatars/user-01.jpg" alt="" width="50" height="50" />
-                            </div>
-
-                            <div className="comment__content">
-
-                                <div className="comment__info">
-                                    <div className="comment__author">Itachi Uchiha</div>
-
-                                    <div className="comment__meta">
-                                        <div className="comment__time">Sept 05, 2020</div>
-                                        <div className="comment__reply">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="comment__text">
-                                <p>Adhuc quaerendum est ne, vis ut harum tantas noluisse, id suas iisque mei. Nec te inani ponderum vulputate,
-                                facilisi expetenda has et. Iudico dictas scriptorem an vim, ei alia mentitum est, ne has voluptua praesent.</p>
-                                </div>
-
-                            </div>
-
-                         </li> {/* <!-- end comment level 1 --> */}
-                    </ol>
-
-                 </div> {/* <!-- end col-full --> */}
-             </div> {/* <!-- end comments --> */}
 
 
-            <div className="row comment-respond">
 
-                {/* <!-- START respond --> */}
-                <div id="respond" className="column">
-                    <h3>Add Comment</h3>
-                    <Comment />
-                </div>
- 
 
-            </div> 
+                    <Comment  user_id={1} post_id={1} comments={comments} setState={setState}/>
 
-        </div> 
+
+        
     </section> 
   )
 }
