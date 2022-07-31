@@ -7,7 +7,8 @@ function Comment(props) {
     const [comment,setComment]=useState();
     const [newComment,setNewComment]=useState();
     const [editDis,setEditDis]=useState({
-        display:'none',
+        formDisplay:'none',
+        btnDisplay:'block',
         element:'',
     });
     const [activeComment,setActiveComment]=useState({
@@ -22,10 +23,12 @@ function Comment(props) {
         props.setState(true);
     }
     const changeComment=(id)=>{
-        axios.post('http://localhost/project9/PHP/insertComment.php?comment_id='+id+'&new_comment='+newComment);
-        console.log(id,newComment);
+        if (newComment) {  
+            axios.post('http://localhost/project9/PHP/insertComment.php?comment_id='+id+'&new_comment='+newComment);
+            console.log(id,newComment);
+        }
         setNewComment('');
-        setEditDis({display:'none',element:''});
+        setEditDis({formDisplay:'none',btnDisplay:'block',element:''});
         props.setState(true);
     }
     const handleSubmit=()=>{
@@ -79,8 +82,11 @@ function Comment(props) {
                         {filteredComment.user_id == props.user_id ? 
                         <div>
                             <button className='btn xxs' onClick={(e)=>{e.preventDefault();deleteComment(filteredComment.id)}}>Delete</button>
-                            <button className='btn xxs' onClick={(e)=>{e.preventDefault();setEditDis({display:'block',element:filteredComment.id})}} key={filteredComment.id}>edit</button>
-                            <form action="" key={filteredComment.id} style={{display: filteredComment.id === editDis.element? editDis.display : 'none'}} >
+                            <button className='btn xxs' 
+                            onClick={(e)=>{e.preventDefault();setEditDis({formDisplay:'block',btnDisplay:'none',element:filteredComment.id})}} key={filteredComment.id}
+                            style={{display: filteredComment.id === editDis.element? editDis.btnDisplay : 'block'}}
+                            >edit</button>
+                            <form action="" key={filteredComment.id} style={{display: filteredComment.id === editDis.element? editDis.formDisplay : 'none'}} >
                             <input type="text xs"
                             value={newComment}
                             onChange={(e)=>{setNewComment(e.target.value)}}
@@ -89,6 +95,8 @@ function Comment(props) {
                             key={filteredComment.id}
                             onClick={(e)=>{e.preventDefault();changeComment(filteredComment.id)}}
                             >edit comment</button>
+                            <button className='btn xxs' 
+                            onClick={(e)=>{e.preventDefault();setEditDis({display:'none',element:''})}} key={filteredComment.id}>Cancel</button>
                             </form>
                         </div>: ''}
                         
