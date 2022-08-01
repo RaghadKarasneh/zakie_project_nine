@@ -1,17 +1,26 @@
 import axios from 'axios';
-import React, { useState,useEffect } from 'react'
+import React, { useState,useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
+
 
 function Posts() {
   const[user,setUser]=useState([]);
   const [posts,setPosts]=useState([]);
 
-  const getPosts=setTimeout(()=>{
+  const navigate = useNavigate();
+  const goToReceiver = (id) => {
+    let post=posts.filter(post => post.id == id);
+    sessionStorage.setItem('post_id','');
+    sessionStorage.setItem('post_id',id);
+    navigate("/post", { state: { post_id:id, post:post }});
+  }
+  const getPosts=()=>{
     axios.get('http://localhost/project9/PHP/posts.php')
     .then((response)=>{
       setPosts(response.data)
       console.log(posts);
     })
-  },1000)
+  }
   useEffect(()=>{
     getPosts();
   },[])
@@ -25,7 +34,7 @@ function Posts() {
           <div className="card-body">
             <h5 className="card-title">{post.title}</h5>
             <p className="card-text">{post.excerpt}</p>
-            <button className="btn-primary">Read more</button>
+            <button className="btn-primary" onClick={()=>{goToReceiver(post.id)}}>Read more</button>
           </div>
         </div>
       )
