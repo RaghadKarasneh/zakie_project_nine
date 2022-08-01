@@ -31,8 +31,8 @@ function Comment(props) {
         setEditDis({formDisplay:'none',btnDisplay:'block',element:''});
         props.setState(true);
     }
-    const handleSubmit=()=>{
-        axios.post('http://localhost/project9/PHP/insertComment.php?userId='+1+'&postId='+1+'&comment='+comment);
+    const handleSubmit=(postId)=>{
+        axios.post('http://localhost/project9/PHP/insertComment.php?userId='+1+'&postId='+postId+'&comment='+comment);
         setComment('');
         props.setState(true);
     };
@@ -40,7 +40,6 @@ function Comment(props) {
 
 
   const userId=localStorage.getItem('userId');
-
 
   return (
     <>
@@ -51,14 +50,14 @@ function Comment(props) {
 <div id="comments" className="row">
     <div className="column">
 
-        <h3>{props.comments.length} Comments</h3>
+        <h3>Users Comments</h3>
 
         {/* <!-- START commentlist --> */}
         <ol className="commentlist">
-
-            {props.comments ? props.comments.filter(comment => (comment.deleted != 1)).map(filteredComment =>
+        {/* ) */}
+            {props.comments ? props.comments.filter(comment => (comment.deleted != 1 && comment.post_id === sessionStorage.getItem('post_id'))).map(filteredComment =>
                 (
-                    <li className="depth-1 comment" key={filteredComment.id}>
+                    <li className="depth-1 comment" key={filteredComment.id+1}>
 
                     <div className="comment__avatar">
                         <img className="avatar" src="images/avatars/user-01.jpg" alt="" width="50" height="50" />
@@ -83,7 +82,7 @@ function Comment(props) {
                         <div>
                             <button className='btn xxs' onClick={(e)=>{e.preventDefault();deleteComment(filteredComment.id)}}>Delete</button>
                             <button className='btn xxs' 
-                            onClick={(e)=>{e.preventDefault();setEditDis({formDisplay:'block',btnDisplay:'none',element:filteredComment.id})}} key={filteredComment.id}
+                            onClick={(e)=>{e.preventDefault();setEditDis({formDisplay:'block',btnDisplay:'none',element:filteredComment.id})}} key={filteredComment.id+4}
                             style={{display: filteredComment.id === editDis.element? editDis.btnDisplay : 'block'}}
                             >edit</button>
                             <form action="" key={filteredComment.id} style={{display: filteredComment.id === editDis.element? editDis.formDisplay : 'none'}} >
@@ -92,11 +91,11 @@ function Comment(props) {
                             onChange={(e)=>{setNewComment(e.target.value)}}
                             />
                             <button className='btn xxs ' 
-                            key={filteredComment.id}
+                            key={filteredComment.id+2}
                             onClick={(e)=>{e.preventDefault();changeComment(filteredComment.id)}}
                             >edit comment</button>
                             <button className='btn xxs' 
-                            onClick={(e)=>{e.preventDefault();setEditDis({display:'none',element:''})}} key={filteredComment.id}>Cancel</button>
+                            onClick={(e)=>{e.preventDefault();setEditDis({display:'none',element:''})}} key={filteredComment.id+3}>Cancel</button>
                             </form>
                         </div>: ''}
                         
@@ -124,7 +123,7 @@ function Comment(props) {
             <label htmlFor="comment">Comment</label>
         </div>
 
-        <input name="submit" id="submit" className="btn btn--primary btn-wide btn--large h-full-width" value="Add Comment" type="submit" onClick={(e)=>{e.preventDefault();handleSubmit()}} />
+        <input name="submit" id="submit" className="btn btn--primary btn-wide btn--large h-full-width" value="Add Comment" type="submit" onClick={(e)=>{e.preventDefault();handleSubmit(sessionStorage.getItem('post_id'))}} />
 
     </form> 
     </div>

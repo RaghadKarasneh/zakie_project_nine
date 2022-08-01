@@ -25,7 +25,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/post' element={<Post />}>Post Page</Route>
-          {/* <Route path='/posts' element={<Posts />}>Post Page</Route> */}
+          <Route path='/posts' element={<Posts />}>Post Page</Route>
           <Route path='/' element={<Home />}>Landing page</Route>
           <Route path='/Home' element={<Home />} />
           <Route path="/log" element={<Login />}/>
