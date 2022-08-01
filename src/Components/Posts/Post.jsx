@@ -1,38 +1,42 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Comment from './Comments/Comment';
+import { useLocation } from "react-router-dom";
+
 
 function Post() {
 
     const [comments,setComments]=useState([]);
     const[user,setUser]=useState([]);
     const [posts,setPosts]=useState([]);
-    const [post,setPost]=useState([]);
+    const [post,setPost]=useState();
     const [state,setState]=useState(false);
-
+    const location = useLocation();
 
 
 
 
 
     const CommentData=() => {
-        axios.get('http://localhost/project9/PHP/comments.php')
+        setPost(sessionStorage.getItem('post_id'));
+        console.log('post ID :',sessionStorage.getItem('post_id'));
+        axios.get('http://localhost/project9/PHP/comments.php',{ post_id: sessionStorage.getItem('post_id')}
+          )
         .then((response)=>{
-        setComments(response.data)
-        console.log(comments);
-    })};
-
-    useEffect(()=>{
-        CommentData();
+            setComments(response.data)
+            console.log(comments);
+        })};
+        
+        useEffect(()=>{
+        const comment=setTimeout(()=>{CommentData()},1000);
         setState(false);
-  
         // const postData=setTimeout(()=>{axios.get('')
         // .then((response)=>{
         //     setPost(response.data)
         //     console.log(post);
         // })},
         // postData();
-    },[state])
+    },[state,post])
 
 
 
@@ -116,8 +120,8 @@ function Post() {
 
 
 
-                    <Comment  user_id={1} post_id={1} comments={comments} setState={setState}/>
-
+                    <Comment  comments={comments} user_id={1} setState={setState} />
+ 
 
         
     </section> 

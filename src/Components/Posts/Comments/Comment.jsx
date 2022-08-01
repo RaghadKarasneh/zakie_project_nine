@@ -41,7 +41,6 @@ function Comment(props) {
 
   const userId=localStorage.getItem('userId');
 
-
   return (
     <>
             {/* <!-- comments
@@ -56,9 +55,9 @@ function Comment(props) {
         {/* <!-- START commentlist --> */}
         <ol className="commentlist">
 
-            {props.comments ? props.comments.filter(comment => (comment.deleted != 1)).map(filteredComment =>
+            {props.comments ? props.comments.filter(comment => (comment.deleted != 1 && comment.post_id)).map(filteredComment =>
                 (
-                    <li className="depth-1 comment" key={filteredComment.id}>
+                    <li className="depth-1 comment" key={filteredComment.id+1}>
 
                     <div className="comment__avatar">
                         <img className="avatar" src="images/avatars/user-01.jpg" alt="" width="50" height="50" />
@@ -83,7 +82,7 @@ function Comment(props) {
                         <div>
                             <button className='btn xxs' onClick={(e)=>{e.preventDefault();deleteComment(filteredComment.id)}}>Delete</button>
                             <button className='btn xxs' 
-                            onClick={(e)=>{e.preventDefault();setEditDis({formDisplay:'block',btnDisplay:'none',element:filteredComment.id})}} key={filteredComment.id}
+                            onClick={(e)=>{e.preventDefault();setEditDis({formDisplay:'block',btnDisplay:'none',element:filteredComment.id})}} key={filteredComment.id+4}
                             style={{display: filteredComment.id === editDis.element? editDis.btnDisplay : 'block'}}
                             >edit</button>
                             <form action="" key={filteredComment.id} style={{display: filteredComment.id === editDis.element? editDis.formDisplay : 'none'}} >
@@ -92,11 +91,11 @@ function Comment(props) {
                             onChange={(e)=>{setNewComment(e.target.value)}}
                             />
                             <button className='btn xxs ' 
-                            key={filteredComment.id}
+                            key={filteredComment.id+2}
                             onClick={(e)=>{e.preventDefault();changeComment(filteredComment.id)}}
                             >edit comment</button>
                             <button className='btn xxs' 
-                            onClick={(e)=>{e.preventDefault();setEditDis({display:'none',element:''})}} key={filteredComment.id}>Cancel</button>
+                            onClick={(e)=>{e.preventDefault();setEditDis({display:'none',element:''})}} key={filteredComment.id+3}>Cancel</button>
                             </form>
                         </div>: ''}
                         
