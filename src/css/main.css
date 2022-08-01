@@ -752,6 +752,7 @@ section {
   font-weight: 700;
   font-size: 34px;
   margin-bottom: 30px;
+  color: #fff;
 }
 
 .why-us .why-box p {
@@ -1037,7 +1038,7 @@ section {
   background-color: #d1d1d7;
   opacity: 1;
   border-radius: 50%;
- 
+
 }
 .testimonials .slide .carousel-indicators{
   margin-bottom: 40px;
@@ -1500,15 +1501,18 @@ section {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
+  color: #000;
 }
 
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
-  border-color: var(--color-primary);
+  border-color: #ce1212;
 }
 
 .contact .php-email-form input {
   height: 48px;
+  border:1px solid #adb5bd;
+  background-color: white;
 }
 
 .contact .php-email-form textarea {

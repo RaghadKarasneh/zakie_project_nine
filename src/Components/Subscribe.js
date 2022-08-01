@@ -15,7 +15,7 @@ function Subscribe() {
     const setMessageHandle=(e)=>{setMessage(e.target.value)}
 
     const clickHandle=()=>{
-        axios.post('http://localhost/zakie_project_nine/PHP/userInfo.php?city='+city+'&address='+address+'&zip_code='+zip_code+'&phone_number='+phone_number+'&message'+message).then((data)=>{
+        axios.post('http://localhost/zakie_project_nine/PHP/userInfo.php?city='+city+'&address='+address+'&zip_code='+zip_code+'&phone_number='+phone_number+'&message'+message+'&id='+sessionStorage.getItem('user_id')+'&gender='+sessionStorage.getItem('gender')+'&weight='+sessionStorage.getItem('weight')+'&age='+sessionStorage.getItem('age')).then((data)=>{
             console.log("success!");
         }).ctach((error)=>{
             console.error(error);

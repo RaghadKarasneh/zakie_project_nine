@@ -215,7 +215,7 @@ class Home extends Component {
                   </div>
               <Carousel>
       <Carousel.Item>
-        
+      
         <div className="row gy-4 justify-content-center">
                             <div className="col-lg-6">
                               <div className="testimonial-content">
@@ -318,9 +318,7 @@ class Home extends Component {
                               <div className="testimonial-content">
                                 <p>
                                   <i className="bi bi-quote quote-icon-left" />
-                                  
                         Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                        
                                   <i className="bi bi-quote quote-icon-right" />
                                 </p>
                                 <h3>John Larson</h3>
@@ -682,7 +680,9 @@ class Home extends Component {
                   </div>
                   <div className="gallery-slider swiper">
                     <div className="swiper-wrapper align-items-center">
-                      <div className="swiper-slide">
+                    <Carousel>
+                   <Carousel.Item>
+                      {/* <div className="swiper-slide"> */}
                         <a
                           className="glightbox"
                           data-gallery="images-gallery"
@@ -694,8 +694,10 @@ class Home extends Component {
                             alt=""
                           />
                         </a>
-                      </div>
-                      <div className="swiper-slide">
+                      {/* </div> */}
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      {/* <div className="swiper-slide"> */}
                         <a
                           className="glightbox"
                           data-gallery="images-gallery"
@@ -707,8 +709,10 @@ class Home extends Component {
                             alt=""
                           />
                         </a>
-                      </div>
-                      <div className="swiper-slide">
+                      {/* </div> */}
+                      </Carousel.Item>
+                      <Carousel.Item>
+                      {/* <div className="swiper-slide"> */}
                         <a
                           className="glightbox"
                           data-gallery="images-gallery"
@@ -720,8 +724,10 @@ class Home extends Component {
                             alt=""
                           />
                         </a>
-                      </div>
-                      <div className="swiper-slide">
+                      {/* </div> */}
+                     </Carousel.Item>
+                     <Carousel.Item>
+                      {/* <div className="swiper-slide"> */}
                         <a
                           className="glightbox"
                           data-gallery="images-gallery"
@@ -733,8 +739,10 @@ class Home extends Component {
                             alt=""
                           />
                         </a>
-                      </div>
-                      <div className="swiper-slide">
+                      {/* </div> */}
+                      </Carousel.Item>
+                      <Carousel.Item>
+                      {/* <div className="swiper-slide"> */}
                         <a
                           className="glightbox"
                           data-gallery="images-gallery"
@@ -746,8 +754,10 @@ class Home extends Component {
                             alt=""
                           />
                         </a>
-                      </div>
-                      <div className="swiper-slide">
+                      {/* </div> */}
+                      </Carousel.Item>
+                      <Carousel.Item>
+                      {/* <div className="swiper-slide"> */}
                         <a
                           className="glightbox"
                           data-gallery="images-gallery"
@@ -759,8 +769,10 @@ class Home extends Component {
                             alt=""
                           />
                         </a>
-                      </div>
-                      <div className="swiper-slide">
+                      {/* </div> */}
+                      </Carousel.Item>
+                      <Carousel.Item>
+                      {/* <div className="swiper-slide"> */}
                         <a
                           className="glightbox"
                           data-gallery="images-gallery"
@@ -772,8 +784,10 @@ class Home extends Component {
                             alt=""
                           />
                         </a>
-                      </div>
-                      <div className="swiper-slide">
+                      {/* </div> */}
+                      </Carousel.Item>
+                      <Carousel.Item>
+                      {/* <div className="swiper-slide"> */}
                         <a
                           className="glightbox"
                           data-gallery="images-gallery"
@@ -785,7 +799,9 @@ class Home extends Component {
                             alt=""
                           />
                         </a>
-                      </div>
+                      {/* </div> */}
+                      </Carousel.Item>
+                      </Carousel>
                     </div>
                     <div className="swiper-pagination" />
                   </div>

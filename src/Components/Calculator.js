@@ -116,12 +116,12 @@ class Calculator extends Component {
   }
   handlePlan(){
     if(this.state.pal,this.state.heightFeet,this.state.heightInches,this.state.age,this.state.weight,this.state.gender != ''){
-    sessionStorage.setItem('gender', this.gender);
-    sessionStorage.setItem('weight', this.weight);
-    sessionStorage.setItem('age', this.age);
-    sessionStorage.setItem('heightFeet', this.heightFeet);
-    sessionStorage.setItem('heightInches', this.heightInches);
-    sessionStorage.setItem('pal', this.pal);
+    sessionStorage.setItem('gender', this.state.gender);
+    sessionStorage.setItem('weight', this.state.weight);
+    sessionStorage.setItem('age', this.state.age);
+    sessionStorage.setItem('heightFeet', this.state.heightFeet);
+    sessionStorage.setItem('heightInches', this.state.heightInches);
+    sessionStorage.setItem('pal', this.state.pal);
     window.location='./Pricing';}
     else{
       this.setState({errorDis:'block'})
