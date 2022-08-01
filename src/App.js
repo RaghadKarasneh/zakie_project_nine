@@ -12,6 +12,7 @@ import Header from './Components/Header';
 import Calculator from './Components/Calculator';
 import Pricing from './Components/Pricing';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Subscribe from './Components/Subscribe';
 function App() {
   return (      
     <> 
@@ -30,6 +31,7 @@ function App() {
           <Route path='/Contact' element={<Contact />} />
           <Route path='/Pricing' element={<Pricing />} />
           <Route path='/Calculator' element={<Calculator />} />
+          <Route path='/Subscribe' element={<Subscribe />} />
           {/* <Route path='/MyAccount' element={<UserPro />} /> */}
         </Routes>
       </BrowserRouter>
