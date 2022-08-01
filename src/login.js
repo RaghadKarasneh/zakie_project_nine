@@ -18,10 +18,10 @@ function Login(){
     <div className=" d-flex justify-content-center align-items-center h-100">
       <div className="col-md-9 col-lg-6 col-xl-5">
         <img
-          src="https://cdn.discordapp.com/attachments/944998982449528843/1001493263649345606/Login-amico.png"
+          src="https://images.pexels.com/photos/1435894/pexels-photo-1435894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           className="img-fluid"
           alt="Sample image"
-          style={{height: '750px'}}
+          style={{height: '400px'}}
         />
 
       </div>
@@ -29,11 +29,11 @@ function Login(){
         <form onSubmit={(e)=>Fun(e)}>
          
           <div className="divider d-flex align-items-center my-4">
-            <h1 className="text-center fw-bold mx-3 mb-0" style={{color:'#7A4495'}}>Login</h1>
+            <h1 className="text-center fw-bold mx-3 mb-0" style={{color:'#FF4141'}}>Login</h1>
           </div>
           {/* Email input */}
           <div className="form-outline mb-4">
-          <label className="form-label" htmlFor="form3Example3"  style={{color:'#937DC2'}}>
+          <label className="form-label" htmlFor="form3Example3"  style={{color:'#000000'}}>
               Email address
             </label>
             <input
@@ -46,7 +46,7 @@ function Login(){
           </div>
           {/* Password input */}
           <div className="form-outline mb-3">
-          <label className="form-label" htmlFor="form3Example4"  style={{color:'#937DC2'}}>
+          <label className="form-label" htmlFor="form3Example4"  style={{color:'#000000'}}>
               Password
             </label>
             <input
@@ -57,23 +57,7 @@ function Login(){
               onChange={(e)=>dispatch(password(e.target.value))}
             /> 
           </div>
-          <div className="d-flex justify-content-between align-items-center">
-            {/* Checkbox */}
-            <div className="form-check mb-0">
-              <input
-                className="form-check-input me-2"
-                type="checkbox"
-                defaultValue=""
-                id="form2Example3"
-              />
-              <label className="form-check-label" htmlFor="form2Example3" style={{color:'#7A86B6'}}>
-                Remember me
-              </label>
-            </div>
-            <a href="#!" className="text-body" style={{color:'#7A86B6'}}>
-              Forgot password?
-            </a>
-          </div>
+          
           <div className="text-center text-lg-start mt-4 pt-2">
             <input
             defaultValue="Login"
@@ -82,9 +66,9 @@ function Login(){
               style={{ paddingLeft: "2.5rem", paddingRight: "2.5rem" }}
             />
             
-            <p className="small fw-bold mt-2 pt-1 mb-0" style={{color:'#7A4495'}}>
+            <p className="small fw-bold mt-2 pt-1 mb-0" style={{color:'#000000'}}>
               Don't have an account?{" "}
-              <a href="../reg" className="link " style={{color:'#7A86B6'}}>
+              <a href="../reg" className="link " style={{color:'#FF3B0B'}}>
                 Register
               </a>
             </p>

@@ -26,7 +26,7 @@ const loginReducer=(state={error:''},action)=>{
 
                 console.log(user_info);
                 if(user_info != ''){
-                    window.location.href = "/user";
+                    window.location.href = "/";
                 }
                 return {...state, error: 'Username/ email or password is invalid'}
             
