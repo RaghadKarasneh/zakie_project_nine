@@ -31,8 +31,8 @@ function Comment(props) {
         setEditDis({formDisplay:'none',btnDisplay:'block',element:''});
         props.setState(true);
     }
-    const handleSubmit=()=>{
-        axios.post('http://localhost/project9/PHP/insertComment.php?userId='+1+'&postId='+1+'&comment='+comment);
+    const handleSubmit=(postId)=>{
+        axios.post('http://localhost/project9/PHP/insertComment.php?userId='+1+'&postId='+postId+'&comment='+comment);
         setComment('');
         props.setState(true);
     };
@@ -123,7 +123,7 @@ function Comment(props) {
             <label htmlFor="comment">Comment</label>
         </div>
 
-        <input name="submit" id="submit" className="btn btn--primary btn-wide btn--large h-full-width" value="Add Comment" type="submit" onClick={(e)=>{e.preventDefault();handleSubmit()}} />
+        <input name="submit" id="submit" className="btn btn--primary btn-wide btn--large h-full-width" value="Add Comment" type="submit" onClick={(e)=>{e.preventDefault();handleSubmit(sessionStorage.getItem('post_id'))}} />
 
     </form> 
     </div>
