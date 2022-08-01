@@ -38,7 +38,7 @@ function Posts() {
   }
   useEffect(()=>{
     getPosts();
-    console.log(typeof(title),typeof(context));
+    console.log(typeof(title),typeof(context),user_id);
   },[title,context])
 
   return (
