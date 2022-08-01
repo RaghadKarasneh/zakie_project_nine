@@ -6,11 +6,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Post from './Components/Posts/Post';
 import Contact from './Components/Contact';
 import About from './Components/About';
-import { UilUser } from '@iconscout/react-unicons';
-import Footer from './Components/Footer';
-import Header from './Components/Header';
-import Posts from './Components/Posts/Posts';
 
+import Footer from './Components/Footer';
+import Posts from './Components/Posts/Posts';
 import Header from './Components/Header';
 import Calculator from './Components/Calculator';
 import Pricing from './Components/Pricing';
