@@ -50,12 +50,12 @@ function Comment(props) {
 <div id="comments" className="row">
     <div className="column">
 
-        <h3>{props.comments.length} Comments</h3>
+        <h3>Users Comments</h3>
 
         {/* <!-- START commentlist --> */}
         <ol className="commentlist">
-
-            {props.comments ? props.comments.filter(comment => (comment.deleted != 1 && comment.post_id)).map(filteredComment =>
+        {/* ) */}
+            {props.comments ? props.comments.filter(comment => (comment.deleted != 1 && comment.post_id === sessionStorage.getItem('post_id'))).map(filteredComment =>
                 (
                     <li className="depth-1 comment" key={filteredComment.id+1}>
 

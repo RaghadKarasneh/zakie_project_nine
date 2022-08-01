@@ -9,8 +9,10 @@ function Posts() {
 
   const navigate = useNavigate();
   const goToReceiver = (id) => {
-    sessionStorage.setItem('post_id',id)
-    navigate("/post", { state: { post_id:id }});
+    let post=posts.filter(post => post.id == id);
+    sessionStorage.setItem('post_id','');
+    sessionStorage.setItem('post_id',id);
+    navigate("/post", { state: { post_id:id, post:post }});
   }
   const getPosts=()=>{
     axios.get('http://localhost/project9/PHP/posts.php')
