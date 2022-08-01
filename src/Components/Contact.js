@@ -1,16 +1,55 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react'
+import emailjs from 'emailjs-com'
+import { init } from 'emailjs-com';
 import '../css/main.css';
 import { UilPhone } from '@iconscout/react-unicons';
 import { UilEnvelope } from '@iconscout/react-unicons';
 import { UilMap } from '@iconscout/react-unicons';
 import { UilShareAlt } from '@iconscout/react-unicons'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-class Contact extends Component {
-    state = {  } 
-    render() { 
-        return (
-        <>
+init('user_id');
 
+const Contact = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [subject, setSubject] = useState('');
+  const [emailSent, setEmailSent] = useState(false);
+
+  const submit = (e) => {
+    if (name && email && message) {
+        const serviceId = 'service_2qdh9jb';
+        const templateId = 'template_iw0edxr';
+        const userId = 'FygekewmDWaC0As1M';
+        const templateParams = {
+            name,
+            email,
+            subject,
+            message
+        };
+        e.preventDefault();
+        emailjs.send(serviceId, templateId, templateParams, userId)
+        .then(response => console.log(response))
+        .then(error => console.log(error));
+        setName('');
+        setEmail('');
+        document.getElementById("alert").style.display = "block";
+        e.target.reset();
+        // const isValidEmail = email => {
+        //   const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        //   return regex.test(String(email).toLowerCase());};
+        setSubject('');
+        setMessage('');
+        setEmailSent(true);
+    } else {
+        <div className="alert">
+        <h4 className="text mb-0">{alert}</h4>
+        <h4 className="text mb-0">pleaese fill all the fields</h4>
+      </div>
+    }
+}
+  return (
+<>
   {/* ======= Contact Section ======= */}
   <section id="contact" className="contact mt-5">
                 <div className="container" data-aos="fade-up">
@@ -27,6 +66,14 @@ class Contact extends Component {
                       frameBorder={0}
                       allowFullScreen=""
                     />
+
+             {/* <iframe height={400}width={1100}
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d27764.911935385284!2d35.01916159171958!3d29.556733703948556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sjo!4v1657047509224!5m2!1sen!2sjo"
+              frameBorder={0}
+              style={{ border: 0 }}
+              allowFullScreen=""
+              aria-hidden="false"
+             tabIndex={0} /> */}
                   </div>
                   {/* End Google Maps */}
                   <div className="row gy-4">
@@ -45,7 +92,7 @@ class Contact extends Component {
                         <UilEnvelope className="icon" />
                         <div>
                           <h3>Email Us</h3>
-                          <p>contact@example.com</p>
+                          <p>Zakie@gmail.com</p>
                         </div>
                       </div>
                     </div>
@@ -74,72 +121,34 @@ class Contact extends Component {
                     </div>
                     {/* End Info Item */}
                   </div>
-                  <form
-                    action="forms/contact.php"
-                    method="post"
-                    role="form"
-                    className="php-email-form p-3 p-md-4"
-                  >
+
+
+                  <div role="form" className="php-email-form p-3 p-md-4">
                     <div className="row">
                       <div className="col-xl-6 form-group">
-                        <input
-                          type="text"
-                          name="name"
-                          className="form-control"
-                          id="name"
-                          placeholder="Your Name"
-                          required=""
-                        />
+                        <input type="text" name="name" className="form-control" id="name" placeholder="Your Name" required="" value={name} onChange={e => setName(e.target.value)} />
                       </div>
                       <div className="col-xl-6 form-group">
-                        <input
-                          type="email"
-                          className="form-control"
-                          name="email"
-                          id="email"
-                          placeholder="Your Email"
-                          required=""
+                        <input type="email" className="form-control" name="email" id="email" placeholder="Your Email" required="" value={email} onChange={e => setEmail(e.target.value)}
                         />
                       </div>
                     </div>
                     <div className="form-group">
-                      <input
-                        type="text"
-                        className="form-control"
-                        name="subject"
-                        id="subject"
-                        placeholder="Subject"
-                        required=""
-                      />
+                      <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject" required="" value={subject} onChange={e => setSubject(e.target.value)}/>
                     </div>
                     <div className="form-group">
-                      <textarea
-                        className="form-control"
-                        name="message"
-                        rows={5}
-                        placeholder="Message"
-                        required=""
-                        defaultValue={""}
-                      />
-                    </div>
-                    <div className="my-3">
-                      <div className="loading">Loading</div>
-                      <div className="error-message" />
-                      <div className="sent-message">
-                        Your message has been sent. Thank you!
-                      </div>
+                      <textarea className="form-control" name="message" rows={5} placeholder="Message" required="" defaultValue={""} value={message} onChange={e => setMessage(e.target.value)} />
                     </div>
                     <div className="text-center">
-                      <button type="submit">Send Message</button>
+                      <button onClick={submit}>Send Message</button>
+                      <span className={emailSent ? 'visible' : null}>Thank you for your message, we will be in touch in no time!</span>
                     </div>
-                  </form>
+                  </div>
                   {/*End Contact Form */}
                 </div>
               </section>
               {/* End Contact Section */}
 </>
-)
-}
-}
-
+);
+};
 export default Contact;
