@@ -17,22 +17,27 @@ const loginReducer=(state={error:''},action)=>{
             }
             break;
         case "LOGIN":
-                const loadInfo = async () => {
-                    const res = await axios.get('http://localhost/project9-1/PHP/login.php?email='+state.emailORUsername+'&password='+state.password);
+                // const loadInfo = async () => {
+                //     const res = await 
+                    axios.get('http://localhost/zakie_project_nine/PHP/login.php?email='+state.emailORUsername+'&password='+state.password)
+                    .then((res)=>{
                     sessionStorage.clear()
-                sessionStorage.setItem("user_info", res.data);
-                console.log(res.data);
-                let user_info= sessionStorage.getItem("user_info");
+                    sessionStorage.setItem("user_info", res.data);
+                    sessionStorage.setItem("user_id", res.data.id);
+                    console.log(res.data);
+                    let user_info= sessionStorage.getItem("user_info");
 
-                console.log(user_info);
-                if(user_info != ''){
-                    window.location.href = "/";
-                }
-                return {...state, error: 'Username/ email or password is invalid'}
+                    console.log(user_info);
+                
+                    if(user_info != ''){
+                        window.location.href = "/";
+                    }
+                    return {...state, error: 'Username/ email or password is invalid'}
+                });
             
   
-            };
-            loadInfo();
+            // };
+            // loadInfo();
             
             
         default:

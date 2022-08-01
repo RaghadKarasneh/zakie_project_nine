@@ -16,6 +16,7 @@ import Signup from "./signup";
 import Login from "./login";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Subscribe from './Components/Subscribe';
 import Menu from './Components/Menu';
 function App() {
   return (      
@@ -37,6 +38,7 @@ function App() {
           <Route path='/Contact' element={<Contact />} />
           <Route path='/Pricing' element={<Pricing />} />
           <Route path='/Calculator' element={<Calculator />} />
+          <Route path='/Subscribe' element={<Subscribe />} />
           {/* <Route path='/MyAccount' element={<UserPro />} /> */}
         </Routes>
       </BrowserRouter>
