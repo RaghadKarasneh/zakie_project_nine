@@ -78,6 +78,12 @@ function Header() {
           <li>
             <a href="/Contact">Contact us</a>
           </li>
+          <li className='offset-1'>
+            <a href="/login">login</a>
+          </li>
+          <li>
+            <a href="/signup">signup</a>
+          </li>
           <li>
             <Link to="/profile">
             <a href="/profile"> <UilUser/></a>

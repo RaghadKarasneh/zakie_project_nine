@@ -29,9 +29,9 @@ class Footer extends Component {
                     <div>
                       <h4>Reservations</h4>
                       <p>
-                        <strong>Phone:</strong> +1 5589 55488 55
+                        <strong style={{ color:'white'}}>Phone:</strong> +1 5589 55488 55
                         <br />
-                        <strong>Email:</strong> Zakie@gmail.com
+                        <strong style={{ color:'white'}}>Email:</strong> Zakie@gmail.com
                         <br />
                       </p>
                     </div>
@@ -41,7 +41,7 @@ class Footer extends Component {
                     <div>
                       <h4>Opening Hours</h4>
                       <p>
-                        <strong>Mon-Sat: 11AM</strong> - 23PM
+                        <strong style={{ color:'white'}}>Mon-Sat: 11AM</strong> - 23PM
                         <br />
                         Sunday: Closed
                       </p>
@@ -69,7 +69,7 @@ class Footer extends Component {
               <div className="container">
                 <div className="copyright">
                   © Copyright{" "}
-                  <strong>
+                  <strong style={{ color:'white'}}>
                     <span>Zakie</span>
                   </strong>
                   . All Rights Reserved

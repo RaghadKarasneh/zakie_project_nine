@@ -35,9 +35,9 @@ const Contact = () => {
         setEmail('');
         document.getElementById("alert").style.display = "block";
         e.target.reset();
-        // const isValidEmail = email => {
-        //   const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        //   return regex.test(String(email).toLowerCase());};
+        const isValidEmail = email => {
+          const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          return regex.test(String(email).toLowerCase());};
         setSubject('');
         setMessage('');
         setEmailSent(true);
@@ -123,18 +123,18 @@ const Contact = () => {
                   </div>
 
 
-                  <div role="form" className="php-email-form p-3 p-md-4">
+                  <form role="form" className="php-email-form p-3 p-md-4">
                     <div className="row">
                       <div className="col-xl-6 form-group">
-                        <input type="text" name="name" className="form-control" id="name" placeholder="Your Name" required="" value={name} onChange={e => setName(e.target.value)} />
+                        <input type="text" name="name" className="form-control" id="name" placeholder="Your Name" required value={name} onChange={e => setName(e.target.value)} />
                       </div>
                       <div className="col-xl-6 form-group">
-                        <input type="email" className="form-control" name="email" id="email" placeholder="Your Email" required="" value={email} onChange={e => setEmail(e.target.value)}
+                        <input type="email" pattern="[^@\s]+@[^@\s]+" className="form-control" name="email" id="email" placeholder="Your Email" required value={email} onChange={e => setEmail(e.target.value)}
                         />
                       </div>
                     </div>
                     <div className="form-group">
-                      <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject" required="" value={subject} onChange={e => setSubject(e.target.value)}/>
+                      <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject" required value={subject} onChange={e => setSubject(e.target.value)}/>
                     </div>
                     <div className="form-group">
                       <textarea className="form-control" name="message" rows={5} placeholder="Message" required="" defaultValue={""} value={message} onChange={e => setMessage(e.target.value)} />
@@ -143,7 +143,7 @@ const Contact = () => {
                       <button onClick={submit}>Send Message</button>
                       <span className={emailSent ? 'visible' : null}>Thank you for your message, we will be in touch in no time!</span>
                     </div>
-                  </div>
+                  </form>
                   {/*End Contact Form */}
                 </div>
               </section>
