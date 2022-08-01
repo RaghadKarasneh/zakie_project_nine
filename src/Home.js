@@ -6,6 +6,7 @@ import { UilClipboardAlt } from '@iconscout/react-unicons'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Menu from './Components/Menu';
 import { UilStar } from '@iconscout/react-unicons';
+import { UilPlayCircle } from '@iconscout/react-unicons';
 class Home extends Component {
     state = {  } 
     render() { 
@@ -58,7 +59,7 @@ class Home extends Component {
                         href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
                         className="glightbox btn-watch-video d-flex align-items-center" target={'_blank'}
                       >
-                        <i className="bi bi-play-circle" />
+                        <UilPlayCircle style={{color:'#ce1212' ,fontSize:'100px'}} />
                         <span>Watch Video</span>
                       </a>
                     </div>
