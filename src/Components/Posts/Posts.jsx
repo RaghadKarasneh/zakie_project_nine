@@ -6,6 +6,11 @@ import { useNavigate } from "react-router-dom";
 function Posts() {
   const[user,setUser]=useState([]);
   const [posts,setPosts]=useState([]);
+  const[title,setTitle]=useState('');
+  const[context,setContext]=useState('');
+  const[btnDis,setBtnDis]=useState('block');
+  const[formDis,setFormDis]=useState('none');
+  const user_id=sessionStorage.getItem('user_id');
 
   const navigate = useNavigate();
   const goToReceiver = (id) => {
@@ -13,17 +18,28 @@ function Posts() {
     sessionStorage.setItem('post_id','');
     sessionStorage.setItem('post_id',id);
     navigate("/post", { state: { post_id:id, post:post }});
-  }
+  };
   const getPosts=()=>{
     axios.get('http://localhost/project9/PHP/posts.php')
     .then((response)=>{
       setPosts(response.data)
       console.log(posts);
     })
+  };
+  const submitPost=(e)=>{
+    e.preventDefault();
+    axios.post('http://localhost/project9/PHP/insertPost.php?userId='+user_id+'&title='+title+'&body='+context)
+    .then(()=>{
+      console.log('Success');
+    })
+    .catch((error)=>{
+      console.log('error happened: ',error);
+    })
   }
   useEffect(()=>{
     getPosts();
-  },[])
+    console.log(typeof(title),typeof(context),user_id);
+  },[title,context])
 
   return (
     <>
@@ -39,6 +55,17 @@ function Posts() {
         </div>
       )
     })}
+    <button className="btn-primary" style={{display: btnDis}} onClick={()=>{setFormDis('block');setBtnDis('none')}}>Insert post</button>
+    <form action="" style={{display: formDis}}>
+      <label htmlFor="title">Title</label>
+      <input type="text" id='title' onChange={(e)=>{setTitle(e.target.value)}}/>
+      <label htmlFor="body">Context</label>
+      <input type="text" id='body' onChange={(e)=>{setContext(e.target.value)}}/>
+      <button className="btn"  onClick={(e)=>submitPost(e)}>Submit post</button>
+      <button className="btn" onClick={()=>{setFormDis('none');setBtnDis('block')}}>Cancel</button>
+      <br /><br /><br /><br /><br />
+    </form>
+
     </>
   )
 }
