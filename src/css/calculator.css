@@ -65,12 +65,15 @@ h2 {
 input[type="text"],
 input[type="number"] {
   padding: 8px 7px;
-  width: 160px;
+  width: 100%;
   margin-right: 10px;
-
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
   border-radius: 20px;
+}
+input[type="text"],
+input[type="number"] .focus{
+  background-color: white;
 }
 input[type="text"] {
   width: 100%;

@@ -63,17 +63,7 @@ const Contact = () => {
                     <iframe
                       style={{ border: 0, width: "100%", height: 350 }}
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13538.235891285094!2d35.889223332120636!3d31.972859349554362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca06b4f0fa949%3A0x767658b1f5642bb5!2sAsh%20Shumaysani%2C%20Amman!5e0!3m2!1sen!2sjo!4v1659106202567!5m2!1sen!2sjo"
-                      frameBorder={0}
-                      allowFullScreen=""
-                    />
-
-             {/* <iframe height={400}width={1100}
-              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d27764.911935385284!2d35.01916159171958!3d29.556733703948556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sjo!4v1657047509224!5m2!1sen!2sjo"
-              frameBorder={0}
-              style={{ border: 0 }}
-              allowFullScreen=""
-              aria-hidden="false"
-             tabIndex={0} /> */}
+                      frameBorder={0} allowFullScreen="" />
                   </div>
                   {/* End Google Maps */}
                   <div className="row gy-4">
@@ -123,18 +113,18 @@ const Contact = () => {
                   </div>
 
 
-                  <div role="form" className="php-email-form p-3 p-md-4">
+                  <form role="form" className="php-email-form p-3 p-md-4">
                     <div className="row">
                       <div className="col-xl-6 form-group">
-                        <input type="text" name="name" className="form-control" id="name" placeholder="Your Name" required="" value={name} onChange={e => setName(e.target.value)} />
+                        <input type="text" name="name" className="form-control" id="name" placeholder="Your Name" required value={name} onChange={e => setName(e.target.value)} />
                       </div>
                       <div className="col-xl-6 form-group">
-                        <input type="email" className="form-control" name="email" id="email" placeholder="Your Email" required="" value={email} onChange={e => setEmail(e.target.value)}
+                        <input type="email" pattern="[^@\s]+@[^@\s]+" className="form-control" name="email" id="email" placeholder="Your Email" required value={email} onChange={e => setEmail(e.target.value)}
                         />
                       </div>
                     </div>
                     <div className="form-group">
-                      <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject" required="" value={subject} onChange={e => setSubject(e.target.value)}/>
+                      <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject" required value={subject} onChange={e => setSubject(e.target.value)}/>
                     </div>
                     <div className="form-group">
                       <textarea className="form-control" name="message" rows={5} placeholder="Message" required="" defaultValue={""} value={message} onChange={e => setMessage(e.target.value)} />
@@ -143,7 +133,7 @@ const Contact = () => {
                       <button onClick={submit}>Send Message</button>
                       <span className={emailSent ? 'visible' : null}>Thank you for your message, we will be in touch in no time!</span>
                     </div>
-                  </div>
+                  </form>
                   {/*End Contact Form */}
                 </div>
               </section>

@@ -4,7 +4,9 @@ import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { UilClipboardAlt } from '@iconscout/react-unicons'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Menu from './Components/Menu'
+import Menu from './Components/Menu';
+import { UilStar } from '@iconscout/react-unicons';
+import { UilPlayCircle } from '@iconscout/react-unicons';
 class Home extends Component {
     state = {  } 
     render() { 
@@ -36,12 +38,6 @@ class Home extends Component {
             {/* Template Main CSS File */}
             <link href="./css/main.css" rel="stylesheet" />
             
-            {/* =======================================================
-            * Template Name: Yummy - v1.1.0
-            * Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
-            * Author: BootstrapMade.com
-            * License: https://bootstrapmade.com/license/
-            ======================================================== */}
             {/* ======= Hero Section ======= */}
             <section id="hero" className="hero d-flex align-items-center section-bg">
               <div className="container">
@@ -53,18 +49,17 @@ class Home extends Component {
                       Delicious Food
                     </h2>
                     <p data-aos="fade-up" data-aos-delay={100}>
-                      Sed autem laudantium dolores. Voluptatem itaque ea consequatur
-                      eveniet. Eum quas beatae cumque eum quaerat.
+                    Healthy plans. Highest quality ingredients. Affordable prices.
                     </p>
                     <div className="d-flex" data-aos="fade-up" data-aos-delay={200}>
-                      <a href="#book-a-table" className="btn-book-a-table">
-                        Book a Table
+                      <a href="/Pricing" className="btn-book-a-table">
+                        Book a Plan
                       </a>
                       <a
                         href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
                         className="glightbox btn-watch-video d-flex align-items-center" target={'_blank'}
                       >
-                        <i className="bi bi-play-circle" />
+                        <UilPlayCircle style={{color:'#ce1212' ,fontSize:'100px'}} />
                         <span>Watch Video</span>
                       </a>
                     </div>
@@ -89,16 +84,12 @@ class Home extends Component {
                   <div className="row gy-4">
                     <div className="col-lg-4" data-aos="fade-up" data-aos-delay={100}>
                       <div className="why-box">
-                        <h3>Why Choose Yummy?</h3>
+                        <h3>Why Choose Zaki?</h3>
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                          eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis
-                          aute irure dolor in reprehenderit Asperiores dolores sed et.
-                          Tenetur quia eos. Autem tempore quibusdam vel necessitatibus
-                          optio ad corporis.
+                        In our restaurant, you can choose the meals that suit your daily calorie need, and you can choose the meals by subscribing with us in our plans to organize your daily meals.
                         </p>
                         <div className="text-center">
-                          <a href="#" className="more-btn">
+                          <a href="/about" className="more-btn">
                             Learn More <i className="bx bx-chevron-right" />
                           </a>
                         </div>
@@ -221,26 +212,23 @@ class Home extends Component {
                               <div className="testimonial-content">
                                 <p>
                                   <i className="bi bi-quote quote-icon-left" />
-                                  Proin iaculis purus consequat sem cure digni ssim donec
-                                  porttitora entum suscipit rhoncus. Accusantium quam,
-                                  ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                                  risus at semper.
+                                  It was a great experience for me, I liked the accuracy of the calculation of the calories I needed in my meal to maintain my weight.
                                   <i className="bi bi-quote quote-icon-right" />
                                 </p>
-                                <h3>Saul Goodman</h3>
-                                <h4>Ceo &amp; Founder</h4>
+                                <h3>Aya Alsawa</h3>
+                                <h4> customer</h4>
                                 <div className="stars">
-                                  <i className="bi bi-star-fill" />
-                                  <i className="bi bi-star-fill" />
-                                  <i className="bi bi-star-fill" />
-                                  <i className="bi bi-star-fill" />
-                                  <i className="bi bi-star-fill" />
+                                  <UilStar className="bi bi-star-fill" />
+                                  <UilStar className="bi bi-star-fill" />
+                                  <UilStar className="bi bi-star-fill" />
+                                  <UilStar className="bi bi-star-fill" />
+                                  <UilStar className="bi bi-star-fill" />
                                 </div>
                               </div>
                             </div>
                             <div className="col-lg-2 text-center">
                               <img
-                                src="./img/testimonials/testimonials-1.jpg"
+                                src="./img/testimonials/aya.png"
                                 className="img-fluid testimonial-img"
                                 alt=""
                               />
@@ -254,26 +242,23 @@ class Home extends Component {
                               <div className="testimonial-content">
                                 <p>
                                 {/* <FontAwesomeIcon icon="fa-solid fa-clipboard-list" /> */}
-                                  Export tempor illum tamen malis malis eram quae irure
-                                  esse labore quem cillum quid cillum eram malis quorum
-                                  velit fore eram velit sunt aliqua noster fugiat irure
-                                  amet legam anim culpa.
+                                One of the most wonderful restaurants I have dealt with, the staff in it are kind and understanding.
                                   <i className="bi bi-quote quote-icon-right" />
                                 </p>
-                                <h3>Sara Wilsson</h3>
-                                <h4>Designer</h4>
+                                <h3>Samar alkhamis</h3>
+                                <h4>customer</h4>
                                 <div className="stars">
-                                  <i className="bi bi-star-fill" />
-                                  <i className="bi bi-star-fill" />
-                                  <i className="bi bi-star-fill" />
-                                  <i className="bi bi-star-fill" />
-                                  <i className="bi bi-star-fill" />
+                                  <UilStar className="bi bi-star-fill" />
+                                  <UilStar className="bi bi-star-fill" />
+                                  <UilStar className="bi bi-star-fill" />
+                                  <UilStar className="bi bi-star-fill" />
+                                  <UilStar className="bi bi-star-fill" />
                                 </div>
                               </div>
                             </div>
                             <div className="col-lg-2 text-center">
                               <img
-                                src="./img/testimonials/testimonials-2.jpg"
+                                src="./img/testimonials/samar.jpg"
                                 className="img-fluid testimonial-img"
                                 alt=""
                               />
@@ -286,26 +271,23 @@ class Home extends Component {
                               <div className="testimonial-content">
                                 <p>
                                   <i className="bi bi-quote quote-icon-left" />
-                                  Enim nisi quem export duis labore cillum quae magna enim
-                                  sint quorum nulla quem veniam duis minim tempor labore
-                                  quem eram duis noster aute amet eram fore quis sint
-                                  minim.
+                                  It was a nice experience, I loved the food and the quality of the ingredients, as well as the deliciousness of the meals.
                                   <i className="bi bi-quote quote-icon-right" />
                                 </p>
-                                <h3>Jena Karlis</h3>
-                                <h4>Store Owner</h4>
+                                <h3>Saja Al Ghalayini</h3>
+                                <h4>customer</h4>
                                 <div className="stars">
-                                  <i className="bi bi-star-fill" />
-                                  <i className="bi bi-star-fill" />
-                                  <i className="bi bi-star-fill" />
-                                  <i className="bi bi-star-fill" />
-                                  <i className="bi bi-star-fill" />
+                                  <UilStar className="bi bi-star-fill" />
+                                  <UilStar className="bi bi-star-fill" />
+                                  <UilStar className="bi bi-star-fill" />
+                                  <UilStar className="bi bi-star-fill" />
+                                  <UilStar className="bi bi-star-fill" />
                                 </div>
                               </div>
                             </div>
                             <div className="col-lg-2 text-center">
                               <img
-                                src="./img/testimonials/testimonials-3.jpg"
+                                src="./img/testimonials/saja.png"
                                 className="img-fluid testimonial-img"
                                 alt=""
                               />
@@ -318,25 +300,23 @@ class Home extends Component {
                               <div className="testimonial-content">
                                 <p>
                                   <i className="bi bi-quote quote-icon-left" />
-                                  
-                        Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                        
+                                  It became easier for me to eat meals on a regular basis while doing my work, in proportion to my need for daily calories, I loved this experience.
                                   <i className="bi bi-quote quote-icon-right" />
                                 </p>
-                                <h3>John Larson</h3>
-                                <h4>Entrepreneur</h4>
+                                <h3>Dua-Alsafasfeh</h3>
+                                <h4>customer</h4>
                                 <div className="stars">
-                                  <i className="bi bi-star-fill" />
-                                  <i className="bi bi-star-fill" />
-                                  <i className="bi bi-star-fill" />
-                                  <i className="bi bi-star-fill" />
-                                  <i className="bi bi-star-fill" />
+                                  <UilStar className="bi bi-star-fill" />
+                                  <UilStar className="bi bi-star-fill" />
+                                  <UilStar className="bi bi-star-fill" />
+                                  <UilStar className="bi bi-star-fill" />
+                                  <UilStar className="bi bi-star-fill" />
                                 </div>
                               </div>
                             </div>
                             <div className="col-lg-2 text-center">
                               <img
-                                src="./img/testimonials/testimonials-4.jpg"
+                                src="./img/testimonials/dua.png"
                                 className="img-fluid testimonial-img"
                                 alt=""
                               />
@@ -548,9 +528,9 @@ class Home extends Component {
               <section id="book-a-table" className="book-a-table">
                 <div className="container" data-aos="fade-up">
                   <div className="section-header">
-                    <h2>Book A Table</h2>
+                    <h2>Book A Plan</h2>
                     <p>
-                      Book <span>Your Stay</span> With Us
+                      Book <span>Your Plan</span> With Us
                     </p>
                   </div>
                   <div className="row g-0">
@@ -662,7 +642,7 @@ class Home extends Component {
                           </div>
                         </div>
                         <div className="text-center">
-                          <button type="submit">Book a Table</button>
+                          <button type="submit">Book a Plan</button>
                         </div>
                       </form>
                     </div>
@@ -671,128 +651,6 @@ class Home extends Component {
                 </div>
               </section>
               {/* End Book A Table Section */}
-              {/* ======= Gallery Section ======= */}
-              <section id="gallery" className="gallery section-bg">
-                <div className="container" data-aos="fade-up">
-                  <div className="section-header">
-                    <h2>gallery</h2>
-                    <p>
-                      Check <span>Our Gallery</span>
-                    </p>
-                  </div>
-                  <div className="gallery-slider swiper">
-                    <div className="swiper-wrapper align-items-center">
-                      <div className="swiper-slide">
-                        <a
-                          className="glightbox"
-                          data-gallery="images-gallery"
-                          href="./img/gallery/gallery-1.jpg"
-                        >
-                          <img
-                            src="./img/gallery/gallery-1.jpg"
-                            className="img-fluid"
-                            alt=""
-                          />
-                        </a>
-                      </div>
-                      <div className="swiper-slide">
-                        <a
-                          className="glightbox"
-                          data-gallery="images-gallery"
-                          href="./img/gallery/gallery-2.jpg"
-                        >
-                          <img
-                            src="./img/gallery/gallery-2.jpg"
-                            className="img-fluid"
-                            alt=""
-                          />
-                        </a>
-                      </div>
-                      <div className="swiper-slide">
-                        <a
-                          className="glightbox"
-                          data-gallery="images-gallery"
-                          href="./img/gallery/gallery-3.jpg"
-                        >
-                          <img
-                            src="./img/gallery/gallery-3.jpg"
-                            className="img-fluid"
-                            alt=""
-                          />
-                        </a>
-                      </div>
-                      <div className="swiper-slide">
-                        <a
-                          className="glightbox"
-                          data-gallery="images-gallery"
-                          href="./img/gallery/gallery-4.jpg"
-                        >
-                          <img
-                            src="./img/gallery/gallery-4.jpg"
-                            className="img-fluid"
-                            alt=""
-                          />
-                        </a>
-                      </div>
-                      <div className="swiper-slide">
-                        <a
-                          className="glightbox"
-                          data-gallery="images-gallery"
-                          href="./img/gallery/gallery-5.jpg"
-                        >
-                          <img
-                            src="./img/gallery/gallery-5.jpg"
-                            className="img-fluid"
-                            alt=""
-                          />
-                        </a>
-                      </div>
-                      <div className="swiper-slide">
-                        <a
-                          className="glightbox"
-                          data-gallery="images-gallery"
-                          href="./img/gallery/gallery-6.jpg"
-                        >
-                          <img
-                            src="./img/gallery/gallery-6.jpg"
-                            className="img-fluid"
-                            alt=""
-                          />
-                        </a>
-                      </div>
-                      <div className="swiper-slide">
-                        <a
-                          className="glightbox"
-                          data-gallery="images-gallery"
-                          href="./img/gallery/gallery-7.jpg"
-                        >
-                          <img
-                            src="./img/gallery/gallery-7.jpg"
-                            className="img-fluid"
-                            alt=""
-                          />
-                        </a>
-                      </div>
-                      <div className="swiper-slide">
-                        <a
-                          className="glightbox"
-                          data-gallery="images-gallery"
-                          href="./img/gallery/gallery-8.jpg"
-                        >
-                          <img
-                            src="./img/gallery/gallery-8.jpg"
-                            className="img-fluid"
-                            alt=""
-                          />
-                        </a>
-                      </div>
-                    </div>
-                    <div className="swiper-pagination" />
-                  </div>
-                </div>
-              </section>
-              {/* End Gallery Section */}
-            
             </main>
             {/* End #main */}
 
@@ -800,7 +658,6 @@ class Home extends Component {
               href="#"
               className="scroll-top d-flex align-items-center justify-content-center"
             >
-              <i className="bi bi-arrow-up-short" />
             </a>
             {/* <div id="preloader" /> */}
             {/* Vendor JS Files */}

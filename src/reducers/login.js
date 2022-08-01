@@ -20,19 +20,22 @@ const loginReducer=(state={error:''},action)=>{
                 const loadInfo = async () => {
                     const res = await axios.get('http://localhost/project9/PHP/login.php?email='+state.emailORUsername+'&password='+state.password);
                     sessionStorage.clear()
-                sessionStorage.setItem("user_info", res.data);
-                console.log(res.data);
-                let user_info= sessionStorage.getItem("user_info");
+                    sessionStorage.setItem("user_info", res.data);
+                    sessionStorage.setItem("user_id", res.data.id);
+                    console.log(res.data);
+                    let user_info= sessionStorage.getItem("user_info");
 
-                console.log(user_info);
-                if(user_info != ''){
-                    window.location.href = "/user";
-                }
-                return {...state, error: 'Username/ email or password is invalid'}
+                    console.log(user_info);
+                
+                    if(user_info != ''){
+                        window.location.href = "/";
+                    }
+                    return {...state, error: 'Username/ email or password is invalid'}
+                });
             
   
-            };
-            loadInfo();
+            // };
+            // loadInfo();
             
             
         default:

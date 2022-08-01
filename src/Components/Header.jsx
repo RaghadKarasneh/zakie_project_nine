@@ -27,56 +27,22 @@ function Header() {
             <a href="/Menu">Menu</a>
           </li>
           <li>
-            <a href="/">Gallery</a>
-          </li>
-          <li className="dropdown">
-            <a href="/">
-              <span>Drop Down</span>{" "}
-              <i className="bi bi-chevron-down dropdown-indicator" />
-            </a>
-            <ul>
-              <li>
-                <a href="/">Drop Down 1</a>
-              </li>
-              <li className="dropdown">
-                <a href="/">
-                  <span>Deep Drop Down</span>{" "}
-                  <i className="bi bi-chevron-down dropdown-indicator" />
-                </a>
-                <ul>
-                  <li>
-                    <a href="/">Deep Drop Down 1</a>
-                  </li>
-                  <li>
-                    <a href="/">Deep Drop Down 2</a>
-                  </li>
-                  <li>
-                    <a href="/">Deep Drop Down 3</a>
-                  </li>
-                  <li>
-                    <a href="/">Deep Drop Down 4</a>
-                  </li>
-                  <li>
-                    <a href="/">Deep Drop Down 5</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="/">Drop Down 2</a>
-              </li>
-              <li>
-                <a href="/">Drop Down 3</a>
-              </li>
-              <li>
-                <a href="/">Drop Down 4</a>
-              </li>
-            </ul>
+            <a href="/Calculator">Calculator</a>
+          </li>    
+          <li>
+            <a href="/Pricing">Pricing</a>
           </li>
           <li>
             <a href="/About">About us</a>
           </li>
           <li>
             <a href="/Contact">Contact us</a>
+          </li>
+          <li className='offset-1'>
+            <a href="/log">login</a>
+          </li>
+          <li>
+            <a href="/reg">signup</a>
           </li>
           <li>
             <Link to="/profile">
@@ -87,8 +53,8 @@ function Header() {
         </ul>
       </nav>
       {/* .navbar */}
-      <a className="btn-book-a-table" href="">
-        Book a Table
+      <a className="btn-book-a-table" href="/Pricing">
+        Book a Plan
       </a>
       <i className="mobile-nav-toggle mobile-nav-show bi bi-list" />
       <i className="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" />

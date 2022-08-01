@@ -1,6 +1,11 @@
 import React from 'react';
 import {useSelector,useDispatch } from 'react-redux';
 import {username,email,password,confirmPass, signup} from "./actions";
+import './App.css'
+
+
+
+
 
 function Signup(){
     const dispatch=useDispatch();
@@ -14,7 +19,7 @@ function Signup(){
 
 
   
-    <section className="vh-100" style={{ backgroundColor: "#eee" }}>
+    <section className="vh-100" style={{ backgroundColor: "#D8D8D8" }}>
 
 
   <div className="container h-100">
@@ -23,26 +28,26 @@ function Signup(){
       <div className='col'>
 
       <div className="col-lg-12 col-xl-11">
-        <div className="card text-black" style={{ borderRadius: 25 }}>
+        <div className="card text-black m-5" style={{ borderRadius:40 }}>
           <div className="card-body p-md-5">
             <div className="row justify-content-center">
             <div className="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2float-left">
                 <img
-                  src="https://midoshriks-school.netlify.app/assets/sing/imgs/login-form-img.png"
+                  src="https://media-cdn.tripadvisor.com/media/photo-s/17/15/1b/f2/this-is-the-oh-so-famous.jpg"
                   className="img-fluid"
                   alt="Sample image"
-                  style={{height: '459px'}}
+                  style={{height: '365px'}}
                   />
               </div>
               <div className="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
-                <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4" style={{color:'#7A4495'}}>
+                <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4" style={{color:'#FB4646'}}>
                   Sign up
                 </p>
                 <form className="mx-1 mx-md-4" onSubmit={()=>handleSubmit()}>
                   <div className="d-flex flex-row align-items-center mb-4">
-                    <i className="fas fa-user fa-lg me-3 fa-fw" style={{color:'#7A86B6'}}/>
+                    <i className="fas fa-user fa-lg me-3 fa-fw" style={{color:'#FF4141'}}/>
                     <div className="form-outline flex-fill mb-0">
-                    <label className="form-label" htmlFor="form3Example1c" style={{color:'#937DC2'}}>
+                    <label className="form-label" htmlFor="form3Example1c" style={{color:'#000000'}}>
                         Your Name
                       </label>
                       <input
@@ -57,7 +62,7 @@ function Signup(){
                   <div className="d-flex flex-row align-items-center mb-4">
                     <i className="fas fa-envelope fa-lg me-3 fa-fw" style={{color:'#7A86B6'}}/>
                     <div className="form-outline flex-fill mb-0">
-                    <label className="form-label" htmlFor="form3Example3c" style={{color:'#937DC2'}}>
+                    <label className="form-label" htmlFor="form3Example3c" style={{color:'#000000'}}>
                         Your Email
                       </label>
                       <input
@@ -72,7 +77,7 @@ function Signup(){
                   <div className="d-flex flex-row align-items-center mb-4">
                     <i className="fas fa-lock fa-lg me-3 fa-fw" style={{color:'#7A86B6'}}/>
                     <div className="form-outline flex-fill mb-0">
-                    <label className="form-label" htmlFor="form3Example4c" style={{color:'#937DC2'}}>
+                    <label className="form-label" htmlFor="form3Example4c" style={{color:'#000000'}}>
                         Password
                       </label>
                       <input
@@ -87,7 +92,7 @@ function Signup(){
                   <div className="d-flex flex-row align-items-center mb-4">
                     <i className="fas fa-key fa-lg me-3 fa-fw" style={{color:'#7A86B6'}}/>
                     <div className="form-outline flex-fill mb-0">
-                    <label className="form-label" htmlFor="form3Example4cd" style={{color:'#937DC2'}}>
+                    <label className="form-label" htmlFor="form3Example4cd" style={{color:'#000000'}}>
                         Repeat your password
                       </label>
                       <input
@@ -114,16 +119,26 @@ function Signup(){
                     </label>
                     
                   </div> */}
+                  <p className="small fw-bold mt-2 pt-1 mb-0" style={{color:'#787878'}}>
+             Already have an Account??  {" "}
+              <a href="../log" className="link " style={{color:'#FF3B0B'}}>
+                Login
+              </a>
+            </p>
+            <br></br>
 
-                  <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                  <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4" >
                   {(error.usernameError || error.emailError || error.passError || error.confirmPassError)
-            ?<input type="submit"  defaultValue="Sign up" disabled/>
-            :<input type="submit"  defaultValue="Sign up" style={{color:'#192294',borderColor:"#192294",borderRadius:"10px"}}/>
+            ?<input type="submit"  defaultValue="Sign up"  disabled/>
+            :<input type="submit"  defaultValue="Sign up"  style={{color:'#FF3312',borderColor:"#5F5F5F",borderRadius:"10px",}} className="bttn"/>
+          
           }
+
+        
+          
                   </div>
                 </form>
-              </div>
-              
+              </div>              
             </div>
           </div>
         </div>
