@@ -47,7 +47,7 @@ function Pricing () {
                         <span className="sign">$</span>
                         <span className="currency">99</span>
                         <span className="cent">.99</span>
-                        <span className="month">/MON</span>
+                        <span className="month">/3 MON</span>
                       </span>
                     </div>
                     {/*//PRICE END*/}
@@ -75,7 +75,7 @@ function Pricing () {
                   {/*BUTTON START*/}
                   <div className="generic_price_btn clearfix">
                   <a className="" href="" onClick={(e)=>{package_submit(e,"weekly")}}>
-                      Sign up
+                     Choose
                     </a>
                   </div>
                   {/*//BUTTON END*/}
@@ -103,7 +103,7 @@ function Pricing () {
                         <span className="sign">$</span>
                         <span className="currency">199</span>
                         <span className="cent">.99</span>
-                        <span className="month">/week</span>
+                        <span className="month">/6 MON</span>
                       </span>
                     </div>
                     {/*//PRICE END*/}
@@ -148,7 +148,7 @@ function Pricing () {
                       {/*HEAD START*/}
                       <div className="head_bg" />
                       <div className="head">
-                        <span>Unlimited</span>
+                        <span>Zakie Offer</span>
                       </div>
                       {/*//HEAD END*/}
                     </div>
@@ -159,7 +159,7 @@ function Pricing () {
                         <span className="sign">$</span>
                         <span className="currency">299</span>
                         <span className="cent">.99</span>
-                        <span className="month">/MON</span>
+                        <span className="month">/9 MON</span>
                       </span>
                     </div>
                     {/*//PRICE END*/}
@@ -187,7 +187,7 @@ function Pricing () {
                   {/*BUTTON START*/}
                   <div className="generic_price_btn clearfix">
                   <a className="" href="" onClick={(e)=>{package_submit(e,"yearly")}}>
-                      Sign up
+                     Choose
                     </a>
                   </div>
                   {/*//BUTTON END*/}

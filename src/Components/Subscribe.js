@@ -13,11 +13,20 @@ function Subscribe() {
     const setZipCodeHandle=(e)=>{setZipCode(e.target.value)}
     const setPhoneNumberHandle=(e)=>{setPhoneNumber(e.target.value)}
     const setMessageHandle=(e)=>{setMessage(e.target.value)}
-
-    const clickHandle=()=>{
-        axios.post('http://localhost/zakie_project_nine/PHP/userInfo.php?city='+city+'&address='+address+'&zip_code='+zip_code+'&phone_number='+phone_number+'&message'+message+'&id='+sessionStorage.getItem('user_id')+'&gender='+sessionStorage.getItem('gender')+'&weight='+sessionStorage.getItem('weight')+'&age='+sessionStorage.getItem('age')).then((data)=>{
+    
+    const gender=sessionStorage.getItem('gender');
+    const weight=sessionStorage.getItem('weight');
+    const height=sessionStorage.getItem('height');
+    const age=sessionStorage.getItem('age');
+    const user_id=sessionStorage.getItem('user_id');
+    const calories=sessionStorage.getItem('calories');
+    const package_type= sessionStorage.getItem('pricing_package');
+    const clickHandle=(e)=>{
+        e.preventDefault();
+        axios.post('http://localhost/zakie_project_nine/PHP/userInfo.php?city='+city+'&address='+address+'&zip_code='+zip_code+'&phone_number='+phone_number+'&message='+message+'&gender='+gender+'&weight='+weight+'&height='+height+'&age='+age+'&id='+user_id+'&calories='+calories+'&package_type'+package_type).then(()=>{
             console.log("success!");
-        }).ctach((error)=>{
+            console.log(city,address,zip_code,phone_number,message,gender,weight,height,age,user_id,calories,package_type)
+        }).catch((error)=>{
             console.error(error);
         });
     }
@@ -103,7 +112,7 @@ function Subscribe() {
                       type="submit"
                       defaultValue="Send Message"
                       className="btn btn-primary rounded-0 py-2 px-4"
-                      onClick={clickHandle}
+                      onClick={(e)=>{clickHandle(e)}}
                     />
                     <span className="submitting" />
                   </div>

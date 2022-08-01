@@ -109,10 +109,11 @@ class Calculator extends Component {
     let resultPAL;
     if (this.state.activity) {
       resultPAL = (
-        <div className="resultPAL">{this.state.bmr * this.state.activity}</div>
+        this.state.bmr * this.state.activity
       );
     }
     this.setState({ pal: resultPAL });
+    console.log({resultPAL});
   }
   handlePlan(){
     if(this.state.pal,this.state.heightFeet,this.state.heightInches,this.state.age,this.state.weight,this.state.gender != ''){
@@ -121,7 +122,9 @@ class Calculator extends Component {
     sessionStorage.setItem('age', this.state.age);
     sessionStorage.setItem('heightFeet', this.state.heightFeet);
     sessionStorage.setItem('heightInches', this.state.heightInches);
-    sessionStorage.setItem('pal', this.state.pal);
+    sessionStorage.setItem('calories', this.state.pal);
+    sessionStorage.setItem('height',parseInt(this.state. heightFeet)+parseInt(this.state.heightInches));
+
     window.location='./Pricing';}
     else{
       this.setState({errorDis:'block'})
@@ -281,7 +284,7 @@ class Calculator extends Component {
             <button type="button" onClick={() => this.calculateKCalories()}>
               Calculate Calories
             </button>
-            {resultPAL}
+            <div className="resultPAL">{resultPAL}</div>
             <button type="button" onClick={() => this.handlePlan()}>
               Choose Your Plan
             </button>
