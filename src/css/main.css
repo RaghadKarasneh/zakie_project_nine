@@ -64,7 +64,7 @@ section {
 }
 
 .section-bg {
-  background-color: #eee;
+  background-color: #eee ;
 }
 
 .section-header {
@@ -1309,6 +1309,7 @@ section {
 .book-a-table .php-email-form input:focus,
 .book-a-table .php-email-form textarea:focus {
   border-color: var(--color-primary);
+  background-color: white;
 }
 
 .book-a-table .php-email-form input {
@@ -1317,6 +1318,7 @@ section {
 
 .book-a-table .php-email-form textarea {
   padding: 12px 15px;
+  background-color: #eaeaea;
 }
 
 .book-a-table .php-email-form button[type=submit] {
@@ -1566,8 +1568,8 @@ section {
 }
 
 .hero p {
-  color: #4f4f5a;
-  font-weight: 400;
+  color: #7d7d86;
+  font-weight: 600;
   margin-bottom: 30px;
 }
 

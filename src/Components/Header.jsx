@@ -79,10 +79,10 @@ function Header() {
             <a href="/Contact">Contact us</a>
           </li>
           <li className='offset-1'>
-            <a href="/login">login</a>
+            <a href="/log">login</a>
           </li>
           <li>
-            <a href="/signup">signup</a>
+            <a href="/reg">signup</a>
           </li>
           <li>
             <Link to="/profile">
@@ -93,8 +93,8 @@ function Header() {
         </ul>
       </nav>
       {/* .navbar */}
-      <a className="btn-book-a-table" href="">
-        Book a Table
+      <a className="btn-book-a-table" href="/Pricing">
+        Book a Plan
       </a>
       <i className="mobile-nav-toggle mobile-nav-show bi bi-list" />
       <i className="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" />
