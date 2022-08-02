@@ -70,10 +70,10 @@ function Post() {
 
                     <div className="s-content__media container">
                         <div className="s-content__post-thumb">
-                            <img src="images/thumbs/single/standard/standard-1050.jpg" 
-                                 srcSet="images/thumbs/single/standard/standard-2100.jpg 2100w, 
-                                         images/thumbs/single/standard/standard-1050.jpg 1050w, 
-                                         images/thumbs/single/standard/standard-525.jpg 525w" sizes="(max-width: 2100px) 100vw, 2100px" alt="" />
+                            <img src="https://images.template.net/wp-content/uploads/2018/03/Useful-Restaurant-Review-Card-Templates.jpg" 
+                                 srcSet="https://images.template.net/wp-content/uploads/2018/03/Useful-Restaurant-Review-Card-Templates.jpg 2100w, 
+                                 https://images.template.net/wp-content/uploads/2018/03/Useful-Restaurant-Review-Card-Templates.jpg 1050w, 
+                                 https://images.template.net/wp-content/uploads/2018/03/Useful-Restaurant-Review-Card-Templates.jpg 525w" sizes="(max-width: 2100px) 100vw, 2100px" alt="" />
                         </div>
                     </div> {/* <!-- end s-content__media --> */}
                     {posts ? posts.filter(post => (post.id === sessionStorage.getItem('post_id'))).map(post => 

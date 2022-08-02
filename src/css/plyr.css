@@ -1414,10 +1414,10 @@ a.plyr__control:before {
 }
 
 .plyr--full-ui.plyr--video input[type='range']:active::-ms-thumb {
-  box-shadow: 0 1px 1px 0 0 0 1px rgba(35, 40, 47, 0.15) rgba(35, 40, 47, 0.2), 0 0 0 3px rgba(255, 255, 255, 0.5);
-  box-shadow: 0 1px 1px rgba(35, 40, 47, 0.15), 0 0 0 1px rgba(35, 40, 47, 0.2),
+  box-shadow: 0 1px 1px 0 0 0 1px rgb(202, 237, 4) rgba(35, 40, 47, 0.2), 0 0 0 3px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 1px rgb(56, 216, 38), 0 0 0 1px rgba(35, 40, 47, 0.2),
         0 0 0 3px hsla(0, 0%, 100%, 0.5);
-  box-shadow: var(--plyr-range-thumb-shadow, 0 1px 1px rgba(35, 40, 47, 0.15), 0 0 0 1px rgba(35, 40, 47, 0.2)),
+  box-shadow: var(--plyr-range-thumb-shadow, 0 1px 1px rgba(105, 214, 22, 0.974), 0 0 0 1px rgba(97, 183, 65, 0.93)),
         0 0 0 var(--plyr-range-thumb-active-shadow-width, 3px) var(--plyr-audio-range-thumb-active-shadow-color, hsla(0, 0%, 100%, 0.5));
 }
 

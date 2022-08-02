@@ -1,6 +1,14 @@
 import axios from 'axios';
 import React, { useState,useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import Form from 'react-bootstrap/Form';
+import FloatingLabel from 'react-bootstrap/FloatingLabel';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Radium from 'radium';
 
 
 function Posts() {
@@ -41,34 +49,63 @@ function Posts() {
   }
   useEffect(()=>{
     getPosts();
-    setState(true);
+    setState(false);
     console.log(typeof(title),typeof(context),user_id);
   },[title,context,state])
 
   return (
     <>
+    {sessionStorage.getItem('user_id') && 
+        <div className='container d-flex justify-content-center ' style={{width: '50%', marginTop:'150px'}}>
+        <Button className="bttn btn-light lg" style={{display: btnDis, width: '18rem',border:'1px solid red' }} onClick={()=>{setFormDis('block');setBtnDis('none')}}><span className='h4'>Insert post</span></Button>
+        <Form style={{display: formDis}}>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+          <FloatingLabel
+            controlId="floatingInput"
+            label="Title"
+            className=""
+          >
+            <Form.Control type="text" placeholder="Enter email" onChange={(e)=>{setTitle(e.target.value)}} style={{ height: '4rem',border: '1px solid red'}}/>
+            </FloatingLabel>
+          </Form.Group>
+    
+          <FloatingLabel
+            controlId="floatingInput"
+            label="Context"
+            className="mb-3"
+          >
+            <Form.Control as="textarea" placeholder="what you want to say ?" style={{ height: '7rem',border: '1px solid red'}} onChange={(e)=>{setContext(e.target.value)}}/>
+            </FloatingLabel>
+          <Button variant="light" className='bttn' type="submit" onClick={(e)=>submitPost(e)} style={{width: '15rem', height: '4rem'}}>
+            Submit Post
+          </Button>
+          <Button variant="light" className='bttn' type="submit" onClick={(e)=>{e.preventDefault();setFormDis('none');setBtnDis('block')}} style={{width: '10rem', height: '4rem'}}>
+            Cancel
+          </Button>
+        </Form>
+        </div>
+    }
+
+    <Row xs={3} md={3} className="g-4">
     {posts.map(post =>{
       return(
-        <div className="card">
-          <img src={'images/avatars/'+post.image} alt="" className="card-img-top" />
-          <div className="card-body">
-            <h5 className="card-title">{post.title}</h5>
-            <p className="card-text">{post.excerpt}</p>
-            <button className="btn-primary" onClick={()=>{goToReceiver(post.id)}}>Read more</button>
-          </div>
-        </div>
+        <Col>
+        <Card style={{ width: '35rem' ,marginTop: "150px"}}>
+          <Card.Img variant="top" src="https://images.template.net/wp-content/uploads/2018/03/Useful-Restaurant-Review-Card-Templates.jpg" />
+          <Card.Body>
+            <Card.Title>{post.title}</Card.Title>
+            <Card.Text>
+              {post.body}
+            </Card.Text>
+            <Button className='bttn' variant="light" onClick={()=>{goToReceiver(post.id)}}>Read More</Button>
+          </Card.Body>
+        </Card>
+        </Col>
       )
     })}
-    <button className="btn-primary" style={{display: btnDis}} onClick={()=>{setFormDis('block');setBtnDis('none')}}>Insert post</button>
-    <form action="" style={{display: formDis}}>
-      <label htmlFor="title">Title</label>
-      <input type="text" id='title' onChange={(e)=>{setTitle(e.target.value)}}/>
-      <label htmlFor="body">Context</label>
-      <input type="text" id='body' onChange={(e)=>{setContext(e.target.value)}}/>
-      <button className="btn"  onClick={(e)=>submitPost(e)}>Submit post</button>
-      <button className="btn" onClick={()=>{setFormDis('none');setBtnDis('block')}}>Cancel</button>
-      <br /><br /><br /><br /><br />
-    </form>
+    </Row>
+    <hr style={{height: '1em',backgroundColor:'red'}}/>
+    
 
     </>
   )
