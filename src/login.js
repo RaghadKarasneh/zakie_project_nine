@@ -21,7 +21,7 @@ function Login(){
           src="https://images.pexels.com/photos/1435894/pexels-photo-1435894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           className="img-fluid"
           alt="Sample image"
-          style={{height: '400px'}}
+          style={{height: '400px',margin:"65px"}}
         />
 
       </div>
@@ -59,17 +59,17 @@ function Login(){
           </div>
           
           <div className="text-center text-lg-start mt-4 pt-2">
-            <input
+            <button
             defaultValue="Login"
               type="submit"
-              className="btn btn-primary btn-lg"
-              style={{ paddingLeft: "2.5rem", paddingRight: "2.5rem" }}
-            />
+              className="btn btn-danger btn-lg"
+              style={{ paddingLeft: "2.5rem", paddingRight: "2.5rem",color:"white" }}
+            >Login</button>
             
             <p className="small fw-bold mt-2 pt-1 mb-0" style={{color:'#000000'}}>
               Don't have an account?{" "}
               <a href="../reg" className="link " style={{color:'#FF3B0B'}}>
-                Register
+                Sign Up
               </a>
             </p>
           </div>
