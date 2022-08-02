@@ -23,7 +23,7 @@ function Subscribe() {
     const package_type= sessionStorage.getItem('pricing_package');
     const clickHandle=(e)=>{
         e.preventDefault();
-        axios.post('http://localhost/zakie_project_nine/PHP/userInfo.php?city='+city+'&address='+address+'&zip_code='+zip_code+'&phone_number='+phone_number+'&message='+message+'&gender='+gender+'&weight='+weight+'&height='+height+'&age='+age+'&id='+user_id+'&calories='+calories+'&package_type'+package_type).then(()=>{
+        axios.post('http://localhost/project9/PHP/userInfo.php?city='+city+'&address='+address+'&zip_code='+zip_code+'&phone_number='+phone_number+'&message='+message+'&gender='+gender+'&weight='+weight+'&height='+height+'&age='+age+'&id='+user_id+'&calories='+calories+'&package_type'+package_type).then(()=>{
             console.log("success!");
             console.log(city,address,zip_code,phone_number,message,gender,weight,height,age,user_id,calories,package_type)
         }).catch((error)=>{

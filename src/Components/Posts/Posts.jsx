@@ -10,7 +10,7 @@ function Posts() {
   const[context,setContext]=useState('');
   const[btnDis,setBtnDis]=useState('block');
   const[formDis,setFormDis]=useState('none');
-  const user_id=sessionStorage.getItem('user_id');
+  const user_id=parseInt(sessionStorage.getItem('user_id'));
 
   const navigate = useNavigate();
   const goToReceiver = (id) => {
@@ -28,9 +28,10 @@ function Posts() {
   };
   const submitPost=(e)=>{
     e.preventDefault();
-    axios.post('http://localhost/project9/PHP/insertPost.php?userId='+user_id+'&title='+title+'&body='+context)
+    axios.post('http://localhost/project9/PHP/insertPost.php?user_id='+user_id+'&title='+title+'&body='+context)
     .then(()=>{
       console.log('Success');
+      console.log(user_id,title,context);
     })
     .catch((error)=>{
       console.log('error happened: ',error);

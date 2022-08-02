@@ -135,7 +135,7 @@ function Post() {
 
 
 
-                    <Comment  comments={comments} user_id={1} setState={setState} />
+                    <Comment  comments={comments} user_id={sessionStorage.getItem('user_id')} setState={setState} />
  
 
         

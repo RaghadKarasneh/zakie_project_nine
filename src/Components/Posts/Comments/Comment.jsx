@@ -32,7 +32,7 @@ function Comment(props) {
         props.setState(true);
     }
     const handleSubmit=(postId)=>{
-        axios.post('http://localhost/project9/PHP/insertComment.php?userId='+1+'&postId='+postId+'&comment='+comment);
+        axios.post('http://localhost/project9/PHP/insertComment.php?userId='+props.user_id+'&postId='+postId+'&comment='+comment);
         setComment('');
         props.setState(true);
     };
