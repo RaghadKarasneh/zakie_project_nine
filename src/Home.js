@@ -55,13 +55,7 @@ class Home extends Component {
                       <a href="/Pricing" className="btn-book-a-table">
                         Book a Plan
                       </a>
-                      <a
-                        href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
-                        className="glightbox btn-watch-video d-flex align-items-center" target={'_blank'}
-                      >
-                     
-                      
-                      </a>
+                   
                     </div>
                   </div>
                   <div className="col-lg-5 order-1 order-lg-2 text-center text-lg-start">

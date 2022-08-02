@@ -3,6 +3,10 @@ import { Link,BrowserRouter } from 'react-router-dom';
 import { UilUser } from '@iconscout/react-unicons';
 
 function Header() {
+  const logout=()=>{
+    sessionStorage.setItem('user_id','');
+    window.location="/"
+  }
   return (
     <header id="header" className="header fixed-top d-flex align-items-center">
     <div className="container d-flex align-items-center justify-content-between">
@@ -41,18 +45,18 @@ function Header() {
           <li>
             <a href="/Contact">Contact us</a>
           </li>
-          <li className='offset-1'>
+          {sessionStorage.getItem('user_id') != "" && sessionStorage.getItem('user_id') !=undefined && sessionStorage.getItem('user_id') !=null? <li><a onClick={(e)=>{e.preventDefault();logout();}}>Logout</a></li>: <><li className='offset-1'>
             <a href="/log">login</a>
           </li>
           <li>
             <a href="/reg">signup</a>
-          </li>
+          </li></> }
+
           <li>
             <Link to="/profile">
             <a href="/profile"> <UilUser/></a>
             </Link>
           </li>
-         
         </ul>
       </nav>
       {/* .navbar */}

@@ -143,9 +143,12 @@
     --color-gray-17: #1e1e1e;
 
 
+    
     --color-gray-16: #d1d1d1;
 
+
     
+
     --color-gray-15: #333333;
     --color-gray-14: #3d3d3d;
     --color-gray-13: #474747;
@@ -2144,7 +2147,7 @@ select {
     font-family: var(--font-1);
     font-size: var(--text-sm);
     line-height: var(--input-line-height);
-    max-width: 100%;
+    max-width: 55%;
     background-color: rgba(0, 0, 0, 0.07);
     border: 1px solid transparent;
     -webkit-transition: all .3s ease-in-out;
@@ -2209,7 +2212,7 @@ input[type="url"]:focus,
 input[type="password"]:focus, 
 textarea:focus, 
 select:focus {
-    color: white;
+    color: black;
     background-color: var(--color-gray-16);
     border: 1px solid var(--color-gray-16);
 }
