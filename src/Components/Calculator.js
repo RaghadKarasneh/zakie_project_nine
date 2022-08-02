@@ -158,6 +158,7 @@ class Calculator extends Component {
           {error}
           <div className="inputwrap">
             <label className="label">Gender</label>
+            <br></br>
             <label>
               <input
                 type="radio"
@@ -183,6 +184,7 @@ class Calculator extends Component {
           </div>
           <div className="inputwrap">
             <label className="label">Weight</label>
+            <br></br>
             <label>
               <input
                 type="radio"
@@ -192,7 +194,7 @@ class Calculator extends Component {
                 name="wrightT"
                 value="1"
               />
-              Imperial (in lbs)
+              In lbs
             </label>
             <label>
               <input
@@ -203,10 +205,11 @@ class Calculator extends Component {
                 name="wrightT"
                 value="2"
               />
-              Metric (in KG)
+              In KG
             </label>
             <input
               type="number"
+              checked={this.state.weightType == "2"}
               value={this.state.weight}
               onChange={this.handleWeightChange}
               name="weight"
@@ -216,7 +219,7 @@ class Calculator extends Component {
             />
           </div>
           <div className="inputwrap">
-            <label className="label">Height in feet and inches</label>
+            <label className="label">Height (in meters)</label>
             <input
               type="number"
               value={this.state.heightFeet}
@@ -226,6 +229,7 @@ class Calculator extends Component {
               min="0"
               max="8"
             />
+            <label className="label">Height fractions (in centimeters)</label>
             <input
               type="number"
               value={this.state.heightInches}
@@ -248,7 +252,7 @@ class Calculator extends Component {
               max="120"
             />
           </div>
-          <button type="button" onClick={() => this.calculateBMR()}>
+          <button className='bttn' type="button" onClick={() => this.calculateBMR()}>
             Calculate BMR
           </button>
           {resultBMR}
@@ -264,28 +268,25 @@ class Calculator extends Component {
               >
                 <option value="">Select your Activity</option>
                 <option value="1.2">
-                  Sedentary (Very little or no exercise, and desk job)
+                  Very little or no exercise, and desk job
                 </option>
                 <option value="1.375">
-                  Lightly Active (Light exercise 1 to 3 days per week)
+                  Light exercise 1 to 3 days per week
                 </option>
                 <option value="1.55">
-                  Moderately Active (Moderate exercise 3 to 5 days per week)
+                  Moderate exercise 3 to 5 days per week
                 </option>
                 <option value="1.725">
-                  Very Active (Heavy exercise 6 to 7 days per week)
+                  Heavy exercise 6 to 7 days per week
                 </option>
-                <option value="1.9">
-                  Extremely Active (Very intense exercise, and physical job,
-                  exercise multiple times per day)
-                </option>
+
               </select>
             </div>
-            <button type="button" onClick={() => this.calculateKCalories()}>
+            <button className='bttn' type="button" onClick={() => this.calculateKCalories()}>
               Calculate Calories
             </button>
             <div className="resultPAL">{resultPAL}</div>
-            <button type="button" onClick={() => this.handlePlan()}>
+            <button className='bttn' type="button" onClick={() => this.handlePlan()}>
               Choose Your Plan
             </button>
             <p style={{color: 'red',display: this.state.errorDis}}>Please submit your information first !!!</p>
