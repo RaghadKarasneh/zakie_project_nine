@@ -115,10 +115,10 @@ const Contact = () => {
 
                   <form role="form" className="php-email-form p-3 p-md-4">
                     <div className="row">
-                      <div className="col-xl-6 form-group">
+                      <div className="col-xl-12 form-group">
                         <input type="text" name="name" className="form-control" id="name" placeholder="Your Name" required value={name} onChange={e => setName(e.target.value)} />
                       </div>
-                      <div className="col-xl-6 form-group">
+                      <div className="col-xl-12 form-group">
                         <input type="email" pattern="[^@\s]+@[^@\s]+" className="form-control" name="email" id="email" placeholder="Your Email" required value={email} onChange={e => setEmail(e.target.value)}
                         />
                       </div>

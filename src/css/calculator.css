@@ -73,7 +73,8 @@ input[type="number"] {
 }
 input[type="text"],
 input[type="number"] .focus{
-  background-color: white;
+  background-color: #e5e5e5
+  ;
 }
 input[type="text"] {
   width: 100%;
