@@ -18,6 +18,9 @@ import Login from "./login";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Subscribe from './Components/Subscribe';
 import Menu from './Components/Menu';
+import AdminLogin from './Components/admin/AdminLogin';
+import Dashboard from './Components/admin/Dash';
+import Auction from './Components/admin/Auction';
 function App() {
   return (      
     <> 
@@ -27,6 +30,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/post' element={<Post />}>Post Page</Route>
+          <Route path='/admin' element={<AdminLogin />}>Post Page</Route>
+          <Route path='/dashboard' element={<Dashboard />}>Post Page</Route>
+          <Route path='/auction' element={<Auction />}>Post Page</Route>
           <Route path='/posts' element={<Posts />}>Post Page</Route>
           <Route path='/' element={<Home />}>Landing page</Route>
           <Route path='/Home' element={<Home />} />
