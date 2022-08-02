@@ -75,6 +75,12 @@ input[type="number"] {
   height: 60px;
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
+  /* border-radius: 20px; */
+}
+input[type="text"],
+input[type="number"] .focus{
+  background-color: #e5e5e5
+  ;
 }
 input[type="text"] {
   width: 100%;

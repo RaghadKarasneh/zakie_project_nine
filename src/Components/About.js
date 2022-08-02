@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import '../css/main.css';
-
+import { UilFacebookF ,UilLinkedinAlt,UilCheck ,UilGithub} from '@iconscout/react-unicons'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 class About extends Component {
     state = {  } 
     render() { 
         return (<>
               {/* ======= About Section ======= */}
-              <section id="about" className="about mt-5">
+              <section id="about" className="about mt-5 mb-5">
                 <div className="container" data-aos="fade-up">
                   <div className="section-header">
                     <h2>About Us</h2>
@@ -23,7 +23,7 @@ class About extends Component {
                       data-aos-delay={150}
                     >
                       <div className="call-us position-absolute">
-                        <h4>Book a Table</h4>
+                        <h4>Book a plan</h4>
                         <p>+1 5589 55488 55</p>
                       </div>
                     </div>
@@ -33,33 +33,23 @@ class About extends Component {
                       data-aos-delay={300}
                     >
                       <div className="content ps-0 ps-lg-3">
-                        <p className="fst-italic">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        <p className=" h2">
+                        The idea of our restaurant was launched from the need of working individuals to eat healthy meals, and in proportion to their daily need of calories, we offer the best types of food at acceptable prices, and the consumers can choose the food plan that suits them.
+
+                        We have 
                         </p>
-                        <ul>
+                        <ul className='mt-5'>
                           <li>
-                            <i className="bi bi-check2-all" /> Ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat.
+                            <UilCheck className="bi bi-check2-all" /> Calorie Tracker
                           </li>
                           <li>
-                            <i className="bi bi-check2-all" /> Duis aute irure dolor in
-                            reprehenderit in voluptate velit.
+                            <UilCheck className="bi bi-check2-all" /> Different selections of Organic food
                           </li>
                           <li>
-                            <i className="bi bi-check2-all" /> Ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate trideta storacalaperda mastiro
-                            dolore eu fugiat nulla pariatur.
+                            <UilCheck className="bi bi-check2-all" /> Avalible 24/7
                           </li>
                         </ul>
-                        <p>
-                          Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                          aute irure dolor in reprehenderit in voluptate velit esse cillum
-                          dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                          cupidatat non proident
-                        </p>
-                        <div className="position-relative mt-4">
+                        <div className="position-relative mt-5">
                           <img
                             src="./img/about-2.jpg"
                             className="img-fluid"
@@ -101,17 +91,11 @@ class About extends Component {
                             alt=""
                           />
                           <div className="social">
-                            <a href="">
-                              <i className="bi bi-twitter" />
+                            <a href="https://github.com/RaghadKarasneh" target={'_blank'}>
+                              <UilGithub className="bi bi-facebook" />
                             </a>
-                            <a href="">
-                              <i className="bi bi-facebook" />
-                            </a>
-                            <a href="">
-                              <i className="bi bi-instagram" />
-                            </a>
-                            <a href="">
-                              <i className="bi bi-linkedin" />
+                            <a href="https://www.linkedin.com/in/raghad-alkarasneh/" target={'_blank'}>
+                              <UilLinkedinAlt className="bi bi-linkedin" />
                             </a>
                           </div>
                         </div>
@@ -135,17 +119,11 @@ class About extends Component {
                             alt=""
                           />
                           <div className="social">
-                            <a href="">
-                              <i className="bi bi-twitter" />
+                            <a href="https://github.com/10-anasAllawafeh" target={'_blank'}>
+                              <UilGithub className="bi bi-facebook" />
                             </a>
-                            <a href="">
-                              <i className="bi bi-facebook" />
-                            </a>
-                            <a href="">
-                              <i className="bi bi-instagram" />
-                            </a>
-                            <a href="">
-                              <i className="bi bi-linkedin" />
+                            <a href="https://www.linkedin.com/in/anas-al-lawafeh-b05954232/" target={'_blank'}>
+                              <UilLinkedinAlt className="bi bi-linkedin" />
                             </a>
                           </div>
                         </div>
@@ -169,17 +147,11 @@ class About extends Component {
                             alt=""
                           />
                           <div className="social">
-                            <a href="">
-                              <i className="bi bi-twitter" />
+                            <a href="https://github.com/Dyarhunaity" target={'_blank'}>
+                              <UilGithub className="bi bi-facebook" />
                             </a>
-                            <a href="">
-                              <i className="bi bi-facebook" />
-                            </a>
-                            <a href="">
-                              <i className="bi bi-instagram" />
-                            </a>
-                            <a href="">
-                              <i className="bi bi-linkedin" />
+                            <a href="https://www.linkedin.com/in/dyar-hunaity-90a540236/" target={'_blank'}>
+                              <UilLinkedinAlt className="bi bi-linkedin" />
                             </a>
                           </div>
                         </div>
@@ -203,17 +175,11 @@ class About extends Component {
                             alt=""
                           />
                           <div className="social">
-                            <a href="">
-                              <i className="bi bi-twitter" />
+                            <a href="https://github.com/taebah-alshlouh" target={'_blank'}>
+                              <UilGithub className="bi bi-facebook mt-2" />
                             </a>
-                            <a href="">
-                              <i className="bi bi-facebook" />
-                            </a>
-                            <a href="">
-                              <i className="bi bi-instagram" />
-                            </a>
-                            <a href="">
-                              <i className="bi bi-linkedin" />
+                            <a href="https://www.linkedin.com/in/taebah-shlouh-2b2401146/" target={'_blank'}>
+                              <UilLinkedinAlt className="bi bi-linkedin mt-2" />
                             </a>
                           </div>
                         </div>

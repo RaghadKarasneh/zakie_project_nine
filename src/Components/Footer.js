@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import '../css/main.css';
-import { UilTwitter } from '@iconscout/react-unicons'
-import { UilFacebookF } from '@iconscout/react-unicons'
-import { UilInstagram } from '@iconscout/react-unicons'
-import { UilLinkedinAlt } from '@iconscout/react-unicons'
+import { UilTwitter,UilFacebookF,UilInstagram ,UilLinkedinAlt} from '@iconscout/react-unicons'
 
 class Footer extends Component {
     state = {  } 

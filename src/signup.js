@@ -19,7 +19,7 @@ function Signup(){
 
 
   
-    <section className="vh-100" style={{ backgroundColor: "#D8D8D8" }}>
+    <section className="vh-100 mt-5 mb-5" style={{ backgroundColor: "#D8D8D8" }}>
 
 
   <div className="container h-100">
@@ -130,7 +130,7 @@ function Signup(){
                   <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4" >
                   {(error.usernameError || error.emailError || error.passError || error.confirmPassError)
             ?<input type="submit"  defaultValue="Sign up"  disabled/>
-            :<input type="submit"  defaultValue="Sign up"  style={{color:'#FF3312',borderColor:"#5F5F5F",borderRadius:"10px",}} className="bttn"/>
+            :<input type="submit"  defaultValue="Sign up"  style={{color:'white',borderRadius:"50px", backgroundColor:'#ce1212'}} className="bttn"/>
           
           }
 

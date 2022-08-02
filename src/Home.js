@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import './css/main.css';
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { UilClipboardAlt } from '@iconscout/react-unicons'
+import { UilClipboardAlt ,UilStar ,UilPlayCircle,UilCrockery,UilClock} from '@iconscout/react-unicons';
+
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Menu from './Components/Menu';
-import { UilStar } from '@iconscout/react-unicons';
+
 class Home extends Component {
     state = {  } 
     render() { 
@@ -54,13 +55,13 @@ class Home extends Component {
                       <a href="/Pricing" className="btn-book-a-table">
                         Book a Plan
                       </a>
-                      <a
+                      {/* <a
                         href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
                         className="glightbox btn-watch-video d-flex align-items-center" target={'_blank'}
                       >
-                        <i className="bi bi-play-circle" />
+                        <UilPlayCircle style={{color:'#ce1212' ,fontSize:'100px'}} />
                         <span>Watch Video</span>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                   <div className="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
@@ -84,7 +85,7 @@ class Home extends Component {
                     <div className="col-lg-4" data-aos="fade-up" data-aos-delay={100}>
                       <div className="why-box">
                         <h3>Why Choose Zaki?</h3>
-                        <p>
+                        <p className='mt-4'>
                         In our restaurant, you can choose the meals that suit your daily calorie need, and you can choose the meals by subscribing with us in our plans to organize your daily meals.
                         </p>
                         <div className="text-center">
@@ -100,32 +101,29 @@ class Home extends Component {
                         <div className="col-xl-4" data-aos="fade-up" data-aos-delay={200}>
                           <div className="icon-box d-flex flex-column justify-content-center align-items-center">
                             <UilClipboardAlt />
-                            <h4>Corporis voluptates officia eiusmod</h4>
+                            <h4>Calorie Tracker</h4>
                             <p>
-                              Consequuntur sunt aut quasi enim aliquam quae harum pariatur
-                              laboris nisi ut aliquip
+                              To be able to track your calories to become more healther.
                             </p>
                           </div>
                         </div>
                         {/* End Icon Box */}
-                        <div className="col-xl-4" data-aos="fade-up" data-aos-delay={300}>
+                        <div className="col-xl-4" data-aos="fade-up" data-aos-delay={200}>
                           <div className="icon-box d-flex flex-column justify-content-center align-items-center">
-                            <i className="bi bi-gem" />
-                            <h4>Ullamco laboris ladore pan</h4>
+                            <UilCrockery className="bi bi-gem" />
+                            <h4>Different selections of Organic food</h4>
                             <p>
-                              Excepteur sint occaecat cupidatat non proident, sunt in
-                              culpa qui officia deserunt
+                              We have added different selections of food to help you with your exercises and to match your taste.
                             </p>
                           </div>
                         </div>
                         {/* End Icon Box */}
-                        <div className="col-xl-4" data-aos="fade-up" data-aos-delay={400}>
+                        <div className="col-xl-4" data-aos="fade-up" data-aos-delay={200}>
                           <div className="icon-box d-flex flex-column justify-content-center align-items-center">
-                            <i className="bi bi-inboxes" />
-                            <h4>Labore consequatur incidid dolore</h4>
+                            <UilClock className="bi bi-inboxes" />
+                            <h4>Avalible 24/7</h4>
                             <p>
-                              Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut
-                              maiores omnis facere
+                              We have organized our time table to track yours to always be there for you.
                             </p>
                           </div>
                         </div>
@@ -333,7 +331,7 @@ class Home extends Component {
               </section>
               {/* End Testimonials Section */}
               {/* ======= Events Section ======= */}
-              <section id="events" className="events">
+              {/* <section id="events" className="events">
                 <div className="container-fluid" data-aos="fade-up">
                   <div className="section-header">
                     <h2>Events</h2>
@@ -358,9 +356,9 @@ class Home extends Component {
                           ipsum voluptas eos omnis facere. Enim facilis veritatis id est
                           rem repudiandae nulla expedita quas.
                         </p>
-                      </div>
+                      </div> */}
                       {/* End Event item */}
-                      <div
+                      {/* <div
                         className="swiper-slide event-item d-flex flex-column justify-content-end col-lg-4"
                         style={{ backgroundImage: "url(./img/events-2.jpg)" }}
                       >
@@ -371,9 +369,9 @@ class Home extends Component {
                           quaerat doloribus. Facere nemo vero est ut dolores ea assumenda
                           et. Delectus saepe accusamus aspernatur.
                         </p>
-                      </div>
+                      </div> */}
                       {/* End Event item */}
-                      <div
+                      {/* <div
                         className="swiper-slide event-item d-flex flex-column justify-content-end col-lg-4"
                         style={{ backgroundImage: "url(./img/events-3.jpg)" }}
                       >
@@ -384,13 +382,13 @@ class Home extends Component {
                           Quis id sit quibusdam. Esse quisquam ducimus officia ipsum ut
                           quibusdam maxime. Non enim perspiciatis.
                         </p>
-                      </div>
+                      </div> */}
                       {/* End Event item */}
-                    </div>
+                    {/* </div>
                     <div className="swiper-pagination" />
                   </div>
                 </div>
-              </section>
+              </section> */}
               {/* End Events Section */}
               {/* ======= Chefs Section ======= */}
               <section id="chefs" className="chefs section-bg">
@@ -410,7 +408,7 @@ class Home extends Component {
                       <div className="chef-member">
                         <div className="member-img">
                           <img
-                            src="./img/chefs/chefs-1.jpg"
+                            src="../../img/chefs/chefs-1.jpg"
                             className="img-fluid"
                             alt=""
                           />
@@ -524,7 +522,7 @@ class Home extends Component {
               </section>
               {/* End Chefs Section */}
               {/* ======= Book A Table Section ======= */}
-              <section id="book-a-table" className="book-a-table">
+              {/* <section id="book-a-table" className="book-a-table">
                 <div className="container" data-aos="fade-up">
                   <div className="section-header">
                     <h2>Book A Plan</h2>
@@ -644,11 +642,11 @@ class Home extends Component {
                           <button type="submit">Book a Plan</button>
                         </div>
                       </form>
-                    </div>
+                    </div> */}
                     {/* End Reservation Form */}
-                  </div>
+                  {/* </div>
                 </div>
-              </section>
+              </section> */}
               {/* End Book A Table Section */}
             </main>
             {/* End #main */}

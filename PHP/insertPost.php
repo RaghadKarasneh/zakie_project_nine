@@ -1,12 +1,13 @@
 <?php
 include('./connect.php');
 
-$user_id=['userId'];
-$title=['title'];
-$image=['image'];
-$excerpt=['excerpt'];
-$body=['body'];
+$user_id=$_REQUEST['user_id'];
+$title=$_REQUEST['title'];
+// $image=['image'];
+// $excerpt=['excerpt'];
+$body=$_REQUEST['body'];
 
-$st= $connect->prepare("INSERT INTO posts(userId,title,image,excerpt,body) VALUES('$user_id','$title','$image','$excerpt','$body');");
+$st=$connect->prepare("INSERT INTO posts(user_id,title,body) VALUES('$user_id','$title','$body');");
 $st->execute();
+
 ?>
