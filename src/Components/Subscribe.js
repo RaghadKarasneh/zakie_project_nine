@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import '../css/subscribe.css'
+// import '../css/subscribe.css';
+import '../css/main.css';
+
 function Subscribe() {
     const [city,setCity]=useState("");
     const [address,setAddress]=useState("");
@@ -35,7 +37,7 @@ function Subscribe() {
         <>
  
   <title>Contact Form #1</title>
-  <div className="content">
+  <div className="content mt-5 ">
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-md-10">
