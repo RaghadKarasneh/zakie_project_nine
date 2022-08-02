@@ -91,10 +91,10 @@ class About extends Component {
                             alt=""
                           />
                           <div className="social">
-                            <a href="" target={'_blank'}>
+                            <a href="https://github.com/RaghadKarasneh" target={'_blank'}>
                               <UilGithub className="bi bi-facebook" />
                             </a>
-                            <a href="" target={'_blank'}>
+                            <a href="https://www.linkedin.com/in/raghad-alkarasneh/" target={'_blank'}>
                               <UilLinkedinAlt className="bi bi-linkedin" />
                             </a>
                           </div>
@@ -119,10 +119,10 @@ class About extends Component {
                             alt=""
                           />
                           <div className="social">
-                            <a href="" target={'_blank'}>
+                            <a href="https://github.com/10-anasAllawafeh" target={'_blank'}>
                               <UilGithub className="bi bi-facebook" />
                             </a>
-                            <a href="" target={'_blank'}>
+                            <a href="https://www.linkedin.com/in/anas-al-lawafeh-b05954232/" target={'_blank'}>
                               <UilLinkedinAlt className="bi bi-linkedin" />
                             </a>
                           </div>
@@ -147,10 +147,10 @@ class About extends Component {
                             alt=""
                           />
                           <div className="social">
-                            <a href="" target={'_blank'}>
+                            <a href="https://github.com/Dyarhunaity" target={'_blank'}>
                               <UilGithub className="bi bi-facebook" />
                             </a>
-                            <a href="" target={'_blank'}>
+                            <a href="https://www.linkedin.com/in/dyar-hunaity-90a540236/" target={'_blank'}>
                               <UilLinkedinAlt className="bi bi-linkedin" />
                             </a>
                           </div>
@@ -178,7 +178,7 @@ class About extends Component {
                             <a href="https://github.com/taebah-alshlouh" target={'_blank'}>
                               <UilGithub className="bi bi-facebook mt-2" />
                             </a>
-                            <a href="" target={'_blank'}>
+                            <a href="https://www.linkedin.com/in/taebah-shlouh-2b2401146/" target={'_blank'}>
                               <UilLinkedinAlt className="bi bi-linkedin mt-2" />
                             </a>
                           </div>
