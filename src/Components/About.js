@@ -80,7 +80,7 @@ class About extends Component {
                   <div className="row gy-4">
                     <div
                       className="col-lg-3 col-md-3 d-flex align-items-stretch"
-                      data-aos="fade-up"
+                      data-aos="fade-up" style={{height:'60vh'}}
                       data-aos-delay={100}
                     >
                       <div className="chef-member">
@@ -91,10 +91,10 @@ class About extends Component {
                             alt=""
                           />
                           <div className="social">
-                            <a href="" target={'_blank'}>
+                            <a href="https://github.com/RaghadKarasneh" target={'_blank'}>
                               <UilGithub className="bi bi-facebook" />
                             </a>
-                            <a href="" target={'_blank'}>
+                            <a href="https://www.linkedin.com/in/raghad-alkarasneh/" target={'_blank'}>
                               <UilLinkedinAlt className="bi bi-linkedin" />
                             </a>
                           </div>
@@ -108,7 +108,7 @@ class About extends Component {
                     {/* End Chefs Member */}
                     <div
                       className="col-lg-3 col-md-3 d-flex align-items-stretch"
-                      data-aos="fade-up"
+                      data-aos="fade-up" style={{height:'60vh'}}
                       data-aos-delay={100}
                     >
                       <div className="chef-member">
@@ -119,10 +119,10 @@ class About extends Component {
                             alt=""
                           />
                           <div className="social">
-                            <a href="" target={'_blank'}>
+                            <a href="https://github.com/10-anasAllawafeh" target={'_blank'}>
                               <UilGithub className="bi bi-facebook" />
                             </a>
-                            <a href="" target={'_blank'}>
+                            <a href="https://www.linkedin.com/in/anas-al-lawafeh-b05954232/" target={'_blank'}>
                               <UilLinkedinAlt className="bi bi-linkedin" />
                             </a>
                           </div>
@@ -136,21 +136,21 @@ class About extends Component {
                     {/* End Chefs Member */}
                     <div
                       className="col-lg-3 col-md-3 d-flex align-items-stretch"
-                      data-aos="fade-up"
+                      data-aos="fade-up" style={{height:'60vh'}}
                       data-aos-delay={200}
                     >
                       <div className="chef-member">
-                        <div className="member-img">
+                        <div className="member-img" style={{height:'65%'}}>
                           <img
                             src="./img/team/dyar.jpg"
                             className="img-fluid"
-                            alt=""
+                            alt="" 
                           />
                           <div className="social">
-                            <a href="" target={'_blank'}>
+                            <a href="https://github.com/Dyarhunaity" target={'_blank'}>
                               <UilGithub className="bi bi-facebook" />
                             </a>
-                            <a href="" target={'_blank'}>
+                            <a href="https://www.linkedin.com/in/dyar-hunaity-90a540236/" target={'_blank'}>
                               <UilLinkedinAlt className="bi bi-linkedin" />
                             </a>
                           </div>
@@ -164,21 +164,21 @@ class About extends Component {
                     {/* End Chefs Member */}
                     <div
                       className="col-lg-3 col-md-3 d-flex align-items-stretch"
-                      data-aos="fade-up"
+                      data-aos="fade-up" style={{height:'60vh'}}
                       data-aos-delay={300}
                     >
                       <div className="chef-member">
                         <div className="member-img">
                           <img
                             src="./img/team/taebah.jpg"
-                            className="img-fluid mt-5"
+                            className="img-fluid"
                             alt=""
                           />
                           <div className="social">
                             <a href="https://github.com/taebah-alshlouh" target={'_blank'}>
                               <UilGithub className="bi bi-facebook mt-2" />
                             </a>
-                            <a href="" target={'_blank'}>
+                            <a href="https://www.linkedin.com/in/taebah-shlouh-2b2401146/" target={'_blank'}>
                               <UilLinkedinAlt className="bi bi-linkedin mt-2" />
                             </a>
                           </div>

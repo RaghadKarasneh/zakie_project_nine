@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import '../css/subscribe.css'
+// import '../css/subscribe.css';
+import '../css/main.css';
+
 function Subscribe() {
     const [city,setCity]=useState("");
     const [address,setAddress]=useState("");
@@ -35,7 +37,7 @@ function Subscribe() {
         <>
  
   <title>Contact Form #1</title>
-  <div className="content">
+  <div className="content mt-5 ">
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-md-10">
@@ -51,8 +53,12 @@ function Subscribe() {
                 name="contactForm"
               >
                 <div className="row">
-                <div className="col-md-6 form-group">
-                    <select className="form-control" name="city" onChange={setCityHandle}>
+                <div className="col-md-8 form-group">
+                    
+                    <select
+                className="form-control activity"
+                name="city" onChange={setCityHandle}
+              >
                         <option value="">Choose Your City</option>
                         <option value="Amman">Amman </option>
                         <option value="Aqaba">Aqaba</option>
@@ -124,17 +130,7 @@ function Subscribe() {
                 Your message was sent, thank you!
               </div>
             </div>
-            <div className="col-lg-4 ml-auto">
-              <h3 className="mb-4">Let's talk about everything.</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
-                deleniti itaque similique magni. Magni, laboriosam perferendis
-                maxime!
-              </p>
-              <p>
-                <a href="#">Read more</a>
-              </p>
-            </div>
+            
           </div>
         </div>
       </div>

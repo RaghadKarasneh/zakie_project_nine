@@ -2,10 +2,7 @@ import React, { useState } from 'react'
 import emailjs from 'emailjs-com'
 import { init } from 'emailjs-com';
 import '../css/main.css';
-import { UilPhone } from '@iconscout/react-unicons';
-import { UilEnvelope } from '@iconscout/react-unicons';
-import { UilMap } from '@iconscout/react-unicons';
-import { UilShareAlt } from '@iconscout/react-unicons'
+import { UilPhone,UilEnvelope, UilMap,UilShareAlt } from '@iconscout/react-unicons';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 init('user_id');
 
@@ -113,24 +110,22 @@ const Contact = () => {
                   </div>
 
 
-                  <form role="form" className="php-email-form p-3 p-md-4">
-                    <div className="row">
-                      <div className="col-xl-6 form-group">
+                  <form role="form" className="php-email-form p-5 p-md-5 ">
+                      <div className="col-xl-12 form-group">
                         <input type="text" name="name" className="form-control" id="name" placeholder="Your Name" required value={name} onChange={e => setName(e.target.value)} />
                       </div>
-                      <div className="col-xl-6 form-group">
+                      <div className="col-xl-12 form-group">
                         <input type="email" pattern="[^@\s]+@[^@\s]+" className="form-control" name="email" id="email" placeholder="Your Email" required value={email} onChange={e => setEmail(e.target.value)}
                         />
                       </div>
-                    </div>
                     <div className="form-group">
-                      <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject" required value={subject} onChange={e => setSubject(e.target.value)}/>
+                      <input type="text" className="form-control input-group-lg" name="subject" id="subject" placeholder="Subject" required value={subject} onChange={e => setSubject(e.target.value)}/>
                     </div>
                     <div className="form-group">
                       <textarea className="form-control" name="message" rows={5} placeholder="Message" required="" defaultValue={""} value={message} onChange={e => setMessage(e.target.value)} />
                     </div>
                     <div className="text-center">
-                      <button onClick={submit}>Send Message</button>
+                      <button onClick={submit} className='bttn'>Send Message</button>
                       <span className={emailSent ? 'visible' : null}>Thank you for your message, we will be in touch in no time!</span>
                     </div>
                   </form>
