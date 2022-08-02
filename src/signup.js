@@ -129,8 +129,10 @@ function Signup(){
 
                   <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4" >
                   {(error.usernameError || error.emailError || error.passError || error.confirmPassError)
-            ?<input type="submit"  defaultValue="Sign up"  disabled/>
-            :<input type="submit"  defaultValue="Sign up"  style={{color:'white',borderRadius:"50px", backgroundColor:'#ce1212'}} className="bttn"/>
+
+            ?<button type="submit"  defaultValue="Sign up"  disabled>SignUp</button>
+            :<button  type="submit"  defaultValue="Sign up"  style={{color:'#FFFFFF',borderColor:"#5F5F5F",borderRadius:"10px",width:'190px',height:'50px'}} className="bttn">Sign Up</button>
+
           
           }
 

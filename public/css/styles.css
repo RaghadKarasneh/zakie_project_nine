@@ -142,11 +142,13 @@
     --color-gray-18: #141414;
     --color-gray-17: #1e1e1e;
 
+
     
     --color-gray-16: #d1d1d1;
 
 
-    --color-gray-16: #d1d1d1;
+    
+
     --color-gray-15: #333333;
     --color-gray-14: #3d3d3d;
     --color-gray-13: #474747;
@@ -2150,6 +2152,7 @@ select {
     border: 1px solid transparent;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+    height: 50px;
 }
 
 .ss-custom-select {
