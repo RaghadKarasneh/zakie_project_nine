@@ -4,6 +4,9 @@
   background-color: rgb(0, 234, 12);
 }
 
+.button{
+  background-color: #ce1212 !important;
+}
 .bttn:hover{
 background-color: rgba(239, 134, 134, 0.656) !important;
 }

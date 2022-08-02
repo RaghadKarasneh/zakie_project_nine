@@ -19,7 +19,7 @@ function Signup(){
 
 
   
-    <section className="vh-100" style={{ backgroundColor: "#D8D8D8" }}>
+    <section className="vh-100 mt-5 mb-5" style={{ backgroundColor: "#D8D8D8" }}>
 
 
   <div className="container h-100">

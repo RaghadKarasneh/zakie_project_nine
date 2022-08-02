@@ -118,6 +118,21 @@ class Calculator extends Component {
           }
           this.setState({ pal: resultPAL });
         }
+        handlePlan(){
+          if(this.state.pal,this.state.heightFeet,this.state.heightInches,this.state.age,this.state.weight,this.state.gender != ''){
+          sessionStorage.setItem('gender', this.state.gender);
+          sessionStorage.setItem('weight', this.state.weight);
+          sessionStorage.setItem('age', this.state.age);
+          sessionStorage.setItem('heightFeet', this.state.heightFeet);
+          sessionStorage.setItem('heightInches', this.state.heightInches);
+          sessionStorage.setItem('calories', this.state.pal);
+          sessionStorage.setItem('height',parseInt(this.state. heightFeet)+parseInt(this.state.heightInches));
+      
+          window.location='./Pricing';}
+          else{
+            this.setState({errorDis:'block'})
+          }
+        }
       
         render() {
           let error;
@@ -273,10 +288,13 @@ class Calculator extends Component {
                       </option>
                     </select>
                   </div>
-                  <button type="button bttn" onClick={() => this.calculateKCalories()}>
+                  <button type="button bttn mb-4" onClick={() => this.calculateKCalories()}>
                     Calculate Calories
                   </button>
-                  <div className='resultPAL'>{resultPAL}</div>
+                  <div className='resultPAL mt-5'>{resultPAL}</div>
+                  <button type="button" onClick={() => this.handlePlan()}>
+                     Choose Your Plan
+                    </button>
                 </div>
                 </div>
               </div>
