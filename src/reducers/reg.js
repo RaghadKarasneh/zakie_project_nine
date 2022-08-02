@@ -47,7 +47,7 @@ const registerReducer=(state={usernameError:'',emailError:'',passError:'',confir
         case "SIGNUP":
             if(state.usernameError == null && state.emailError == null && state.passError == null && state.confirmPassError == null) {
 
-                axios.post('http://localhost/zakie_project_nine/PHP/reg.php?username='+state.username+'&email='+state.email+'&password='+state.password)
+                axios.post('http://localhost/project9/PHP/reg.php?username='+state.username+'&email='+state.email+'&password='+state.password)
                 .then(()=>{
                     console.log('dyar');
                     window.location="/log";
