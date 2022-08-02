@@ -10,6 +10,7 @@ function Posts() {
   const[context,setContext]=useState('');
   const[btnDis,setBtnDis]=useState('block');
   const[formDis,setFormDis]=useState('none');
+  const [state,setState]=useState(false);
   const user_id=parseInt(sessionStorage.getItem('user_id'));
 
   const navigate = useNavigate();
@@ -32,6 +33,7 @@ function Posts() {
     .then(()=>{
       console.log('Success');
       console.log(user_id,title,context);
+      setState(true);
     })
     .catch((error)=>{
       console.log('error happened: ',error);
@@ -39,8 +41,9 @@ function Posts() {
   }
   useEffect(()=>{
     getPosts();
+    setState(true);
     console.log(typeof(title),typeof(context),user_id);
-  },[title,context])
+  },[title,context,state])
 
   return (
     <>
