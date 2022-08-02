@@ -64,7 +64,7 @@ section {
 }
 
 .section-bg {
-  background-color: #eee;
+  background-color: #eee ;
 }
 
 .section-header {
@@ -752,6 +752,7 @@ section {
   font-weight: 700;
   font-size: 34px;
   margin-bottom: 30px;
+  color: #fff;
 }
 
 .why-us .why-box p {
@@ -1037,7 +1038,7 @@ section {
   background-color: #d1d1d7;
   opacity: 1;
   border-radius: 50%;
- 
+
 }
 .testimonials .slide .carousel-indicators{
   margin-bottom: 40px;
@@ -1308,6 +1309,7 @@ section {
 .book-a-table .php-email-form input:focus,
 .book-a-table .php-email-form textarea:focus {
   border-color: var(--color-primary);
+  background-color: white;
 }
 
 .book-a-table .php-email-form input {
@@ -1316,6 +1318,7 @@ section {
 
 .book-a-table .php-email-form textarea {
   padding: 12px 15px;
+  background-color: #eaeaea;
 }
 
 .book-a-table .php-email-form button[type=submit] {
@@ -1500,15 +1503,18 @@ section {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
+  color: #000;
 }
 
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
-  border-color: var(--color-primary);
+  border-color: #ce1212;
 }
 
 .contact .php-email-form input {
   height: 48px;
+  border:1px solid #adb5bd;
+  background-color: white;
 }
 
 .contact .php-email-form textarea {
@@ -1562,8 +1568,8 @@ section {
 }
 
 .hero p {
-  color: #4f4f5a;
-  font-weight: 400;
+  color: #7d7d86;
+  font-weight: 600;
   margin-bottom: 30px;
 }
 

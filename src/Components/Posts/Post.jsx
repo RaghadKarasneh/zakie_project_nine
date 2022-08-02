@@ -1,31 +1,53 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Comment from './Comments/Comment';
+import { useLocation,useNavigate } from "react-router-dom";
+
+
 
 function Post() {
 
     const [comments,setComments]=useState([]);
     const[user,setUser]=useState([]);
     const [posts,setPosts]=useState([]);
-    const [post,setPost]=useState([]);
     const [state,setState]=useState(false);
+    const location = useLocation();
+
+    const getPosts=()=>{
+        axios.get('http://localhost/project9/PHP/posts.php')
+        .then((response)=>{
+          setPosts(response.data)
+          console.log(posts);
+        })
+      }
+      useEffect(()=>{
+        getPosts();
+      },[])
 
 
-
-
-
+    const navigate = useNavigate();
+    const goToReceiver = (id) => {
+    let post=posts.filter(post => post.id == id);
+    sessionStorage.setItem('post_id','');
+    sessionStorage.setItem('post_id',id);
+    navigate("/post", { state: { post_id:id, post:post }});
+    }
 
     const CommentData=() => {
+        console.log('post ID :',sessionStorage.getItem('post_id'));
         axios.get('http://localhost/project9/PHP/comments.php')
         .then((response)=>{
-        setComments(response.data)
-        console.log(comments);
-    })};
-
-    useEffect(()=>{
-        CommentData();
+            setComments(response.data)
+            console.log(comments);
+            console.log('post_id:',comments[0].post_id);
+        })};
+        
+        const comment=setTimeout(()=>{
+            console.log('post Data is:',posts);
+            },3000);
+        useEffect(()=>{
+            CommentData()
         setState(false);
-  
         // const postData=setTimeout(()=>{axios.get('')
         // .then((response)=>{
         //     setPost(response.data)
@@ -54,22 +76,18 @@ function Post() {
                                          images/thumbs/single/standard/standard-525.jpg 525w" sizes="(max-width: 2100px) 100vw, 2100px" alt="" />
                         </div>
                     </div> {/* <!-- end s-content__media --> */}
-
+                    {posts ? posts.filter(post => (post.id === sessionStorage.getItem('post_id'))).map(post => 
+                    (
                     <div className="s-content__primary container">
 
-                        <h2 className="s-content__title s-content__title--post">Hey, This Is A Standard Format Post.</h2>
+                        <h2 className="s-content__title s-content__title--post">{post.title}</h2>
 
                         <ul className="s-content__post-meta">
-                            <li className="date">September 05, 2020</li>
+                            <li className="date">{post.created_at}</li>
                             <li className="cat"><a href="">Frontend</a><a href="">Design</a></li>
                         </ul>
 
-                        <p className="lead">
-                        Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor 
-                        sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat 
-                        enim mollit amet anim veniam dolor dolor irure velit commodo cillum sit nulla ullamco 
-                        magna amet magna cupidatat qui labore cillum sit in tempor veniam consequat non laborum 
-                        adipisicing aliqua ea nisi sint. Unde quod at minus quia velit ipsa ea qui. </p> 
+                        <p className="lead">{post.body}</p> 
 
                         <p>Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat enim mollit amet anim veniam dolor dolor irure velit commodo cillum sit nulla ullamco magna amet magna cupidatat qui labore cillum sit in tempor veniam consequat non laborum adipisicing aliqua ea nisi sint ut quis proident ullamco ut dolore culpa occaecat ut laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat in adipisicing in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed.
                         </p>
@@ -88,24 +106,25 @@ function Post() {
                                 </ul>
                             </div>
                         </div> {/* <!-- end s-content__author --> */}
-
+                        
 
                         <div className="s-content__pagenav group">
                             <div className="prev-nav">
-                                <a href="#" rel="prev">
+                                <a href="#" rel="prev"
+                                onClick={()=>{goToReceiver(parseInt(post.id)-1)}}>
                                     <span>Previous</span>
-                                    Tips on Minimalist Design 
                                 </a>
                             </div>
                              <div className="next-nav">
-                                 <a href="#" rel="next">
+                                <a href="#" rel="next"
+                                 onClick={()=>{goToReceiver(parseInt(post.id)+1)}}>
                                      <span>Next</span>
-                                    Less Is More 
-                                 </a>
+                                </a>
                              </div>
-                         </div> {/* <!-- end s-content__pagenav --> */}
+                         </div> 
 
-                    </div> {/* <!-- end s-content__primary --> */}
+                    </div> 
+                    )): ''}
                 </article>
 
             </div> {/* <!-- end column --> */}
@@ -116,8 +135,8 @@ function Post() {
 
 
 
-                    <Comment  user_id={1} post_id={1} comments={comments} setState={setState}/>
-
+                    <Comment  comments={comments} user_id={1} setState={setState} />
+ 
 
         
     </section> 

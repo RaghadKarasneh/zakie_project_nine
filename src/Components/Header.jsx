@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link,BrowserRouter } from 'react-router-dom';
+import { UilUser } from '@iconscout/react-unicons';
 
 function Header() {
   return (
     <header id="header" className="header fixed-top d-flex align-items-center">
     <div className="container d-flex align-items-center justify-content-between">
       <BrowserRouter>
-      <Link to='/Home'>
+
       <a
-        href=""
+        href="/"
         className="logo d-flex align-items-center me-auto me-lg-0"
       >
         {/* Uncomment the line below if you also wish to use an image logo */}
@@ -16,22 +17,14 @@ function Header() {
         <h1>
           Zakie<span>.</span>
         </h1>
-      </a></Link>
+      </a>
       <nav id="navbar" className="navbar">
         <ul>
           <li>
-          <Link to='/Home'>
-            <a href="">Home</a>
-            </Link>
+            <a href="/Home">Home</a>
           </li>
           <li>
-            <a href="/">Menu</a>
-          </li>
-          <li>
-            <a href="/">Events</a>
-          </li>
-          <li>
-            <a href="/">Chefs</a>
+            <a href="/Menu">Menu</a>
           </li>
           <li>
             <a href="/">Gallery</a>
@@ -80,20 +73,28 @@ function Header() {
             </ul>
           </li>
           <li>
-             <Link to="/About">
             <a href="/About">About us</a>
-            </Link>
           </li>
           <li>
-            <Link to="/Contact">
             <a href="/Contact">Contact us</a>
+          </li>
+          <li className='offset-1'>
+            <a href="/log">login</a>
+          </li>
+          <li>
+            <a href="/reg">signup</a>
+          </li>
+          <li>
+            <Link to="/profile">
+            <a href="/profile"> <UilUser/></a>
             </Link>
           </li>
+         
         </ul>
       </nav>
       {/* .navbar */}
-      <a className="btn-book-a-table" href="">
-        Book a Table
+      <a className="btn-book-a-table" href="/Pricing">
+        Book a Plan
       </a>
       <i className="mobile-nav-toggle mobile-nav-show bi bi-list" />
       <i className="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" />
