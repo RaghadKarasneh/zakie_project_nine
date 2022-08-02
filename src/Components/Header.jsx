@@ -27,6 +27,9 @@ function Header() {
             <a href="/Menu">Menu</a>
           </li>
           <li>
+            <a href="/posts">Community</a>
+          </li>
+          <li>
             <a href="/Calculator">Calculator</a>
           </li>    
           <li>
