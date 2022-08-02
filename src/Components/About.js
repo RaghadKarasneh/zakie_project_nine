@@ -80,7 +80,7 @@ class About extends Component {
                   <div className="row gy-4">
                     <div
                       className="col-lg-3 col-md-3 d-flex align-items-stretch"
-                      data-aos="fade-up"
+                      data-aos="fade-up" style={{height:'60vh'}}
                       data-aos-delay={100}
                     >
                       <div className="chef-member">
@@ -108,7 +108,7 @@ class About extends Component {
                     {/* End Chefs Member */}
                     <div
                       className="col-lg-3 col-md-3 d-flex align-items-stretch"
-                      data-aos="fade-up"
+                      data-aos="fade-up" style={{height:'60vh'}}
                       data-aos-delay={100}
                     >
                       <div className="chef-member">
@@ -136,15 +136,15 @@ class About extends Component {
                     {/* End Chefs Member */}
                     <div
                       className="col-lg-3 col-md-3 d-flex align-items-stretch"
-                      data-aos="fade-up"
+                      data-aos="fade-up" style={{height:'60vh'}}
                       data-aos-delay={200}
                     >
                       <div className="chef-member">
-                        <div className="member-img">
+                        <div className="member-img" style={{height:'65%'}}>
                           <img
                             src="./img/team/dyar.jpg"
                             className="img-fluid"
-                            alt=""
+                            alt="" 
                           />
                           <div className="social">
                             <a href="https://github.com/Dyarhunaity" target={'_blank'}>
@@ -164,14 +164,14 @@ class About extends Component {
                     {/* End Chefs Member */}
                     <div
                       className="col-lg-3 col-md-3 d-flex align-items-stretch"
-                      data-aos="fade-up"
+                      data-aos="fade-up" style={{height:'60vh'}}
                       data-aos-delay={300}
                     >
                       <div className="chef-member">
                         <div className="member-img">
                           <img
                             src="./img/team/taebah.jpg"
-                            className="img-fluid mt-5"
+                            className="img-fluid"
                             alt=""
                           />
                           <div className="social">
