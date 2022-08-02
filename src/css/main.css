@@ -520,12 +520,12 @@ section {
 
   .navbar a:hover,
   .navbar li:hover>a {
-    color: #000;
+    color: rgb(255, 0, 0);
   }
 
   .navbar .active,
   .navbar .active:focus {
-    color: #000;
+    color: rgb(254, 0, 0);
     border-color: var(--color-primary);
   }
 

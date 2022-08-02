@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../css/pricing.css'
 function Pricing () {
-  
-    
+
+  const[dis,setDis]=useState('none');
+
     const package_submit=(e,str)=>{
       e.preventDefault();
-      sessionStorage.setItem('pricing_package',str);
-      window.location='./Subscribe';
-    }
+      if (sessionStorage.getItem('user_id')) { 
+        sessionStorage.setItem('pricing_package',str);
+        window.location='./Subscribe';
+      }
+      else{
+        setDis('flex');
+      }
+    };
 
         return (
       <div id="generic_price_table">
@@ -198,7 +204,7 @@ function Pricing () {
             {/*//BLOCK ROW END*/}
           </div>
         </section>
-       
+       <div className='container justify-content-center' style={{display: dis}}><h3 style={{color: 'red'}}>To Subscribe Please Log in first</h3></div>
       </div>
   
     );

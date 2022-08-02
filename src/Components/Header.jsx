@@ -4,8 +4,8 @@ import { UilUser } from '@iconscout/react-unicons';
 
 function Header() {
   const logout=()=>{
-    sessionStorage.setItem('user_id','');
-    window.location="/"
+    sessionStorage.clear();
+    window.location="/log"
   }
   return (
     <header id="header" className="header fixed-top d-flex align-items-center">
