@@ -7,6 +7,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
+import '../../css/posts.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import Radium from 'radium';
 
@@ -57,7 +58,7 @@ function Posts() {
     <>
     {sessionStorage.getItem('user_id') && 
         <div className='container d-flex justify-content-center ' style={{width: '50%', marginTop:'150px'}}>
-        <Button className="bttn btn-light lg" style={{display: btnDis, width: '18rem',border:'1px solid red' }} onClick={()=>{setFormDis('block');setBtnDis('none')}}><span className='h4'>Insert post</span></Button>
+        <Button className="bttn insertButton btn-light lg" style={{display: btnDis,border: '1px solid gray',backgroundColor: 'red !important', color:'#fff', width: '100%', borderRadius: '20px',marginBottom: '100px'}} onClick={()=>{setFormDis('block');setBtnDis('none')}}><span className='h4' style={{color: 'rgb(255, 255, 255)', }}>POST NOW</span></Button>
         <Form style={{display: formDis}}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
           <FloatingLabel
@@ -86,25 +87,26 @@ function Posts() {
         </div>
     }
 
-    <Row xs={3} md={3} className="g-4">
+    <Row xs={3} md={3} className="g-4" style={{marginBottom:'70px'}} >
     {posts.map(post =>{
       return(
-        <Col>
-        <Card style={{ width: '35rem' ,marginTop: "150px"}}>
-          <Card.Img variant="top" src="https://images.template.net/wp-content/uploads/2018/03/Useful-Restaurant-Review-Card-Templates.jpg" />
-          <Card.Body>
+        <Col lg="8" style={{boxShadow: '6px 5px 10px grey',height: '150px',margin: '20px auto'}}>
+      
+          {/* <Card.Img variant="top" src="https://images.template.net/wp-content/uploads/2018/03/Useful-Restaurant-Review-Card-Templates.jpg" /> */}
+          
             
-            <Card.Text>
+            <h3 style={{display:'inline-block', width:'50%',  marginLeft: '50px'}}>
             {post.excerpt}
-            </Card.Text>
-            <Button className='bttn' variant="light" onClick={()=>{goToReceiver(post.id)}}>Read More</Button>
-          </Card.Body>
-        </Card>
+            </h3>
+            <button className='bttn col-lg-4' variant="light" onClick={()=>{goToReceiver(post.id)}} style={{display:'inline-block', width:'30%',
+    height: '55px'}}>Read More</button>
+         
+       
         </Col>
       )
     })}
     </Row>
-    <hr style={{height: '1em',backgroundColor:'red'}}/>
+  
     
 
     </>

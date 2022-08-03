@@ -45,15 +45,15 @@ function Comment(props) {
     <>
             {/* <!-- comments
         ================================================== --> */}
-        <div className="comments-wrap">
+        <div className="comments-wrap" style={{padding:0}}>
 
-<div id="comments" className="row">
+{/* <div id="comments" className="row"> */}
     <div className="column">
 
-        <h3>Users Comments</h3>
+        {/* <h3>Users Comments</h3> */}
 
         {/* <!-- START commentlist --> */}
-        <ol className="commentlist">
+        {/* <ol className="commentlist"> */}
         {/* ) */}
             {props.comments ? props.comments.filter(comment => (comment.deleted != 1 && comment.post_id === sessionStorage.getItem('post_id'))).map(filteredComment =>
                 (
@@ -106,7 +106,7 @@ function Comment(props) {
                 </li>
                 )) : ""}
             
-        </ol>
+        {/* </ol> */}
 
      </div> {/* <!-- end col-full --> */}
  </div> {/* <!-- end comments --> */}
@@ -115,22 +115,22 @@ function Comment(props) {
 
     {/* <!-- START respond --> */}
     <div id="respond" className="column">
-        <h3>Add Comment</h3>
+        <h2>Add A New Comment</h2>
     <form name="commentForm" id="commentForm" method="post" action="" autoComplete="off">
 
         <div className="form-floating">
-            <textarea className="form-control border-0 bg-light" placeholder="Leave a comment here" id="comment" style={{height: "150px"}} name="comment" onChange={(e)=>{setComment(e.target.value)}} value={comment}></textarea>
-            <label htmlFor="comment">Comment</label>
+            <textarea className="form-control border-0 bg-light" placeholder="Leave a comment here" id="comment" style={{height: "150px", marginBottom:'50px'}} name="comment" onChange={(e)=>{setComment(e.target.value)}} value={comment}></textarea>
+            {/* <label htmlFor="comment">Comment</label> */}
         </div>
 
-        <input name="submit" id="submit" className="btn btn--primary btn-wide btn--large h-full-width" value="Add Comment" type="submit" onClick={(e)=>{e.preventDefault();handleSubmit(sessionStorage.getItem('post_id'))}} />
+        <input name="submit" id="submit" className="btn btn--primary btn-wide btn--large h-full-width" type="submit" style={{width: '50%', margin: 'auto', padding: '5px'}}onClick={(e)=>{e.preventDefault();handleSubmit(sessionStorage.getItem('post_id'))}} />
 
     </form> 
     </div>
  
 
  </div> 
- </div> 
+ {/* </div>  */}
     </>
   )
 }

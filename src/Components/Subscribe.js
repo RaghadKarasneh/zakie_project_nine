@@ -42,8 +42,9 @@ function Subscribe() {
         <div className="col-md-12">
           <div className="row align-items-center">
             <div className="col-lg-12 mb-5 mb-lg-0">
-              <h2 className="mb-5">
-                Fill the form. <br /> It's easy.
+              <h2 style={{marginBottom:'70px'}}>
+                Fill the form for Healthy 
+                <br></br>follow-up service
               </h2>
               <form
                 className="border-right pr-5 mb-5"
@@ -113,7 +114,7 @@ function Subscribe() {
                       id="message"
                       cols={30}
                       rows={7}
-                      placeholder="Add any notes"
+                      placeholder="Add any notes/ Food you don't like/ Allergic to certain foods/ Chronic diseases"
                       defaultValue={""}
                       onChange={setMessageHandle}
                     />

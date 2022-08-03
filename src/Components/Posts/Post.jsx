@@ -87,7 +87,7 @@ function Post() {
                             <li className="cat"><a href="">Frontend</a><a href="">Design</a></li>
                         </ul> */}
 
-                        <h2 className='mb-50'>{post.excerpt}</h2> 
+                        <h2 className='mb-50' style={{marginBottom: '70px'}}>{post.excerpt}</h2> 
 
                         <p>{post.body}
                         </p>
@@ -95,7 +95,7 @@ function Post() {
                         <div className="s-content__author container">
                             <img src="images/avatars/user-06.jpg" alt="" />
 
-                            <div className="about">
+                            <div className="about" style={{marginLeft: '70px'}}>
                                 <h5><a href="#">Jonathan Smith</a></h5>
 
                                 <ul className="author-social">
@@ -109,16 +109,16 @@ function Post() {
                         
 
                         <div className="s-content__pagenav group">
-                            <div className="prev-nav">
+                            <div className="prev-nav" style={{width: '15%', paddingTop:' var(--vspace-0_5)',paddingRight: 'var(--gutter-lg)',backgroundColor: '#ce1212', marginRight: '20px',borderRadius: '20px', color: '#fff'}}>
                                 <a href="#" rel="prev"
                                 onClick={()=>{goToReceiver(parseInt(post.id)-1)}}>
-                                    <span>Previous</span>
+                                    <span style={{color:'#fff',textAlign:'center', fontSize:'20px', marginLeft:'10px'}}>Previous Post</span>
                                 </a>
                             </div>
-                             <div className="next-nav">
+                             <div className="next-nav"  style={{width: '15%', paddingTop:' var(--vspace-0_5)',paddingRight: 'var(--gutter-lg)',backgroundColor: '#ce1212', marginRight: '20px',borderRadius: '20px', color: '#fff'}}>
                                 <a href="#" rel="next"
                                  onClick={()=>{goToReceiver(parseInt(post.id)+1)}}>
-                                     <span>Next</span>
+                                     <span style={{color:'#fff',textAlign:'center', fontSize:'20px', marginLeft:'10px'}}>Next Post</span>
                                 </a>
                              </div>
                          </div> 

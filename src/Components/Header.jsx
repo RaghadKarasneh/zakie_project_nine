@@ -46,10 +46,10 @@ function Header() {
             <a href="/Contact">Contact us</a>
           </li>
           {sessionStorage.getItem('user_id') != "" && sessionStorage.getItem('user_id') !=undefined && sessionStorage.getItem('user_id') !=null? <li><a onClick={(e)=>{e.preventDefault();logout();}}>Logout</a></li>: <><li className='offset-1'>
-            <a href="/log">login</a>
+            <a href="/log">Sign In</a>
           </li>
           <li>
-            <a href="/reg">signup</a>
+            <a href="/reg">Sign Up</a>
           </li></> }
 
           <li>
