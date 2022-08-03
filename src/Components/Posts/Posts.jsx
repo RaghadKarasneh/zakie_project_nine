@@ -29,7 +29,7 @@ function Posts() {
     navigate("/post", { state: { post_id:id, post:post }});
   };
   const getPosts=()=>{
-    axios.get('http://localhost/project9/PHP/posts.php')
+    axios.get('http://localhost/zakie_project_nine/PHP/posts.php')
     .then((response)=>{
       setPosts(response.data)
       console.log(posts);
@@ -37,7 +37,7 @@ function Posts() {
   };
   const submitPost=(e)=>{
     e.preventDefault();
-    axios.post('http://localhost/project9/PHP/insertPost.php?user_id='+user_id+'&title='+title+'&body='+context)
+    axios.post('http://localhost/zakie_project_nine/PHP/insertPost.php?user_id='+user_id+'&title='+title+'&body='+context)
     .then(()=>{
       console.log('Success');
       console.log(user_id,title,context);
@@ -93,9 +93,9 @@ function Posts() {
         <Card style={{ width: '35rem' ,marginTop: "150px"}}>
           <Card.Img variant="top" src="https://images.template.net/wp-content/uploads/2018/03/Useful-Restaurant-Review-Card-Templates.jpg" />
           <Card.Body>
-            <Card.Title>{post.title}</Card.Title>
+            
             <Card.Text>
-              {post.body}
+            {post.excerpt}
             </Card.Text>
             <Button className='bttn' variant="light" onClick={()=>{goToReceiver(post.id)}}>Read More</Button>
           </Card.Body>

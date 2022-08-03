@@ -7,9 +7,9 @@ class Menu extends Component {
             <section id="menu" className="menu">
                 <div className="container" data-aos="fade-up">
                   <div className="section-header">
-                    <h2>Our Menu</h2>
+                    {/* <h2>Our Menu</h2> */}
                     <p>
-                      Check Our <span>Zakie Menu</span>
+                      Check Our <span>Zakie Main Dishes</span>
                     </p>
                   </div>
                   <ul
@@ -62,7 +62,7 @@ class Menu extends Component {
                     <div className="tab-pane fade active show" id="menu-starters">
                       <div className="tab-header text-center">
                         {/* <p>Menu</p> */}
-                        <h3>Menu</h3>
+                        {/* <h3>Menu</h3> */}
                       </div>
                       <div className="row gy-5">
                         <div className="col-lg-4 menu-item">

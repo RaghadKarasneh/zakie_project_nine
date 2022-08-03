@@ -191,7 +191,7 @@ class Home extends Component {
               <section id="testimonials" className="testimonials section-bg">
               <div className="container" data-aos="fade-up">
                   <div className="section-header">
-                    <h2>Testimonials</h2>
+                    {/* <h2>Testimonials</h2> */}
                     <p>
                       What Are They <span>Saying About Us</span>
                     </p>
@@ -389,7 +389,7 @@ class Home extends Component {
               <section id="chefs" className="chefs section-bg">
                 <div className="container" data-aos="fade-up">
                   <div className="section-header">
-                    <h2>Chefs</h2>
+                    {/* <h2>Chefs</h2> */}
                     <p>
                       Our <span>Proffesional</span> Chefs
                     </p>
@@ -403,7 +403,7 @@ class Home extends Component {
                       <div className="chef-member">
                         <div className="member-img">
                           <img
-                            src="../../img/chefs/chefs-1.jpg"
+                            src="./img/chefs/chefs-1.jpg"
                             className="img-fluid"
                             alt=""
                           />

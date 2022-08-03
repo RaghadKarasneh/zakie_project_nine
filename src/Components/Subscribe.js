@@ -36,7 +36,7 @@ function Subscribe() {
         <>
  
   <title style={{marginTop:'52vh !important'}}>Contact Form #1</title>
-  <div className="content mt-5 ">
+  <div className="content ">
  
       <div className="row justify-content-center">
         <div className="col-md-12">

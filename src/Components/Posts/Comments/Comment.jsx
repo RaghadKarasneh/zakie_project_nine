@@ -18,13 +18,13 @@ function Comment(props) {
 
     // const isEditing=activeComment && activeComment.id === comment.id && activeComment.type === 'editing';
     const deleteComment=(id)=>{
-        axios.post('http://localhost/project9/PHP/insertComment.php?comment_id='+id+'&deleted=true');
+        axios.post('http://localhost/zakie_project_nine/PHP/insertComment.php?comment_id='+id+'&deleted=true');
         console.log(id,newComment);
         props.setState(true);
     }
     const changeComment=(id)=>{
         if (newComment) {  
-            axios.post('http://localhost/project9/PHP/insertComment.php?comment_id='+id+'&new_comment='+newComment);
+            axios.post('http://localhost/zakie_project_nine/PHP/insertComment.php?comment_id='+id+'&new_comment='+newComment);
             console.log(id,newComment);
         }
         setNewComment('');
@@ -32,7 +32,7 @@ function Comment(props) {
         props.setState(true);
     }
     const handleSubmit=(postId)=>{
-        axios.post('http://localhost/project9/PHP/insertComment.php?userId='+props.user_id+'&postId='+postId+'&comment='+comment);
+        axios.post('http://localhost/zakie_project_nine/PHP/insertComment.php?userId='+props.user_id+'&postId='+postId+'&comment='+comment);
         setComment('');
         props.setState(true);
     };

@@ -32,10 +32,10 @@ function Signup(){
                   src="https://media-cdn.tripadvisor.com/media/photo-s/17/15/1b/f2/this-is-the-oh-so-famous.jpg"
                   className="img-fluid"
                   alt="Sample image"
-                  style={{height: '365px'}}
+                  style={{height: '450px'}}
                   />
               </div>
-              <div className="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+              <div className="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1 mt-5">
                 <h2 className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4" style={{color:'#FB4646'}}>
                   Sign up
                 </h2>
