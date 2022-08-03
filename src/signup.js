@@ -3,15 +3,11 @@ import {useSelector,useDispatch } from 'react-redux';
 import {username,email,password,confirmPass, signup} from "./actions";
 import './App.css'
 
-
-
-
-
 function Signup(){
     const dispatch=useDispatch();
     const error=useSelector(state=>state.register);
 
-    const handleSubmit=()=>{
+    const handleSubmit=(e)=>{
       dispatch(signup());
         window.location.href('/log')
     }
@@ -19,10 +15,10 @@ function Signup(){
 
 
   
-    <section className="vh-100 mt-5 mb-5" style={{ backgroundColor: "#D8D8D8" }}>
+    <section className=" mt-5" style={{ backgroundColor: "#D8D8D8" }}>
 
 
-  <div className="container h-100">
+  <div className="container">
 
     <div className="row d-flex justify-content-center align-items-center h-100">
       <div className='col'>
@@ -40,9 +36,9 @@ function Signup(){
                   />
               </div>
               <div className="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
-                <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4" style={{color:'#FB4646'}}>
+                <h2 className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4" style={{color:'#FB4646'}}>
                   Sign up
-                </p>
+                </h2>
                 <form className="mx-1 mx-md-4" onSubmit={()=>handleSubmit()}>
                   <div className="d-flex flex-row align-items-center mb-4">
                     <i className="fas fa-user fa-lg me-3 fa-fw" style={{color:'#FF4141'}}/>
@@ -122,7 +118,7 @@ function Signup(){
                   <p className="small fw-bold mt-2 pt-1 mb-0" style={{color:'#787878'}}>
              Already have an Account??  {" "}
               <a href="../log" className="link " style={{color:'#FF3B0B'}}>
-                Login
+                Sign In
               </a>
             </p>
             <br></br>
@@ -130,7 +126,7 @@ function Signup(){
                   <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4" >
                   {(error.usernameError || error.emailError || error.passError || error.confirmPassError)
 
-            ?<button type="submit"  defaultValue="Sign up"  disabled>SignUp</button>
+            ?<button type="submit"  defaultValue="Sign up" onClick={(e)=>handleSubmit}  disabled>SignUp</button>
             :<button  type="submit"  defaultValue="Sign up"  style={{color:'#FFFFFF',borderColor:"#5F5F5F",borderRadius:"10px",width:'190px',height:'50px'}} className="bttn">Sign Up</button>
 
           
