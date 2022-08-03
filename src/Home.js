@@ -59,8 +59,8 @@ class Home extends Component {
                         href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
                         className="glightbox btn-watch-video d-flex align-items-center" target={'_blank'}
                       >
-                        <UilPlayCircle style={{color:'#ce1212' ,fontSize:'100px'}} />
-                        <span>Watch Video</span>
+                     
+                      
                       </a>
                     </div>
                   </div>
@@ -145,8 +145,8 @@ class Home extends Component {
                           data-purecounter-end={232}
                           data-purecounter-duration={1}
                           className="purecounter"
-                        />
-                        <p>Clients</p>
+                        >200</span>
+                        <h3 style={{color:"white"}}> Clients per month</h3>
                       </div>
                     </div>
                     {/* End Stats Item */}
@@ -157,20 +157,21 @@ class Home extends Component {
                           data-purecounter-end={521}
                           data-purecounter-duration={1}
                           className="purecounter"
-                        />
-                        <p>Projects</p>
+                        >7</span>
+                        <h3 style={{color:"white"}}>Projects a year</h3>
                       </div>
                     </div>
                     {/* End Stats Item */}
                     <div className="col-lg-3 col-md-6">
                       <div className="stats-item text-center w-100 h-100">
                         <span
+                        
                           data-purecounter-start={0}
                           data-purecounter-end={1453}
                           data-purecounter-duration={1}
                           className="purecounter"
-                        />
-                        <p>Hours Of Support</p>
+                        >24</span>
+                        <h3 style={{color:"white"}}> Hours Of Support</h3>
                       </div>
                     </div>
                     {/* End Stats Item */}
@@ -181,8 +182,8 @@ class Home extends Component {
                           data-purecounter-end={32}
                           data-purecounter-duration={1}
                           className="purecounter"
-                        />
-                        <p>Workers</p>
+                        >365</span>
+                        <h3 style={{color:"white"}}>Days here for you </h3>
                       </div>
                     </div>
                     {/* End Stats Item */}
