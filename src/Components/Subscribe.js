@@ -152,6 +152,8 @@ function Subscribe() {
       </div>
     </div>
     </div>
+        </div>
+      </div>
     </div>
 </>
 
