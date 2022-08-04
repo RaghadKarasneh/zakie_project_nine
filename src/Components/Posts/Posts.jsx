@@ -8,7 +8,7 @@ import Row from 'react-bootstrap/Row';
 import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Radium from 'radium';
+// import Radium from 'radium';
 
 
 function Posts() {

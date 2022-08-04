@@ -42,10 +42,18 @@ width: 100% !important;
       outline: none;
       -webkit-box-shadow: none;
       box-shadow: none;
-      border-color: rgb(0, 0, 0); }
+      border-color: #ce1212; }
   
   .btn, .form-control {
-    height: 55px; }
+    height: 55px; 
+}
+  .btn{
+    background-color: #ce1212 !important;
+  }
+  .btn :hover{
+    background-color: #e61b1b !important;
+
+  }
   
   form.border-right {
     padding-right: 6rem !important; }
@@ -82,4 +90,14 @@ width: 100% !important;
 
     color: rgb(0, 0, 0); }
 
-  
+  input{
+    max-width: 100% !important;
+  }
+  select{
+    max-width: 100% !important;
+
+  }
+  textarea{
+    max-width: 100% !important;
+
+  }

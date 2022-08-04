@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-// import '../css/subscribe.css';
-import '../css/main.css';
+import '../css/subscribe.css';
 
 function Subscribe() {
     const [city,setCity]=useState("");
@@ -36,13 +35,13 @@ function Subscribe() {
     return(
         <>
  
-  <title>Contact Form #1</title>
+  <title style={{marginTop:'52vh !important'}}>Contact Form #1</title>
   <div className="content mt-5 ">
-    <div className="container">
+ 
       <div className="row justify-content-center">
-        <div className="col-md-10">
+        <div className="col-md-12">
           <div className="row align-items-center">
-            <div className="col-lg-7 mb-5 mb-lg-0">
+            <div className="col-lg-12 mb-5 mb-lg-0">
               <h2 className="mb-5">
                 Fill the form. <br /> It's easy.
               </h2>
@@ -53,29 +52,24 @@ function Subscribe() {
                 name="contactForm"
               >
                 <div className="row">
-                <div className="col-md-8 form-group">
+                <div className="col-md-12 form-group">
                     
                     <select
                 className="form-control activity"
                 name="city" onChange={setCityHandle}
               >
+
                         <option value="">Choose Your City</option>
                         <option value="Amman">Amman </option>
                         <option value="Aqaba">Aqaba</option>
                         <option value="Irbid">Irbid</option>
                     </select>
                   </div>
-                  <div className="col-md-6 form-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      name="address"
-                      id="address"
-                      placeholder="Address"
-                      onChange={setAddressHandle}
-                    />
-                  </div>
-                  <div className="col-md-6 form-group">
+                  
+                </div>
+                <div className='row'>
+                  
+                <div className="col-md-12 form-group">
                     <input
                       type="text"
                       className="form-control"
@@ -83,6 +77,18 @@ function Subscribe() {
                       id="zip_code"
                       placeholder="Zip Code"
                       onChange={setZipCodeHandle}
+                    />
+                  </div>
+                </div>
+                <div className='row'>
+                <div className="col-md-12 form-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="address"
+                      id="address"
+                      placeholder="Address"
+                      onChange={setAddressHandle}
                     />
                   </div>
                 </div>
@@ -118,14 +124,14 @@ function Subscribe() {
                     <input
                       type="submit"
                       defaultValue="Send Message"
-                      className="btn btn-primary rounded-0 py-2 px-4"
+                      className="btn btn-primary rounded-0 py-2 px-4 mt-3"
                       onClick={(e)=>{clickHandle(e)}}
                     />
-                    <span className="submitting" />
+                    <span className="submitting mt-3" />
                   </div>
                 </div>
               </form>
-              <div id="form-message-warning mt-4" />
+              <div id="form-message-warning" className=' mt-4' />
               <div id="form-message-success">
                 Your message was sent, thank you!
               </div>
@@ -135,7 +141,7 @@ function Subscribe() {
         </div>
       </div>
     </div>
-  </div>
+
 </>
 
     )
