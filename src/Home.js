@@ -152,7 +152,7 @@ class Home extends Component {
                           data-purecounter-duration={1}
                           className="purecounter"
                         >7</span>
-                        <h3 style={{color:"white"}}>Projects a year</h3>
+                        <h3 style={{color:"white"}}>Days a week</h3>
                       </div>
                     </div>
                     {/* End Stats Item */}
@@ -176,8 +176,8 @@ class Home extends Component {
                           data-purecounter-end={32}
                           data-purecounter-duration={1}
                           className="purecounter"
-                        >365</span>
-                        <h3 style={{color:"white"}}>Days here for you </h3>
+                        >12</span>
+                        <h3 style={{color:"white"}}>Months here for you </h3>
                       </div>
                     </div>
                     {/* End Stats Item */}
@@ -191,7 +191,7 @@ class Home extends Component {
               <section id="testimonials" className="testimonials section-bg">
               <div className="container" data-aos="fade-up">
                   <div className="section-header">
-                    <h2>Testimonials</h2>
+                    {/* <h2>Testimonials</h2> */}
                     <p>
                       What Are They <span>Saying About Us</span>
                     </p>
@@ -389,7 +389,7 @@ class Home extends Component {
               <section id="chefs" className="chefs section-bg">
                 <div className="container" data-aos="fade-up">
                   <div className="section-header">
-                    <h2>Chefs</h2>
+                    {/* <h2>Chefs</h2> */}
                     <p>
                       Our <span>Proffesional</span> Chefs
                     </p>
@@ -403,7 +403,7 @@ class Home extends Component {
                       <div className="chef-member">
                         <div className="member-img">
                           <img
-                            src="../../img/chefs/chefs-1.jpg"
+                            src="./img/chefs/chefs-1.jpg"
                             className="img-fluid"
                             alt=""
                           />

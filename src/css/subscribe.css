@@ -15,7 +15,9 @@ body {
       text-decoration: none !important; }
   
   .content {
-    padding: 7rem 0; }
+    padding: 7rem 0;
+  
+  margin-top: 150px;}
   
   h2 {
     font-size: 3.5rem;
@@ -45,7 +47,19 @@ width: 100% !important;
       border-color: rgb(0, 0, 0); }
   
   .btn, .form-control {
-    height: 55px; }
+    height: 55px; 
+}
+.subscribe-button{
+   margin-top: 50px !important;
+}
+  .btn{
+    background-color: #ce1212 !important;
+   
+  }
+  .btn :hover{
+    background-color: #e61b1b !important;
+
+  }
   
   form.border-right {
     padding-right: 6rem !important; }
@@ -93,18 +107,9 @@ width: 100% !important;
     max-width: 100% !important;
 
   }
-  .styleinput{
-    background-color: #fff !important;
-    border: 1.5px solid rgb(180, 179, 179) !important;
-    width: 100% !important;
+  input{
+    margin-bottom: 30px;
   }
-  .styleinput :active{
-    border: 1px solid #ce1212 !important;
-  }
-  .stylebut{
-    width: 100% !important;
-    background-color: #ce1212 !important;
-  }
-  .stylebut :hover{
-    background-color: #f45050 !important;
+  .subscribe-button{
+    margin: auto;
   }

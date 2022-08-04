@@ -7,9 +7,13 @@ class Menu extends Component {
             <section id="menu" className="menu mt-5">
                 <div className="container" data-aos="fade-up">
                   <div className="section-header">
+<<<<<<< HEAD
                     <h2 className='mb-4'>Our Menu</h2>
+=======
+                    {/* <h2>Our Menu</h2> */}
+>>>>>>> 29a09ba60a0bebc94489253935ec266d783186cb
                     <p>
-                      Check Our <span>Zakie Menu</span>
+                      Check Our <span>Zakie Main Dishes</span>
                     </p>
                   </div>
                   <ul
@@ -62,39 +66,41 @@ class Menu extends Component {
                     <div className="tab-pane fade active show" id="menu-starters">
                       <div className="tab-header text-center">
                         {/* <p>Menu</p> */}
-                        <h3>Menu</h3>
+                        {/* <h3>Menu</h3> */}
                       </div>
                       <div className="row gy-5">
                         <div className="col-lg-4 menu-item">
-                          <a href="../public\img\main-menu\lunch\Kibbeh Bi Laban-lunch.png" className="glightbox">
+                          <a href="../public\img\main-menu\lunch\Kofta Bi Tahini-lunch.png" className="glightbox">
+                            
                             <img
                               src="../../img/main-menu/lunch/Kibbeh Bi Laban-lunch.png"
                               className="menu-img img-fluid"
                               alt=""
                             />
                           </a>
-                          <h4>Kibbeh Bi Laban</h4>
+                          <h4>Kofta Bi Tahini
+</h4>
                           <p className="ingredients">
-                            Lorem, deren, trataro, filede, nerada
-                          </p>
-                          <p className="price">1.50 JD</p>
+                          Minced kebab, thin slices of potato, and thick tahini sauce
+         </p>                <p className="price">1.50 JD</p>
                         </div>
-                        {/* Menu Item */}
-                        <div className="col-lg-4 menu-item rounded-3">
-                          <a href="../../img/menu/menu-item-2.png" className="glightbox">
+                           {/* Menu Item */}
+                           <div className="col-lg-4 menu-item">
+                          <a href="./img/menu/menu-item-6.png" className="glightbox">
                             <img
-                              src="../../img/main-menu/lunch/Kofta Bi Tahini-lunch.png"
-                              className="menu-img img-fluid rounded-4"
+                              src="../../img/main-menu/lunch/Zarb-lunch.png"
+                              className="menu-img img-fluid"
                               alt=""
                             />
                           </a>
-                          <h4>Ful Medames</h4>
+                          <h4>Zarb-lunch</h4>
                           <p className="ingredients">
-                            Lorem, deren, trataro, filede, nerada
+                          Smoked, steamed, and grilled lamb with rice 
                           </p>
-                          <p className="price">1.50 JD</p>
+                          <p className="price">7.50 JD</p>
                         </div>
                         {/* Menu Item */}
+                       
                         <div className="col-lg-4 menu-item">
                           <a href="./img/menu/menu-item-3.png" className="glightbox">
                             <img
@@ -105,7 +111,7 @@ class Menu extends Component {
                           </a>
                           <h4>Musakhan</h4>
                           <p className="ingredients">
-                            Lorem, deren, trataro, filede, nerada
+                          Bread, chicken, onions, allspice, cinnamon, and lots of olive oil
                           </p>
                           <p className="price">4.00 JD</p>
                         </div>
@@ -120,7 +126,7 @@ class Menu extends Component {
                           </a>
                           <h4>Mansaf</h4>
                           <p className="ingredients">
-                            Lorem, deren, trataro, filede, nerada
+                          Rice, lamb, and jameed
                           </p>
                           <p className="price">7.50 JD</p>
                         </div>
@@ -135,24 +141,25 @@ class Menu extends Component {
                           </a>
                           <h4>Shish Kebabs</h4>
                           <p className="ingredients">
-                            Lorem, deren, trataro, filede, nerada
+                          Minced lamb, parsley, and salt
                           </p>
                           <p className="price">8.50 JD</p>
                         </div>
-                        {/* Menu Item */}
-                        <div className="col-lg-4 menu-item">
-                          <a href="./img/menu/menu-item-6.png" className="glightbox">
+                       {/* Menu Item */}
+                        <div className="col-lg-4 menu-item rounded-3">
+                          <a href="../../img/menu/menu-item-2.png" className="glightbox">
                             <img
-                              src="../../img/main-menu/lunch/Zarb-lunch.png"
-                              className="menu-img img-fluid"
+                              src="../../img/main-menu/lunch\Kofta Bi Tahini-lunch.png"
+                             
+                              className="menu-img img-fluid rounded-4"
                               alt=""
                             />
                           </a>
-                          <h4>Zarb-lunch</h4>
+                          <h4>Kibbeh Bi Laban</h4>
                           <p className="ingredients">
-                            Lorem, deren, trataro, filede, nerada
+                          Fried nuggets of minced meat, onions, spices, wrapped in a crust of bulger wheat, and cooked with Laban yoghurt sauce
                           </p>
-                          <p className="price">7.50 JD</p>
+                          <p className="price">1.50 JD</p>
                         </div>
                         {/* Menu Item */}
                       </div>

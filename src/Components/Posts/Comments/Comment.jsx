@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import FloatingLabel from 'react-bootstrap/FloatingLabel';
 
 function Comment(props) {
 
@@ -18,7 +18,7 @@ function Comment(props) {
 
     // const isEditing=activeComment && activeComment.id === comment.id && activeComment.type === 'editing';
     const deleteComment=(id)=>{
-        axios.post('http://localhost/project9/PHP/insertComment.php?comment_id='+id+'&deleted=true');
+        axios.post('http://localhost/zakie_project_nine/PHP/insertComment.php?comment_id='+id+'&deleted=true');
         console.log(id,newComment);
         props.setState(true);
     }
@@ -32,7 +32,7 @@ function Comment(props) {
         props.setState(true);
     }
     const handleSubmit=(postId)=>{
-        axios.post('http://localhost/project9/PHP/insertComment.php?userId='+props.user_id+'&postId='+postId+'&comment='+comment);
+        axios.post('http://localhost/zakie_project_nine/PHP/insertComment.php?userId='+props.user_id+'&postId='+postId+'&comment='+comment);
         setComment('');
         props.setState(true);
     };
@@ -40,12 +40,14 @@ function Comment(props) {
 
 
   const userId=localStorage.getItem('userId');
-
+useEffect(()=>{
+console.log(props.comments)
+})
   return (
     <>
             {/* <!-- comments
         ================================================== --> */}
-        <div className="comments-wrap">
+        <div className="comments-wrap" style={{padding:0}}>
 
 <div id="comments" className="row">
     <div className="column">
@@ -115,15 +117,24 @@ function Comment(props) {
 
     {/* <!-- START respond --> */}
     <div id="respond" className="column">
-        <h3>Add Comment</h3>
+        <h2>Add A New Comment</h2>
     <form name="commentForm" id="commentForm" method="post" action="" autoComplete="off">
-
+    
         <div className="form-floating">
-            <textarea className="form-control border-0 bg-light" placeholder="Leave a comment here" id="comment" style={{height: "150px"}} name="comment" onChange={(e)=>{setComment(e.target.value)}} value={comment}></textarea>
-            <label htmlFor="comment">Comment</label>
+            <FloatingLabel
+            controlId="floatingInput"
+            label="Leave a comment here"
+            className="mb-3"
+            style={{marginBottom:'50px'}}
+          >
+            <textarea className="form-control border-0 bg-light" placeholder="Leave a comment here" id="comment" style={{height: "150px", marginBottom:'50px'}} name="comment" onChange={(e)=>{setComment(e.target.value)}} 
+            value={comment}
+            ></textarea>
+         </FloatingLabel>
+            {/* <label htmlFor="comment">Comment</label> */}
         </div>
 
-        <input name="submit" id="submit" className="btn btn--primary btn-wide btn--large h-full-width" value="Add Comment" type="submit" onClick={(e)=>{e.preventDefault();handleSubmit(sessionStorage.getItem('post_id'))}} />
+        <input name="submit" id="submit" className="btn btn--primary btn-wide btn--large h-full-width" type="submit" style={{width: '50%', margin: 'auto', padding: '5px'}}onClick={(e)=>{e.preventDefault();handleSubmit(sessionStorage.getItem('post_id'))}} />
 
     </form> 
     </div>

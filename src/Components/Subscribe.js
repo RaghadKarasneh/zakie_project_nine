@@ -37,10 +37,16 @@ function Subscribe() {
     return(
         <>
  
-  <title>Contact Form #1</title>
-  <div style={{marginTop:'100px'}}>
-  <h2 className="mb-5 mt-5">
-                Fill the form. <br /> It's easy.
+  <title style={{marginTop:'52vh !important'}}>Contact Form #1</title>
+  <div className="content ">
+ 
+      <div className="row justify-content-center">
+        <div className="col-md-12">
+          <div className="row align-items-center">
+            <div className="col-lg-12 mb-5 mb-lg-0">
+              <h2 style={{marginBottom:'70px'}}>
+                Fill the form for Healthy 
+                <br></br>follow-up service
               </h2>
       <div className="row mt-5" style={{marginLeft:'20vw'}}>
       <form
@@ -50,7 +56,7 @@ function Subscribe() {
                 name="contactForm"
               >
                 <div className="row">
-                <div className="col-md-6">
+                <div className="col-md-4 form-group">
                     
                     <select
                 className="form-control activity styleinput mt-3"
@@ -64,10 +70,10 @@ function Subscribe() {
                     </select>
                   </div>
                   
-                </div>
-                <div className='row'>
+                
+                
                   
-                <div className="col-md-6">
+                <div className="col-md-4 form-group">
                     <input
                       type="text"
                       className="form-control styleinput mt-3"
@@ -77,9 +83,9 @@ function Subscribe() {
                       onChange={setZipCodeHandle}
                     />
                   </div>
-                </div>
-                <div className='row'>
-                <div className="col-md-6">
+               
+                
+                <div className="col-md-4 form-group">
                     <input
                       type="text"
                       className="form-control styleinput mt-3"
@@ -89,9 +95,9 @@ function Subscribe() {
                       onChange={setAddressHandle}
                     />
                   </div>
-                </div>
-                <div className="row">
-                  <div className="col-md-6">
+                
+                
+                  <div className="col-md-4 form-group">
                     <input
                       type="text"
                       className="form-control styleinput mt-3"
@@ -102,23 +108,23 @@ function Subscribe() {
                       onChange={setPhoneNumberHandle}
                     />
                   </div>
-                </div>
-                <div className="row">
-                  <div className="col-md-6">
+                
+                
+                  <div className="col-md-12 form-group">
                     <textarea
                       className="form-control styleinput mt-3"
                       name="message"
                       id="message"
                       cols={30}
                       rows={7}
-                      placeholder="Add any notes"
+                      placeholder="Add any notes/ Food you don't like/ Allergic to certain foods/ Chronic diseases"
                       defaultValue={""}
                       onChange={setMessageHandle}
                     />
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-md-6">
+                  <div className="col-md-6 subscribe-button">
                     <input
                       type="submit"
                       defaultValue="Send Message"
@@ -128,6 +134,7 @@ function Subscribe() {
                     <span className="submitting mt-3" />
                   </div>
                 </div>
+                
               </form>
               <div id="form-message-warning" className=' mt-4' />
               <div id="form-message-success">
@@ -144,7 +151,8 @@ function Subscribe() {
         </div>
       </div>
     </div>
-
+    </div>
+    </div>
 </>
 
     )
