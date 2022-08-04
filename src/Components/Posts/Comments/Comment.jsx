@@ -23,7 +23,7 @@ function Comment(props) {
         props.setState(true);
     }
     const changeComment=(id)=>{
-        if (newComment) {  
+        if (newComment) { 
             axios.post('http://localhost/project9/PHP/insertComment.php?comment_id='+id+'&new_comment='+newComment);
             console.log(id,newComment);
         }

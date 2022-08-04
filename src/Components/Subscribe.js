@@ -27,7 +27,9 @@ function Subscribe() {
         axios.post('http://localhost/project9/PHP/userInfo.php?city='+city+'&address='+address+'&zip_code='+zip_code+'&phone_number='+phone_number+'&message='+message+'&gender='+gender+'&weight='+weight+'&height='+height+'&age='+age+'&id='+user_id+'&calories='+calories+'&package_type'+package_type).then(()=>{
             console.log("success!");
             console.log(city,address,zip_code,phone_number,message,gender,weight,height,age,user_id,calories,package_type);
-            alert("we recieved your application ");
+
+
+        alert("we recieved your application ");
         }).catch((error)=>{
             console.error(error);
         });
@@ -35,27 +37,23 @@ function Subscribe() {
     return(
         <>
  
-  <title style={{marginTop:'52vh !important'}}>Contact Form #1</title>
-  <div className="content mt-5 ">
- 
-      <div className="row justify-content-center">
-        <div className="col-md-12">
-          <div className="row align-items-center">
-            <div className="col-lg-12 mb-5 mb-lg-0">
-              <h2 className="mb-5">
+  <title>Contact Form #1</title>
+  <div style={{marginTop:'100px'}}>
+  <h2 className="mb-5 mt-5">
                 Fill the form. <br /> It's easy.
               </h2>
-              <form
+      <div className="row mt-5" style={{marginLeft:'20vw'}}>
+      <form
                 className="border-right pr-5 mb-5"
                 method="post"
                 id="contactForm"
                 name="contactForm"
               >
                 <div className="row">
-                <div className="col-md-12 form-group">
+                <div className="col-md-6">
                     
                     <select
-                className="form-control activity"
+                className="form-control activity styleinput mt-3"
                 name="city" onChange={setCityHandle}
               >
 
@@ -69,10 +67,10 @@ function Subscribe() {
                 </div>
                 <div className='row'>
                   
-                <div className="col-md-12 form-group">
+                <div className="col-md-6">
                     <input
                       type="text"
-                      className="form-control"
+                      className="form-control styleinput mt-3"
                       name="zip_code"
                       id="zip_code"
                       placeholder="Zip Code"
@@ -81,10 +79,10 @@ function Subscribe() {
                   </div>
                 </div>
                 <div className='row'>
-                <div className="col-md-12 form-group">
+                <div className="col-md-6">
                     <input
                       type="text"
-                      className="form-control"
+                      className="form-control styleinput mt-3"
                       name="address"
                       id="address"
                       placeholder="Address"
@@ -93,10 +91,10 @@ function Subscribe() {
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-md-12 form-group">
+                  <div className="col-md-6">
                     <input
                       type="text"
-                      className="form-control"
+                      className="form-control styleinput mt-3"
                       name="phone_number"
                       id="phone_number"
                       placeholder="0777777777"
@@ -106,9 +104,9 @@ function Subscribe() {
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-md-12 form-group">
+                  <div className="col-md-6">
                     <textarea
-                      className="form-control"
+                      className="form-control styleinput mt-3"
                       name="message"
                       id="message"
                       cols={30}
@@ -120,11 +118,11 @@ function Subscribe() {
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-md-12">
+                  <div className="col-md-6">
                     <input
                       type="submit"
                       defaultValue="Send Message"
-                      className="btn btn-primary rounded-0 py-2 px-4 mt-3"
+                      className="btn btn-primary rounded-0 py-2 px-4 mt-3 stylebut"
                       onClick={(e)=>{clickHandle(e)}}
                     />
                     <span className="submitting mt-3" />
@@ -135,6 +133,11 @@ function Subscribe() {
               <div id="form-message-success">
                 Your message was sent, thank you!
               </div>
+        <div className="col-md-12">
+          <div className="row align-items-center">
+            <div className="col-lg-6 mb-5 mb-lg-0">
+              
+              
             </div>
             
           </div>

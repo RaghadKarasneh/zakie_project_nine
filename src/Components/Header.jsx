@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link,BrowserRouter } from 'react-router-dom';
-import { UilUser } from '@iconscout/react-unicons';
 
 function Header() {
   const logout=()=>{
@@ -51,12 +50,6 @@ function Header() {
           <li>
             <a href="/reg">signup</a>
           </li></> }
-
-          <li>
-            <Link to="/profile">
-            <a href="/profile"> <UilUser/></a>
-            </Link>
-          </li>
         </ul>
       </nav>
       {/* .navbar */}

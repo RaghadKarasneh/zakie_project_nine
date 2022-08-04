@@ -4,10 +4,10 @@ class Menu extends Component {
     render() { 
         return (
             <>
-            <section id="menu" className="menu">
+            <section id="menu" className="menu mt-5">
                 <div className="container" data-aos="fade-up">
                   <div className="section-header">
-                    <h2>Our Menu</h2>
+                    <h2 className='mb-4'>Our Menu</h2>
                     <p>
                       Check Our <span>Zakie Menu</span>
                     </p>

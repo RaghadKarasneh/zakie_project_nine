@@ -122,7 +122,7 @@ function Signup(){
                   <p className="small fw-bold mt-2 pt-1 mb-0" style={{color:'#787878'}}>
              Already have an Account??  {" "}
               <a href="../log" className="link " style={{color:'#FF3B0B'}}>
-                Login
+                Signin
               </a>
             </p>
             <br></br>

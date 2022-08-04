@@ -63,8 +63,8 @@ function Login(){
             defaultValue="Login"
               type="submit"
               className="btn btn-danger btn-lg"
-              style={{ paddingLeft: "2.5rem", paddingRight: "2.5rem",color:"white" }}
-            >Login</button>
+              style={{ paddingLeft: "2.5rem", paddingRight: "2.5rem",color:"white",backgroundColor:"#ce1212" }}
+            >Signin</button>
             
             <p className="small fw-bold mt-2 pt-1 mb-0" style={{color:'#000000'}}>
               Don't have an account?{" "}

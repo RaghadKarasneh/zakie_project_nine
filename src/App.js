@@ -15,7 +15,6 @@ import Pricing from './Components/Pricing';
 import Signup from "./signup";
 import Login from "./login";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Subscribe from './Components/Subscribe';
 import Menu from './Components/Menu';
 import AdminLogin from './Components/admin/AdminLogin';
