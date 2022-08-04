@@ -16,9 +16,7 @@ import Login from "./login";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Subscribe from './Components/Subscribe';
 import Menu from './Components/Menu';
-import AdminLogin from './Components/admin/AdminLogin';
-import Dashboard from './Components/admin/Dash';
-import Auction from './Components/admin/Auction';
+
 
 function App() {
   return (      
