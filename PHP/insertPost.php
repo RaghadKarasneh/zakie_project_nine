@@ -7,7 +7,7 @@ $title=$_REQUEST['title'];
 // $excerpt=['excerpt'];
 $body=$_REQUEST['body'];
 
-$st=$connect->prepare("INSERT INTO posts(user_id,title,body) VALUES('$user_id','$title','$body');");
+$st=$connect->prepare("INSERT INTO posts(user_id,excerpt,body) VALUES('$user_id','$title','$body');");
 $st->execute();
 
 ?>

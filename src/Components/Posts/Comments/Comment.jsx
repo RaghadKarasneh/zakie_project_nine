@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import FloatingLabel from 'react-bootstrap/FloatingLabel';
 
 function Comment(props) {
 
@@ -40,20 +40,22 @@ function Comment(props) {
 
 
   const userId=localStorage.getItem('userId');
-
+useEffect(()=>{
+console.log(props.comments)
+})
   return (
     <>
             {/* <!-- comments
         ================================================== --> */}
         <div className="comments-wrap" style={{padding:0}}>
 
-{/* <div id="comments" className="row"> */}
+<div id="comments" className="row">
     <div className="column">
 
-        {/* <h3>Users Comments</h3> */}
+        <h3>Users Comments</h3>
 
         {/* <!-- START commentlist --> */}
-        {/* <ol className="commentlist"> */}
+        <ol className="commentlist">
         {/* ) */}
             {props.comments ? props.comments.filter(comment => (comment.deleted != 1 && comment.post_id === sessionStorage.getItem('post_id'))).map(filteredComment =>
                 (
@@ -106,7 +108,7 @@ function Comment(props) {
                 </li>
                 )) : ""}
             
-        {/* </ol> */}
+        </ol>
 
      </div> {/* <!-- end col-full --> */}
  </div> {/* <!-- end comments --> */}
@@ -117,9 +119,18 @@ function Comment(props) {
     <div id="respond" className="column">
         <h2>Add A New Comment</h2>
     <form name="commentForm" id="commentForm" method="post" action="" autoComplete="off">
-
+    
         <div className="form-floating">
-            <textarea className="form-control border-0 bg-light" placeholder="Leave a comment here" id="comment" style={{height: "150px", marginBottom:'50px'}} name="comment" onChange={(e)=>{setComment(e.target.value)}} value={comment}></textarea>
+            <FloatingLabel
+            controlId="floatingInput"
+            label="Leave a comment here"
+            className="mb-3"
+            style={{marginBottom:'50px'}}
+          >
+            <textarea className="form-control border-0 bg-light" placeholder="Leave a comment here" id="comment" style={{height: "150px", marginBottom:'50px'}} name="comment" onChange={(e)=>{setComment(e.target.value)}} 
+            value={comment}
+            ></textarea>
+         </FloatingLabel>
             {/* <label htmlFor="comment">Comment</label> */}
         </div>
 
@@ -130,7 +141,7 @@ function Comment(props) {
  
 
  </div> 
- {/* </div>  */}
+ </div> 
     </>
   )
 }

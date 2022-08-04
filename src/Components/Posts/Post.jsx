@@ -35,7 +35,7 @@ function Post() {
 
     const CommentData=() => {
         console.log('post ID :',sessionStorage.getItem('post_id'));
-        axios.get('http://localhost/project9/PHP/comments.php')
+        axios.get('http://localhost/zakie_project_nine/PHP/comments.php')
         .then((response)=>{
             setComments(response.data)
             console.log(comments);
@@ -48,6 +48,7 @@ function Post() {
         useEffect(()=>{
             CommentData()
         setState(false);
+        console.log(comments)
         // const postData=setTimeout(()=>{axios.get('')
         // .then((response)=>{
         //     setPost(response.data)
@@ -89,25 +90,25 @@ function Post() {
 
                         <h2 className='mb-50' style={{marginBottom: '70px'}}>{post.excerpt}</h2> 
 
-                        <p>{post.body}
-                        </p>
+                        
 
-                        <div className="s-content__author container">
+                        <div className="s-content__author container" style={{height: '70px'}}>
                             <img src="images/avatars/user-06.jpg" alt="" />
 
                             <div className="about" style={{marginLeft: '70px'}}>
-                                <h5><a href="#">Jonathan Smith</a></h5>
+                                <h5 style={{marginTop: '20px', fontSize: '20px'}}><a href="#">Jonathan Smith</a></h5>
 
-                                <ul className="author-social">
+                                {/* <ul className="author-social">
                                     <li><a href="#0">Facebook</a></li>
                                     <li><a href="#0">Twitter</a></li>
                                     <li><a href="#0">Dribbble</a></li>
                                     <li><a href="#0">Instagram</a></li>
-                                </ul>
+                                </ul> */}
                             </div>
                         </div> {/* <!-- end s-content__author --> */}
                         
-
+<p>{post.body}
+                        </p>
                         <div className="s-content__pagenav group">
                             <div className="prev-nav" style={{width: '15%', paddingTop:' var(--vspace-0_5)',paddingRight: 'var(--gutter-lg)',backgroundColor: '#ce1212', marginRight: '20px',borderRadius: '20px', color: '#fff'}}>
                                 <a href="#" rel="prev"

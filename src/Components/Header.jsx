@@ -27,9 +27,9 @@ function Header() {
           <li>
             <a href="/Home">Home</a>
           </li>
-          <li>
+          {/* <li>
             <a href="/Menu">Menu</a>
-          </li>
+          </li> */}
           <li>
             <a href="/posts">Community</a>
           </li>
@@ -52,11 +52,11 @@ function Header() {
             <a href="/reg">Sign Up</a>
           </li></> }
 
-          <li>
+          {/* <li>
             <Link to="/profile">
             <a href="/profile"> <UilUser/></a>
             </Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
       {/* .navbar */}

@@ -18,13 +18,13 @@ class About extends Component {
                   <div className="row gy-4">
                     <div
                       className="col-lg-6 position-relative about-img"
-                      style={{ backgroundImage: "url(./img/about.jpg)", height: '685px' }}
+                      style={{ backgroundImage: "url(./img/about.jpg)", height: '638px' }}
                       data-aos="fade-up"
                       data-aos-delay={150}
                     >
                       <div className="call-us position-absolute">
                         <h4>Book a plan</h4>
-                        <p>+1 5589 55488 55</p>
+                        <p>+962 777 777 777</p>
                       </div>
                     </div>
                     <div
@@ -33,10 +33,10 @@ class About extends Component {
                       data-aos-delay={300}
                     >
                       <div className="content ps-0 ps-lg-3" style={{marginTop:'0', paddingTop:'0'}}>
-                        <p className=" h2" style={{marginTop:'0', paddingTop:'0'}}>
+                        <p className=" h4" style={{marginTop:'0', paddingTop:'0'}}>
                         The idea of our restaurant was launched from the need of working individuals to eat healthy meals, and in proportion to their daily need of calories, we offer the best types of food at acceptable prices, and the consumers can choose the food plan that suits them.
 
-                        We have 
+                        We have:
                         </p>
                         <ul className='mt-5'>
                           <li>
@@ -46,7 +46,7 @@ class About extends Component {
                             <UilCheck className="bi bi-check2-all" /> Different selections of Organic food
                           </li>
                           <li>
-                            <UilCheck className="bi bi-check2-all" /> Avalible 24/7
+                            <UilCheck className="bi bi-check2-all" /> Available 24/7
                           </li>
                         </ul>
                         <div className="position-relative mt-5">
@@ -83,8 +83,8 @@ class About extends Component {
                       data-aos="fade-up"
                       data-aos-delay={100}
                     >
-                      <div className="chef-member">
-                        <div className="member-img">
+                      <div className="chef-member" style={{height: '400px'}}>
+                        <div className="member-img" >
                           <img
                             src="./img/team/raghad.jpg"
                             className="img-fluid"
@@ -111,7 +111,7 @@ class About extends Component {
                       data-aos="fade-up"
                       data-aos-delay={100}
                     >
-                      <div className="chef-member">
+                      <div className="chef-member" style={{height: '400px'}}>
                         <div className="member-img">
                           <img
                             src="./img/team/anas.png"
@@ -139,8 +139,8 @@ class About extends Component {
                       data-aos="fade-up" 
                       data-aos-delay={200}
                     >
-                      <div className="chef-member">
-                        <div className="member-img" style={{height:'56%'}}>
+                      <div className="chef-member" style={{height: '400px'}}>
+                        <div className="member-img" style={{height:'72%'}}>
                           <img
                             src="./img/team/dyar.jpg"
                             className="img-fluid"
@@ -155,7 +155,7 @@ class About extends Component {
                             </a>
                           </div>
                         </div>
-                        <div className="member-info" style={{marginTop: '15px'}}>
+                        <div className="member-info" style={{marginTop: '25px'}}>
                           <h4>Dyar hunaity</h4>
                           <span>Product Owner</span>
                         </div>
@@ -167,7 +167,7 @@ class About extends Component {
                       data-aos="fade-up" 
                       data-aos-delay={300}
                     >
-                      <div className="chef-member">
+                      <div className="chef-member" style={{height: '400px'}}>
                         <div className="member-img">
                           <img
                             src="./img/team/taebah.jpg"
@@ -183,7 +183,7 @@ class About extends Component {
                             </a>
                           </div>
                         </div>
-                        <div className="member-info">
+                        <div className="member-info" >
                           <h4> Taebah Bassam</h4>
                           <span>Scrum Master</span>
                         </div>

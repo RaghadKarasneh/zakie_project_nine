@@ -152,7 +152,7 @@ class Home extends Component {
                           data-purecounter-duration={1}
                           className="purecounter"
                         >7</span>
-                        <h3 style={{color:"white"}}>Projects a year</h3>
+                        <h3 style={{color:"white"}}>Days a week</h3>
                       </div>
                     </div>
                     {/* End Stats Item */}
@@ -176,8 +176,8 @@ class Home extends Component {
                           data-purecounter-end={32}
                           data-purecounter-duration={1}
                           className="purecounter"
-                        >365</span>
-                        <h3 style={{color:"white"}}>Days here for you </h3>
+                        >12</span>
+                        <h3 style={{color:"white"}}>Months here for you </h3>
                       </div>
                     </div>
                     {/* End Stats Item */}

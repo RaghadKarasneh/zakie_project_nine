@@ -51,8 +51,8 @@ const Contact = () => {
   <section id="contact" className="contact mt-5">
                 <div className="container" data-aos="fade-up">
                   <div className="section-header">
-                    <h2>Contact</h2>
-                    <p>
+                    {/* <h2>Contact</h2> */}
+                    <p style={{margin: '50px auto'}}>
                       Need Help? <span>Contact Us</span>
                     </p>
                   </div>
@@ -63,7 +63,7 @@ const Contact = () => {
                       frameBorder={0} allowFullScreen="" />
                   </div>
                   {/* End Google Maps */}
-                  <div className="row gy-4">
+                  <div className="row gy-4" style={{marginTop:'70px'}}>
                     <div className="col-md-6">
                       <div className="info-item  d-flex align-items-center">
                         <UilMap className="icon" />
@@ -110,19 +110,24 @@ const Contact = () => {
                   </div>
 
 
-                  <form role="form" className="php-email-form p-5 p-md-5 ">
-                      <div className="col-xl-12 form-group">
+                  <form role="form" className="row php-email-form p-5 p-md-5 ">
+                  <div className="section-header">
+                  <p style={{margin: '50px auto'}}>
+                      Keep <span>In Touch</span>
+                    </p>
+                    </div>
+                      <div className="col-md-12 ">
                         <input type="text" name="name" className="form-control" id="name" placeholder="Your Name" required value={name} onChange={e => setName(e.target.value)} />
                       </div>
-                      <div className="col-xl-12 form-group">
+                      <div className="col-md-12">
                         <input type="email" pattern="[^@\s]+@[^@\s]+" className="form-control" name="email" id="email" placeholder="Your Email" required value={email} onChange={e => setEmail(e.target.value)}
                         />
                       </div>
-                    <div className="form-group">
+                    <div className="col-md-12">
                       <input type="text" className="form-control input-group-lg" name="subject" id="subject" placeholder="Subject" required value={subject} onChange={e => setSubject(e.target.value)}/>
                     </div>
-                    <div className="form-group">
-                      <textarea className="form-control" name="message" rows={5} placeholder="Message" required="" defaultValue={""} value={message} onChange={e => setMessage(e.target.value)} />
+                    <div className="col-md-12">
+                      <textarea className="form-control" name="message"  placeholder="Message" required="" defaultValue={""} value={message} onChange={e => setMessage(e.target.value)} style={{height:'100px'}} />
                     </div>
                     <div className="text-center">
                       <button onClick={submit} className='bttn'>Send Message</button>

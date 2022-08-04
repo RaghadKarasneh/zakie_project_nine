@@ -43,6 +43,8 @@ function Posts() {
       console.log('Success');
       console.log(user_id,title,context);
       setState(true);
+      setBtnDis('block');
+      setFormDis('none')
     })
     .catch((error)=>{
       console.log('error happened: ',error);
@@ -59,14 +61,14 @@ function Posts() {
     {sessionStorage.getItem('user_id') && 
         <div className='container d-flex justify-content-center ' style={{width: '50%', marginTop:'150px'}}>
         <Button className="bttn insertButton btn-light lg" style={{display: btnDis,border: '1px solid gray',backgroundColor: 'red !important', color:'#fff', width: '100%', borderRadius: '20px',marginBottom: '100px'}} onClick={()=>{setFormDis('block');setBtnDis('none')}}><span className='h4' style={{color: 'rgb(255, 255, 255)', }}>POST NOW</span></Button>
-        <Form style={{display: formDis}}>
+        <Form style={{display: formDis, width:'100%'}}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
           <FloatingLabel
             controlId="floatingInput"
             label="Title"
             className=""
           >
-            <Form.Control type="text" placeholder="Enter email" onChange={(e)=>{setTitle(e.target.value)}} style={{ height: '4rem',border: '1px solid red'}}/>
+            <Form.Control type="text" placeholder="Enter email" onChange={(e)=>{setTitle(e.target.value)}} style={{ height: '4rem',border: '1px solid red', backgroundColor:'transparent'}}/>
             </FloatingLabel>
           </Form.Group>
     
@@ -75,10 +77,10 @@ function Posts() {
             label="Context"
             className="mb-3"
           >
-            <Form.Control as="textarea" placeholder="what you want to say ?" style={{ height: '7rem',border: '1px solid red'}} onChange={(e)=>{setContext(e.target.value)}}/>
+            <Form.Control as="textarea" placeholder="what you want to say ?" style={{ height: '7rem',border: '1px solid red', backgroundColor:'transparent'}} onChange={(e)=>{setContext(e.target.value)}}/>
             </FloatingLabel>
-          <Button variant="light" className='bttn' type="submit" onClick={(e)=>submitPost(e)} style={{width: '15rem', height: '4rem'}}>
-            Submit Post
+          <Button variant="light" className='bttn' type="submit" onClick={(e)=>submitPost(e)} style={{width: '10rem', height: '4rem'}}>
+           Post
           </Button>
           <Button variant="light" className='bttn' type="submit" onClick={(e)=>{e.preventDefault();setFormDis('none');setBtnDis('block')}} style={{width: '10rem', height: '4rem'}}>
             Cancel
