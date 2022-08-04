@@ -61,14 +61,14 @@ class PostsPage extends React.Component {
     }
     addPost(e) {
         e.preventDefault();
-        axios.post('http://localhost/project9/admin/PHP/addpost.php?title='+this.state.title+'&body='+this.state.body);
+        axios.post('http://localhost/zakie_project_nine/admin/PHP/addpost.php?title='+this.state.title+'&body='+this.state.body);
         this.setState({ showModal: false });
         this.setState({ render: true });
     }
     editPost(e)
     {
         e.preventDefault();
-        axios.post('http://localhost/project9/admin/PHP/editpost.php?id='+this.state.id+'&title='+this.state.title+'&body='+this.state.body);
+        axios.post('http://localhost/zakie_project_nine/admin/PHP/editpost.php?id='+this.state.id+'&title='+this.state.title+'&body='+this.state.body);
         this.setState({ showEdit: false });
         this.setState({ render: true });
         console.log('edited');
@@ -76,11 +76,11 @@ class PostsPage extends React.Component {
     deletePost(e,id)
     {
         e.preventDefault();
-        axios.post('http://localhost/project9/admin/PHP/deletepost.php?id='+id);
+        axios.post('http://localhost/zakie_project_nine/admin/PHP/deletepost.php?id='+id);
         this.setState({ render: true });
     }
     componentDidMount(){
-        axios.get('http://localhost/project9/admin/PHP/posts.php')
+        axios.get('http://localhost/zakie_project_nine/admin/PHP/posts.php')
         .then((res)=>{
           this.setState({posts: res.data});
           console.log(this.state.users);
@@ -89,7 +89,7 @@ class PostsPage extends React.Component {
     componentDidUpdate(prevProps,prevState){
         if (prevState.render !== this.state.render) {
             
-            axios.get('http://localhost/project9/admin/PHP/posts.php')
+            axios.get('http://localhost/zakie_project_nine/admin/PHP/posts.php')
             .then((res)=>{
                 this.setState({posts: res.data});
                 console.log(this.state.posts);

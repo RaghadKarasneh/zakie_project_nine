@@ -50,15 +50,6 @@ function Header() {
           <li>
             <a href="/reg">Sign Up</a>
           </li></> }
-<<<<<<< HEAD
-=======
-
-          {/* <li>
-            <Link to="/profile">
-            <a href="/profile"> <UilUser/></a>
-            </Link>
-          </li> */}
->>>>>>> 29a09ba60a0bebc94489253935ec266d783186cb
         </ul>
       </nav>
       {/* .navbar */}

@@ -89,7 +89,7 @@ class UsersPage extends React.Component {
     }
     addUser (e) {
         e.preventDefault();
-        axios.post('http://localhost/project9/admin/PHP/adduser.php?name='+this.state.name+'&email='+this.state.email+'$password='+this.state.password+'&city='+this.state.city+'&phone='+this.state.phone);
+        axios.post('http://localhost/zakie_project_nine/admin/PHP/adduser.php?name='+this.state.name+'&email='+this.state.email+'$password='+this.state.password+'&city='+this.state.city+'&phone='+this.state.phone);
         this.setState({ showModal: false });
         this.setState({ render: true });
     }
@@ -97,7 +97,7 @@ class UsersPage extends React.Component {
     editUser(e)
     {
         e.preventDefault();
-        axios.post('http://localhost/project9/admin/PHP/edituser.php?id='+this.state.id+'&name='+this.state.name+'&email='+this.state.email+'&city='+this.state.city+'&phone='+this.state.phone);
+        axios.post('http://localhost/zakie_project_nine/admin/PHP/edituser.php?id='+this.state.id+'&name='+this.state.name+'&email='+this.state.email+'&city='+this.state.city+'&phone='+this.state.phone);
         this.setState({ showEdit: false });
         this.setState({ render: true });
         console.log('edited',this.state.editData.id,this.state.username,this.state.email,this.state.city,this.state.phone_number);
@@ -105,13 +105,13 @@ class UsersPage extends React.Component {
     deleteUser(e,id)
     {
         e.preventDefault();
-        axios.post('http://localhost/project9/admin/PHP/deleteuser.php?id='+id);
+        axios.post('http://localhost/zakie_project_nine/admin/PHP/deleteuser.php?id='+id);
         this.setState({ render: true });
     }
 
     componentDidMount()
     {
-        axios.get('http://localhost/project9/admin/PHP/users.php')
+        axios.get('http://localhost/zakie_project_nine/admin/PHP/users.php')
         .then((res)=>{
           this.setState({users: res.data});
           console.log(this.state.users);
@@ -120,7 +120,7 @@ class UsersPage extends React.Component {
     componentDidUpdate(prevProps,prevState){
         if (prevState.render !== this.state.render ||prevState.editData !== this.state.editData) {
             
-            axios.get('http://localhost/project9/admin/PHP/users.php')
+            axios.get('http://localhost/zakie_project_nine/admin/PHP/users.php')
             .then((res)=>{
                 this.setState({users: res.data});
                 console.log(this.state.users);

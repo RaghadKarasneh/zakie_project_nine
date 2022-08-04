@@ -12,7 +12,7 @@ class DashboardPage extends React.Component {
     }
 
     componentDidMount(){
-      axios.get('http://localhost/project9/admin/PHP/count.php')
+      axios.get('http://localhost/zakie_project_nine/admin/PHP/count.php')
       .then((res)=>{
         this.setState({data: res.data});
         console.log(this.state.data);

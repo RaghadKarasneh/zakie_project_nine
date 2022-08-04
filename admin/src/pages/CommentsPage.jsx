@@ -18,11 +18,11 @@ class CommentsPage extends React.Component {
     deleteComment(e,id)
     {
         e.preventDefault();
-        axios.post('http://localhost/project9/admin/PHP/deletecomment.php?id='+id);
+        axios.post('http://localhost/zakie_project_nine/admin/PHP/deletecomment.php?id='+id);
         this.setState({ render: true });
     }
     componentDidMount(){
-        axios.get('http://localhost/project9/admin/PHP/comments.php')
+        axios.get('http://localhost/zakie_project_nine/admin/PHP/comments.php')
         .then((res)=>{
           this.setState({comments: res.data});
           console.log(this.state.comments);
@@ -31,7 +31,7 @@ class CommentsPage extends React.Component {
     componentDidUpdate(prevProps,prevState){
         if (prevState.render !== this.state.render) {
             
-            axios.get('http://localhost/project9/admin/PHP/comments.php')
+            axios.get('http://localhost/zakie_project_nine/admin/PHP/comments.php')
             .then((res)=>{
                 this.setState({comments: res.data});
                 console.log(this.state.comments);

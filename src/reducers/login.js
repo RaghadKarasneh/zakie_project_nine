@@ -16,12 +16,7 @@ const loginReducer=(state={error:''},action)=>{
             }
             break;
         case "LOGIN":
-<<<<<<< HEAD
-                const loadInfo = async () => 
-                {
-=======
                 const loadInfo = async () => {
->>>>>>> 54d86c3e24e2f36c825da95506ffcff76f716a8b
                     const res = await axios.get('http://localhost/project9/PHP/login.php?email='+state.emailORUsername+'&password='+state.password);
                     sessionStorage.clear()
                     sessionStorage.setItem("user_info", res.data);

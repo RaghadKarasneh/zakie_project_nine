@@ -7,11 +7,7 @@ class Menu extends Component {
             <section id="menu" className="menu mt-5">
                 <div className="container" data-aos="fade-up">
                   <div className="section-header">
-<<<<<<< HEAD
                     <h2 className='mb-4'>Our Menu</h2>
-=======
-                    {/* <h2>Our Menu</h2> */}
->>>>>>> 29a09ba60a0bebc94489253935ec266d783186cb
                     <p>
                       Check Our <span>Zakie Main Dishes</span>
                     </p>
