@@ -7,6 +7,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
+import '../../css/posts.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import Radium from 'radium';
 
@@ -29,7 +30,7 @@ function Posts() {
     navigate("/post", { state: { post_id:id, post:post }});
   };
   const getPosts=()=>{
-    axios.get('http://localhost/project9/PHP/posts.php')
+    axios.get('http://localhost/zakie_project_nine/PHP/posts.php')
     .then((response)=>{
       setPosts(response.data)
       console.log(posts);
@@ -37,11 +38,13 @@ function Posts() {
   };
   const submitPost=(e)=>{
     e.preventDefault();
-    axios.post('http://localhost/project9/PHP/insertPost.php?user_id='+user_id+'&title='+title+'&body='+context)
+    axios.post('http://localhost/zakie_project_nine/PHP/insertPost.php?user_id='+user_id+'&title='+title+'&body='+context)
     .then(()=>{
       console.log('Success');
       console.log(user_id,title,context);
       setState(true);
+      setBtnDis('block');
+      setFormDis('none')
     })
     .catch((error)=>{
       console.log('error happened: ',error);
@@ -57,15 +60,15 @@ function Posts() {
     <>
     {sessionStorage.getItem('user_id') && 
         <div className='container d-flex justify-content-center ' style={{width: '50%', marginTop:'150px'}}>
-        <Button className="bttn btn-light lg" style={{display: btnDis, width: '18rem',border:'1px solid red' }} onClick={()=>{setFormDis('block');setBtnDis('none')}}><span className='h4'>Insert post</span></Button>
-        <Form style={{display: formDis}}>
+        <Button className="bttn insertButton btn-light lg" style={{display: btnDis,border: '1px solid gray',backgroundColor: 'red !important', color:'#fff', width: '100%', borderRadius: '20px',marginBottom: '100px'}} onClick={()=>{setFormDis('block');setBtnDis('none')}}><span className='h4' style={{color: 'rgb(255, 255, 255)', }}>POST NOW</span></Button>
+        <Form style={{display: formDis, width:'100%'}}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
           <FloatingLabel
             controlId="floatingInput"
             label="Title"
             className=""
           >
-            <Form.Control type="text" placeholder="Enter email" onChange={(e)=>{setTitle(e.target.value)}} style={{ height: '4rem',border: '1px solid red'}}/>
+            <Form.Control type="text" placeholder="Enter email" onChange={(e)=>{setTitle(e.target.value)}} style={{ height: '4rem',border: '1px solid red', backgroundColor:'transparent'}}/>
             </FloatingLabel>
           </Form.Group>
     
@@ -74,10 +77,10 @@ function Posts() {
             label="Context"
             className="mb-3"
           >
-            <Form.Control as="textarea" placeholder="what you want to say ?" style={{ height: '7rem',border: '1px solid red'}} onChange={(e)=>{setContext(e.target.value)}}/>
+            <Form.Control as="textarea" placeholder="what you want to say ?" style={{ height: '7rem',border: '1px solid red', backgroundColor:'transparent'}} onChange={(e)=>{setContext(e.target.value)}}/>
             </FloatingLabel>
-          <Button variant="light" className='bttn' type="submit" onClick={(e)=>submitPost(e)} style={{width: '15rem', height: '4rem'}}>
-            Submit Post
+          <Button variant="light" className='bttn' type="submit" onClick={(e)=>submitPost(e)} style={{width: '10rem', height: '4rem'}}>
+           Post
           </Button>
           <Button variant="light" className='bttn' type="submit" onClick={(e)=>{e.preventDefault();setFormDis('none');setBtnDis('block')}} style={{width: '10rem', height: '4rem'}}>
             Cancel
@@ -86,25 +89,26 @@ function Posts() {
         </div>
     }
 
-    <Row xs={3} md={3} className="g-4">
+    <Row xs={3} md={3} className="g-4" style={{marginBottom:'70px'}} >
     {posts.map(post =>{
       return(
-        <Col>
-        <Card style={{ width: '35rem' ,marginTop: "150px"}}>
-          <Card.Img variant="top" src="https://images.template.net/wp-content/uploads/2018/03/Useful-Restaurant-Review-Card-Templates.jpg" />
-          <Card.Body>
-            <Card.Title>{post.title}</Card.Title>
-            <Card.Text>
-              {post.body}
-            </Card.Text>
-            <Button className='bttn' variant="light" onClick={()=>{goToReceiver(post.id)}}>Read More</Button>
-          </Card.Body>
-        </Card>
+        <Col lg="8" style={{boxShadow: '6px 5px 10px grey',height: '150px',margin: '20px auto'}}>
+      
+          {/* <Card.Img variant="top" src="https://images.template.net/wp-content/uploads/2018/03/Useful-Restaurant-Review-Card-Templates.jpg" /> */}
+          
+            
+            <h3 style={{display:'inline-block', width:'50%',  marginLeft: '50px'}}>
+            {post.excerpt}
+            </h3>
+            <button className='bttn col-lg-4' variant="light" onClick={()=>{goToReceiver(post.id)}} style={{display:'inline-block', width:'30%',
+    height: '55px'}}>Read More</button>
+         
+       
         </Col>
       )
     })}
     </Row>
-    <hr style={{height: '1em',backgroundColor:'red'}}/>
+  
     
 
     </>

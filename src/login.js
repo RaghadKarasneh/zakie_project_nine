@@ -29,7 +29,7 @@ function Login(){
         <form onSubmit={(e)=>Fun(e)}>
          
           <div className="divider d-flex align-items-center my-4">
-            <h1 className="text-center fw-bold mx-3 mb-0" style={{color:'#FF4141'}}>Login</h1>
+            <h2 className="text-center fw-bold mx-3 mb-0" style={{color:'#FF4141',margin:'auto 150px'}}>SIGN IN</h2>
           </div>
           {/* Email input */}
           <div className="form-outline mb-4">
@@ -64,7 +64,7 @@ function Login(){
               type="submit"
               className="btn btn-danger btn-lg"
               style={{ paddingLeft: "2.5rem", paddingRight: "2.5rem",color:"white" }}
-            >Login</button>
+            >SIGN IN</button>
             
             <p className="small fw-bold mt-2 pt-1 mb-0" style={{color:'#000000'}}>
               Don't have an account?{" "}
