@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import '../css/pricing.css'
 function Pricing () {
 
   const[dis,setDis]=useState('none');
+  const[pack,setPack]=useState('');
+  const[re,setRe]=useState(false);
 
     const package_submit=(e,str)=>{
       e.preventDefault();
@@ -14,6 +17,29 @@ function Pricing () {
         setDis('flex');
       }
     };
+
+    function getPackage()
+    {
+      if (sessionStorage.getItem('user_id')) 
+      {
+      
+      axios.get('http://localhost/project9/PHP/package.php?id='+sessionStorage.getItem('user_id'))
+      .then((res)=>{
+        setPack(res.data);
+        console.log(pack);
+      })
+      .catch((e)=>{
+        console.log('Error Message: ',e);
+      })
+      }
+      setRe(false);
+    }
+    useEffect(()=>{
+        getPackage();
+      setRe(false);
+    },[pack,re])
+
+
 
         return (
       <div id="generic_price_table">
@@ -80,8 +106,8 @@ function Pricing () {
                   {/*//FEATURE LIST END*/}
                   {/*BUTTON START*/}
                   <div className="generic_price_btn clearfix">
-                  <a className="" href="" onClick={(e)=>{package_submit(e,"weekly")}}>
-                     Choose
+                  <a className={pack === 'weekly' ?'disabled':''} href="" onClick={(e)=>{package_submit(e,"weekly")}} >
+                     {pack === ''?"Choose":<>{pack !== "weekly" ? 'Update Plan' :'Your Plan'}</>}
                     </a>
                   </div>
                   {/*//BUTTON END*/}
@@ -136,8 +162,8 @@ function Pricing () {
                   {/*//FEATURE LIST END*/}
                   {/*BUTTON START*/}
                   <div className="generic_price_btn clearfix">
-                    <a className="" href="" onClick={(e)=>{package_submit(e,"monthly")}}>
-                     Choose
+                    <a className={pack === 'monthly' ?'disabled':''} href="" onClick={(e)=>{package_submit(e,"monthly")}}>
+                    {pack === ''?"Choose":<>{pack !== "monthly" ? 'Update Plan' :'Your Plan'}</>}
                     </a>
                   </div>
                   {/*//BUTTON END*/}
@@ -192,8 +218,8 @@ function Pricing () {
                   {/*//FEATURE LIST END*/}
                   {/*BUTTON START*/}
                   <div className="generic_price_btn clearfix">
-                  <a className="" href="" onClick={(e)=>{package_submit(e,"yearly")}}>
-                     Choose
+                  <a className={pack === 'yearly' ?'disabled':''} href="" onClick={(e)=>{package_submit(e,"yearly")}}>
+                  {pack === ''?"Choose":<>{pack !== "yearly" ? 'Update Plan' :'Your Plan'}</>}
                     </a>
                   </div>
                   {/*//BUTTON END*/}
