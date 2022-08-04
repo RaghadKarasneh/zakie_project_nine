@@ -118,11 +118,11 @@ class Calculator extends Component {
     if(this.state.pal,this.state.heightFeet,this.state.heightInches,this.state.age,this.state.weight,this.state.gender != ''){
     sessionStorage.setItem('gender', this.state.gender);
     sessionStorage.setItem('weight', this.state.weight);
+    sessionStorage.setItem('height',parseInt(this.state. heightFeet)+parseInt(this.state.heightInches));
     sessionStorage.setItem('age', this.state.age);
     sessionStorage.setItem('heightFeet', this.state.heightFeet);
     sessionStorage.setItem('heightInches', this.state.heightInches);
     sessionStorage.setItem('calories', this.state.pal);
-    sessionStorage.setItem('height',parseInt(this.state. heightFeet)+parseInt(this.state.heightInches));
 
     window.location='./Pricing';}
     else{
