@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link,BrowserRouter } from 'react-router-dom';
-import { UilUser } from '@iconscout/react-unicons';
 
 function Header() {
   const logout=()=>{
@@ -27,9 +26,9 @@ function Header() {
           <li>
             <a href="/Home">Home</a>
           </li>
-          <li>
+          {/* <li>
             <a href="/Menu">Menu</a>
-          </li>
+          </li> */}
           <li>
             <a href="/posts">Community</a>
           </li>
@@ -46,17 +45,20 @@ function Header() {
             <a href="/Contact">Contact us</a>
           </li>
           {sessionStorage.getItem('user_id') != "" && sessionStorage.getItem('user_id') !=undefined && sessionStorage.getItem('user_id') !=null? <li><a onClick={(e)=>{e.preventDefault();logout();}}>Logout</a></li>: <><li className='offset-1'>
-            <a href="/log">login</a>
+            <a href="/log">Sign In</a>
           </li>
           <li>
-            <a href="/reg">signup</a>
+            <a href="/reg">Sign Up</a>
           </li></> }
+<<<<<<< HEAD
+=======
 
-          <li>
+          {/* <li>
             <Link to="/profile">
             <a href="/profile"> <UilUser/></a>
             </Link>
-          </li>
+          </li> */}
+>>>>>>> 29a09ba60a0bebc94489253935ec266d783186cb
         </ul>
       </nav>
       {/* .navbar */}

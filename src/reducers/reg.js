@@ -50,7 +50,7 @@ const registerReducer=(state={usernameError:'',emailError:'',passError:'',confir
                 axios.post('http://localhost/project9/PHP/reg.php?username='+state.username+'&email='+state.email+'&password='+state.password)
                 .then(()=>{
                     console.log('dyar');
-                    window.location="/log";
+                    window.location="./log";
                 })
                 // .catch(()=>{
                 //     console.log("error");

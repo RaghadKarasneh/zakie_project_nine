@@ -7,6 +7,7 @@
 .button{
   background-color: #ce1212 !important;
 }
+
 .bttn:hover{
 
 background-color: rgba(239, 134, 134, 0.656) !important;
@@ -24,3 +25,30 @@ padding-top: -20px !important;
   }
 }
 
+.form-outline span{
+  color:red;
+
+}
+#form3Example1c,
+#form3Example3c,
+#form3Example4c,
+#form3Example4cd{
+   margin-bottom: 10px !important; 
+}
+.why-box{
+  text-align: center;
+  
+}
+.why-box p{
+  color: white !important;
+}
+.why-us .icon-box h4 {
+  margin: 0 !important;
+  margin-top: 12px !important;
+}
+#chefs{
+  padding-top: 10px;
+}
+#chefs .section-header{ 
+margin-bottom: 55px;
+}
